@@ -27,9 +27,8 @@ const ButtonLink = styled.button`
   justify-content: center;
   font-size: calc(0.5rem + 2vmin);
   font-size: ${(props) => props.fontSize};
-
-    background: ${(props) => props.bgColor};
-    color: ${(props) => props.textColor};
+  background: ${(props) => props.bgColor};
+  color: ${(props) => props.textColor};
 
 
   &:hover {
