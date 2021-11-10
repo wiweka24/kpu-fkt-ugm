@@ -132,7 +132,7 @@ const GlobalStyle = createGlobalStyle`
     h4{
         font-size: calc(0.5rem + 2vmin);
     }
-    h4{
+    h5{
         font-size: calc(0.5rem + 1.5vmin);
     }
    /*----------------------*\
