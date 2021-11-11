@@ -1,6 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
-import ReactPlayer from 'react-player'
+import ReactPlayer from 'react-player/youtube'
 import Button from "../components/Button";
 import {
     Dice,
@@ -12,6 +12,30 @@ import {
 
 export default function Beranda(){
     // Kode Javascript //
+    const [data, setData] = useState({
+        message: "",
+      })
+    const { message } = data
+
+    const handleChange = e =>
+    setData({ ...data, [e.target.name]: e.target.value })
+
+    const handleSubmit = async e => {
+        e.preventDefault()
+        try {
+            await fetch("https://v1.nocodeapi.com/wiweka24/google_sheets/OABEIiLFFqUeOzJG?tabId=Sheet1", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify([[new Date().toLocaleString(), message]]),
+            })
+            
+            document.getElementById("message").value = "";
+        } catch (err) {
+            console.log(err)
+        }
+    }
 
     return(
         // Kode HTML //
@@ -20,7 +44,7 @@ export default function Beranda(){
 
             {/* Awal Bagian Hero*/}
             <div className="hero-container">
-                <div className="text">
+                <div className="text-center">
                     <h1 className="tittle font-squids">kpu ft<br/>2021 </h1>
                     <h4>Pemilihan Umum </h4>
                     <h2 className>Ketua BEM KM FT UGM 2022 </h2>
@@ -46,12 +70,12 @@ export default function Beranda(){
                     <img className="foto_calon2" src={Calon_2} alt="dice"></img>
                 </div>
 
-                <div className="desc text">
-                    <span class="calon1_desc">
+                <div className="desc text-center">
+                    <span className="calon1_desc">
                         <h2 className="font-squids">Calon 1 </h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum purus eget feugiat gravida. Sed vel justo sit amet dui aliquam ornare. Duis blandit, metus aliquet dapibus eleifend, enim elit suscipit magna, id pulvinar odio nibh sed velit. Maecenas id cursus dui. </p> 
                     </span>
-                    <span class="calon2_desc">
+                    <span className="calon2_desc">
                         <h2 className="font-squids">Calon 2 </h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum purus eget feugiat gravida. Sed vel justo sit amet dui aliquam ornare. Duis blandit, metus aliquet dapibus eleifend, enim elit suscipit magna, id pulvinar odio nibh sed velit. Maecenas id cursus dui. </p> 
                     </span>
@@ -61,25 +85,34 @@ export default function Beranda(){
             {/* Akhir Calon calon */}
 
             {/* Awal About & Tata Cara */}
-            <div className="about-container text">
-                <div class="about">
-                    <h2 class="font-squids">Tentang Pemilu FT UGM 2022 </h2>
-                    <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum purus eget feugiat gravida. Sed vel justo sit amet dui aliquam ornare. Duis blandit, metus aliquet dapibus eleifend, enim elit suscipit magna, id pulvinar odio nibh sed velit. Maecenas id cursus dui. </p> 
+            <div className="about-container text-center">
+                <div className="about">
+                    <h2 className="font-squids">Tentang Pemilu FT UGM 2022 </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum purus eget feugiat gravida. Sed vel justo sit amet dui aliquam ornare. Duis blandit, metus aliquet dapibus eleifend, enim elit suscipit magna, id pulvinar odio nibh sed velit. Maecenas id cursus dui. </p> 
                 </div>
                 
-                <div class="tatacara">
-                    <h2 class="font-squids">Tata Cara Pemilihan </h2>
-                    <ReactPlayer class="video" url='https://www.youtube.com/watch?v=rhFSQdILOXk&ab_channel=FakultasTeknikUGM' />
+                <div className="tatacara">
+                    <h2 className="font-squids">Tata Cara Pemilihan </h2>
+                    <ReactPlayer className="video" controls={true} url='https://www.youtube.com/watch?v=rhFSQdILOXk&ab_channel=FakultasTeknikUGM' />
                 </div>
             </div>
 
             {/* Akhir About & Tata Cara */}
             
             {/* Awal Kritik & Saran */}
-            <div className="kritik text">
-                <div><h3>Kritik & Saran</h3></div>
-                <textarea rows="20" cols="50"></textarea>
-                <Button>Kirim</Button>
+            <div className="kritik">
+                <form onSubmit={handleSubmit}>
+                    <div className="box"><h4>Kritik Saran</h4></div>
+                    <textarea
+                        id="message"
+                        name="message" 
+                        placeholder="Ketik di sini ..." 
+                        rows="5" 
+                        value={message} 
+                        onChange={handleChange}>
+                    </textarea>
+                    <Button>Sumbit</Button>
+                </form>
             </div>
 
             {/* Akhir Kritik & Saran */}
@@ -89,20 +122,16 @@ export default function Beranda(){
 }
 
 const Container = styled.div`
-// umum // ----------------------------------------------------------------------
+// umum // -------------------------------------------------------
 background-color: var(--color-blue);
 
 * {
     margin: 0;
     padding: 0;
-}
-
-.text{
-    text-align: center;
     color: white;
 }
 
-// judul // ---------------------------------------------------------------------
+// judul // -------------------------------------------------------
 
 .hero-container{
     display: flex;
@@ -115,19 +144,19 @@ background-color: var(--color-blue);
     padding: 10vmin;
 }
 
-.tittle{
+.hero-container .tittle{
     font-weight: lighter;
 }
 
-.text h4{
+.hero-container h4{
     font-weight: lighter;
 }
 
-.text h2{
+.hero-container h2{
     font-weight: bolder;
 }
 
-.text img{
+.hero-container img{
     width: 10%;
     padding: 4vmin;
 }
@@ -139,10 +168,9 @@ Button{
     background-color: var(--color-pink);
 }
 
-// Calon // --------------------------------------------------------------
+// Calon // -------------------------------------------------------
 .calon-container{
     display: flex;
-
     overflow: hidden;
     width: 100%;
     padding: 5vmin 0 15vmin 0;
@@ -150,14 +178,55 @@ Button{
 
 .calon1{
     order: 1;
+
+    &:hover .rec1{
+        margin-right: -115%;
+        transition: all 0.2s ease-out; 
+    }
+
+    &:hover .foto_calon1{
+        max-height: 115%;
+        transition: all 0.2s ease-out; 
+    }
+
+    &:hover ~ .desc{
+        visibility: visible;
+        transition: all 0.2s ease-out;
+    }
+    
+    &:hover ~ .desc .calon2_desc{
+        display: none;
+        transition: all 0.2s ease-out;
+    }
 }
 
 .calon2{
     order: 3;
-}
 
-.desc{
-    order: 2;
+    &:hover .rec2{
+        margin-left: -115%;
+        transition: all 0.2s ease-out; 
+    }
+    
+    &:hover .foto_calon2{
+        max-height: 115%;
+        transition: all 0.2s ease-out; 
+    }
+    
+    &:hover ~ .desc{
+        visibility: visible;
+        transition: all 0.2s ease-out;
+    }
+    
+    &:hover ~ .desc .calon1_desc{
+        display: none;
+        transition: all 0.2s ease-out;
+    }
+    
+    &:hover ~ .desc .calon2_desc{
+        display: inline;
+        transition: all 0.2s ease-out;
+    }
 }
 
 .calon{
@@ -178,8 +247,8 @@ Button{
 }
 
 .foto_calon2{
-    max-height: 110%;
     z-index: 1;
+    max-height: 110%;
     right: 0;
 }
 
@@ -193,67 +262,16 @@ Button{
     left: 0;
 }
 
-.calon1:hover .rec1{
-    margin-right: -115%;
-    transition: all 0.2s ease-out; 
-}
-
-.calon1:hover .foto_calon1{
-    max-height: 115%;
-    transition: all 0.2s ease-out; 
-}
-
-.calon1:hover ~ .desc{
-    visibility: visible;
-    transition: all 0.2s ease-out;
-}
-
-.calon1:hover ~ .desc .calon2_desc{
-    display: none;
-    transition: all 0.2s ease-out;
-}
-
-.calon2:hover .rec2{
-    margin-left: -115%;
-    transition: all 0.2s ease-out; 
-}
-
-.calon2:hover .foto_calon2{
-    max-height: 115%;
-    transition: all 0.2s ease-out; 
-}
-
-.calon2:hover ~ .desc{
-    visibility: visible;
-    transition: all 0.2s ease-out;
-}
-
-.calon2:hover ~ .desc .calon1_desc{
-    display: none;
-    transition: all 0.2s ease-out;
-}
-
-.calon2:hover ~ .desc .calon2_desc{
-    display: inline;
-    transition: all 0.2s ease-out;
-}
-
 .desc{
-    visibility: hidden;
+    order: 2;
     z-index: 1;
+    visibility: hidden;
     width: 30%;
+    padding: 30vmin 2vmin 0 2vmin;
 }
 
 .desc .calon2_desc{
     display: none;
-}
-
-.desc h2{
-    padding-top: 25vmin;
-}
-
-.desc p{
-    padding: 2vmin;
 }
 
 // about // -------------------------------------------------------
@@ -274,12 +292,17 @@ Button{
 }
 
 .tatacara{
-    padding-top: 10vmin;
+    padding: 10vmin 0;
 }
 
 .video{
+    border-style: solid;
+    border-width: thick;
+    border-color: var(--color-pink);
+    border-radius: 1vmin;
     margin: auto;
-    width: 100%;
+    width: 112vmin !important;
+    height: 63vmin !important;
 }
 
 // kritik dan saran // -------------------------------------------------------
@@ -293,17 +316,18 @@ Button{
     width: 50%;
 }
 
-.kritik div{
+.kritik .box{
     display: flex;
 }
 
-.kritik h3{
+.kritik .box h4{
     border-style: solid;
     border-color: var(--color-pink);
     border-radius: 2vmin 2vmin 0 0;
     background-color: var(--color-pink);
 
     color: var(--color-black);
+    font-weight: bolder;
     padding: 1vmin;
     text-align: left;
 }
@@ -313,10 +337,11 @@ Button{
     border-color: var(--color-pink);
     border-width: thick;
     border-radius: 0 2vmin 2vmin 2vmin;
-    height: 25vmin;
     margin-bottom: 3vmin;
     padding: 1vmin;
+    width: 100%;
 
+    color: var(--color-black);
     font-size: calc(0.5rem + 2vmin);
     font-family: "MontBook";
 }
