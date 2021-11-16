@@ -1,41 +1,25 @@
 import React, {useState} from "react";
 import styled from "styled-components";
-import GlobalStyle from "../globalStyle.js";
-import Button from "../components/Button";
 import {
     Dice,
-    Rectangle_1,
-    Rectangle_2,
     Calon_1, 
     Calon_2,
     ChooseCandidate,
 }from "../assets/images"
 
-/*var modal1 = document.getElementById("Candidate1");
-var modal2 = document.getElementById("Candidate2");
-
-var btn1 = document.getElementById("button1");
-var btn2 = document.getElementById("button2");
-
-var span = document.getElementsByClassName("close")[0];
-
-btn1.onclick = () => {
-  modal.style.display = "block";
-}
-
-span.onclick = function() {
-  modal.style.display = "none";
-}*/
-
-
 export function InfoCalon(){
 
+  const [isClicked, setIsClicked] = React.useState(false);
+  const [isClicked2, setIsClicked2] = React.useState(false);
+
+  const clickHandler = () => setIsClicked(clicked => !clicked);
+  const clickHandler2 = () => setIsClicked2(clicked => !clicked);
 
   return(
     
-    <Container> 
+    <Container isClicked={isClicked} isClicked2={isClicked2}> 
      <div class="background-fixed">
-        <img src={Dice} alt="Dice" style={{width: "50vw"}}/>
+        <img src={Dice} alt="Dice" style={{width: "40vw"}}/>
     </div>
 
     <div class="title-container">
@@ -44,19 +28,19 @@ export function InfoCalon(){
         </div>
     </div>
     
-    <div class="content-container">
-        <button id="button1" class="button" ></button>
-        <button id="button2" class="button" ></button>
+    <div class="content-container" >
+        <button id="button1" class="button" onClick={clickHandler}></button>
+        <button id="button2" class="button" onClick={clickHandler2}></button>
         <div class="image-background">
             <img src={ChooseCandidate} alt="Choose A Candidate" style={{maxWidth: "100%", height: "auto"}}/>
         </div>
         
     </div>
 
-    <div id="Candidate1" className="modalpopup">
+    <div id="Candidate1" class="modal-popup">
         <div class="modal-content">
             <div class="modal-header">
-                <span class="close">&times;</span>
+                <span class="close" onClick={clickHandler}>&times;</span>
                 <h2>Candidate Name 1</h2>
             </div>
 
@@ -72,7 +56,7 @@ export function InfoCalon(){
               <h3>Profil</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia laborum necessitatibus veniam? Porro pariatur quibusdam eius modi, explicabo rem. Repudiandae, exercitationem! Et quisquam dolores facilis veritatis ut praesentium qui eum, fugiat voluptatum doloremque necessitatibus quaerat labore sunt eveniet repellendus vel! Cumque magni nemo autem voluptates sequi ut, aspernatur ducimus explicabo in nisi laboriosam placeat consequatur. Unde, officia non minus quasi provident natus voluptates aut ratione? Ab quasi velit, incidunt voluptas perferendis minus cumque ullam nemo quam veritatis, qui, aspernatur magnam. A iure non ipsum. Blanditiis dicta delectus quam? Alias in aspernatur quidem commodi, soluta necessitatibus maiores iusto eligendi expedita similique?</p>
               <h3>CV</h3>
-                <img src = "dice.png" alt="CV" style={{maxWidth: "100%", height: "auto", width: "500px"}}/>
+                <img src = "dice.png" alt="CV di sini" style={{maxWidth: "100%", height: "auto", width: "500px"}}/>
             </div>
 
             <div class="modal-video">
@@ -85,10 +69,10 @@ export function InfoCalon(){
         </div>
     </div>
 
-    <div id="Candidate2" class="modalpopup">
+    <div id="Candidate2" class="modal-popup">
         <div class="modal-content">
             <div class="modal-header">
-                <span class="close">&times;</span>
+                <span class="close" onClick={clickHandler2}>&times;</span>
                 <h2>Candidate Name 2</h2>
             </div>
 
@@ -104,7 +88,7 @@ export function InfoCalon(){
               <h3>Profil</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia laborum necessitatibus veniam? Porro pariatur quibusdam eius modi, explicabo rem. Repudiandae, exercitationem! Et quisquam dolores facilis veritatis ut praesentium qui eum, fugiat voluptatum doloremque necessitatibus quaerat labore sunt eveniet repellendus vel! Cumque magni nemo autem voluptates sequi ut, aspernatur ducimus explicabo in nisi laboriosam placeat consequatur. Unde, officia non minus quasi provident natus voluptates aut ratione? Ab quasi velit, incidunt voluptas perferendis minus cumque ullam nemo quam veritatis, qui, aspernatur magnam. A iure non ipsum. Blanditiis dicta delectus quam? Alias in aspernatur quidem commodi, soluta necessitatibus maiores iusto eligendi expedita similique?</p>
               <h3>CV</h3>
-                <img src = "dice.png" alt="CV" style={{maxWidth: "100%", height: "auto", width: "500px"}}/>
+                <img src = "dice.png" alt="CV di sini" style={{maxWidth: "100%", height: "auto", width: "500px"}}/>
             </div>
 
             <div class="modal-video">
@@ -116,26 +100,18 @@ export function InfoCalon(){
             </div>
         </div>
     </div>
-
     </Container>
-    
     )
-
 }
 
 const Container = styled.div`
 background-color: var(--color-darkblue);
 font-family: GameofSquids;
-position: relative;
 
 * {
     margin: 0;
     padding: 0;
     color: white;
-}
-
-h1 {
-  color: #FFFFFF; 
 }
 
 //Container Judul
@@ -148,9 +124,8 @@ h1 {
 
 //Teks Calon Ketua
 .page-title{
-  font-size: 1vw;
+  font-size: 1vh;
   max-width: 100%;
-  height: 50%;
   text-align: center;
   margin: auto;
 }
@@ -161,21 +136,16 @@ h1 {
   position: relative;
 }
 
-//Foto Kandidat
+//Tombol Kandidat
 .button {
   border: none;
   background-size: cover;
   min-width: 30%;
   height: auto;
   display: inline-flexbox;
-  color: var(--color-yellow);
   border-radius: 12px;
   padding: 20% 0%;
-  text-align: center;
   text-decoration: none;
-  font-size: 4vw;
-  font-family: MontBook;
-  font-weight: bolder;
   margin: 10px 10% 10px 10%;
   transition-duration: 0.2s;
   cursor: pointer;
@@ -183,7 +153,6 @@ h1 {
 
 
 .button:hover{
-  color: white;
   transform: scale(1.02);
   box-shadow: 0 12px 100px 0 rgba(251, 36, 129, 0.9), 0 5px 70px 0 rgba(181, 34, 63, 0.9);
 }
@@ -193,14 +162,14 @@ h1 {
   transition-duration: 0.05s;
 }
 
-//Kandidat 1
+//Khusus Tombol Kandidat 1
 #button1 {
-  background-image: url(calon_1.png);
+  background-image: url(${Calon_1});
 }
 
-//Kandidat2
+//Khusus Tombol Kandidat 2
 #button2 {
-  background-image: url(calon_2.png);
+  background-image: url(${Calon_2});
 }
 
 //Uno
@@ -220,18 +189,26 @@ h1 {
   transition-duration: 0.4s;
 }
 
-/*Dice*/
+//Dice
 .background-fixed{
-  position: absolute;
-  width: 100px;
-  height: auto;
-  right: 30%;
+  position: fixed;
+  right: -15%;
   top: -10%;
   z-index: 0;
 }
 
+//Modal Untuk Kandidat 1
+#Candidate1 {
+  display: ${({ isClicked }) => isClicked ? "block" : "none"};
+}
+
+//Modal untuk Kandidat 2
+#Candidate2 {
+  display: ${({ isClicked2 }) => isClicked2 ? "block" : "none"};
+}
+
+//Modal keseluruhan (overlay)
 .modal-popup {
-  display: none;
   position: fixed;
   z-index: 10;
   left: 0;
@@ -244,33 +221,36 @@ h1 {
   font-family: MontBook;
 }
 
+//Bagian box Modal
 .modal-content {
   background-color: #102037;
   border-radius: 2%;
   font-size: 1vw;
   margin: 7% auto;
   position: relative;
-  padding: 1% 3% 3% 3%;
+  padding: 1% 4% 3% 4%;
   border: 5px solid rgba(251, 36, 129, 0.9);
-  width: 80%;
+  width: 90%;
   animation-name: animatetop;
   animation-duration: 1s;
 }
 
+//Nama Kandidat
 .modal-header{
   font-family: GameofSquids;
   text-align: center;
   margin: 2% 0px 0px 0px;
-  padding: 1%;
+  padding: 1% 10%;
   background-color: rgba(251, 36, 129, 0.9);
-  border-radius: 12px;
+  border-radius: 12px 12px 0px 0px;
 }
 
+//Departemen
 .modal-subheader{
   text-align: center;
   background-color: var(--color-yellow);
-  border-radius: 12px;
-  padding: 1%;
+  border-radius: 0px 0px 12px 12px;
+  padding: 1% 10%;
   margin: auto;
 }
 
@@ -290,16 +270,19 @@ h1 {
 
 .modal-body p{
   line-height: 150%;
+  font-size: 1.5vw;
 }
 
 .modal-body h3{
-  margin: 1% auto;
+  margin: 2% 0% auto;
+  font-size: 3vw;
+  font-family: GameOfSquids;
 }
 
 .modal-video{
   position: relative;
   margin: auto;
-  width: 97%;
+  width: 100%;
   padding-bottom: 56.25%; 
   height: 0;
 }
@@ -314,17 +297,10 @@ h1 {
 
 .modal-footer{
   margin: 3% 0% 0% 0%;
+  text-align: center;
 }
 
-#Candidate1 {
-  display: none;
-}
-
-#Candidate2 {
-  display: none;
-  z-index: 11;
-}
-
+//Tombol close modal
 .close {
   color: #FFFFFF;
   position: absolute;
@@ -343,6 +319,7 @@ h1 {
   cursor: pointer;
 }
 
+//Animasi
 @keyframes animatetop {
   from {top: -1000px; opacity: 0}
   to {top: 0; opacity: 1}
