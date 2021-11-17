@@ -9,6 +9,8 @@ import {
     Rectangle_2,
     Calon_1, 
     Calon_2,
+    Catur,
+    Path,
 }from "../assets/images/imgIndex.js"
 
 export default function Beranda(){
@@ -49,8 +51,10 @@ export default function Beranda(){
                     <h1 className="tittle font-squids">kpu ft<br/>2021 </h1>
                     <h4>Pemilihan Umum </h4>
                     <h2 className>Ketua BEM KM FT UGM 2022 </h2>
-                    <img src={Dice} alt="dice"></img>
+                    <img className="dice" src={Dice} alt="dice"></img>
                     <Timerdown/>
+                    <img className="catur" src={Catur} alt="dice"></img>
+                    <img className="path" src={Path} alt="dice"></img>
                 </div>
             </div>
 
@@ -97,6 +101,8 @@ export default function Beranda(){
                     <h2 className="font-squids">Tata Cara Pemilihan </h2>
                     <ReactPlayer className="video" controls={true} url='https://www.youtube.com/watch?v=rhFSQdILOXk&ab_channel=FakultasTeknikUGM' />
                 </div>
+
+                <img className="path" src={Path} alt="dice"></img>
             </div>
 
             {/* Akhir About & Tata Cara */}
@@ -139,6 +145,7 @@ overflow: hidden;
 .hero-container{
     display: grid;
 
+    z-index: 0;
     width: 100%;
     position: relative;
     background-color: var(--color-darkblue);
@@ -161,14 +168,14 @@ overflow: hidden;
     font-weight: bolder;
 }
 
-.hero-container img{
+.hero-container .dice{
     width: 15vmin;
     padding: 4vmin;
 }
 
 Button{
     margin: auto;
-    padding: 2vmin;
+    padding: 1vmin 2vmin;
     font-weight: bold;
     background-color: var(--color-pink);
 }
@@ -188,6 +195,14 @@ Button{
 
 .cd .last {
     border-style: none solid; 
+}
+
+.catur{
+    display: none;
+}
+
+.path{
+    display: none;
 }
 
 // Calon // -------------------------------------------------------
@@ -257,6 +272,7 @@ Button{
 
 .about-container{
     display: grid;
+    z-index: 0;
     padding: 10vmin 0;
     position: relative;
     background-color: var(--color-darkblue);
@@ -330,8 +346,28 @@ Button{
 @media (min-width: 961px) {
     
     // hero // -------------------------------------------------------
+    .catur{
+        display: inline;
+        position: absolute;
+        z-index: -1;
+        width: 40vmin;
+        right: 0;
+        bottom: 0;
+    }
 
-    .hero-container img{
+    .path{
+        display: inline;
+        position: absolute;
+        z-index: -1;
+        width: 60vmin;
+    }
+
+    .hero-container .path{
+        left: 0;
+        top: 0;
+    }
+
+    .hero-container .dice{
         animation: spinner 5s infinite;
         animation-timing-function: linear;
     }
@@ -440,6 +476,13 @@ Button{
     .video{
         width: 112vmin !important;
         height: 63vmin !important;
+    }
+
+    .about-container .path{
+        right: 0;
+        bottom: 0;
+
+        transform: rotate(180deg);
     }
 
     // kritik dan saran // -------------------------------------------------------

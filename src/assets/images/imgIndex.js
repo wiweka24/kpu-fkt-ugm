@@ -3,6 +3,8 @@ import Rectangle_1 from './rectangle1.webp';
 import Rectangle_2 from './rectangle2.webp';
 import Calon_1 from './calon_1.webp';
 import Calon_2 from './calon_2.webp';
+import Catur from './catur.webp';
+import Path from './path.webp'
 
 export{
   Dice,
@@ -10,4 +12,6 @@ export{
   Rectangle_2,
   Calon_1,
   Calon_2,
+  Catur,
+  Path,
 }
