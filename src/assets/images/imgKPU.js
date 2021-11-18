@@ -1,8 +1,6 @@
-import Dice from './dice.png';
-import Rectangle_1 from './rectangle1.png';
-import Rectangle_2 from './rectangle2.png';
-import Calon_1 from './calon_1.png';
-import Calon_2 from './calon_2.png';
+import Dice from './Dadu.png';
+import Rectangle_1 from './rectangle1.webp';
+import Rectangle_2 from './rectangle2.webp';
 import ACARA from '../ImgPanitia/ACARA.png'
 import HUMAS from '../ImgPanitia/HUMAS.png'
 import IT from '../ImgPanitia/IT.png'
@@ -23,8 +21,6 @@ export{
   Dice,
   Rectangle_1,
   Rectangle_2,
-  Calon_1,
-  Calon_2,
   ACARA,
   HUMAS,
   IT,

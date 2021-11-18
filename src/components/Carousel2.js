@@ -7,7 +7,7 @@ import {
     ACARA2,
     HUMAS2,
     KSK2
-}from "../assets/images"
+}from "../assets/images/imgKPU"
 import styled from "styled-components";
 
 
