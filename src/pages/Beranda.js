@@ -2,13 +2,16 @@ import React, {useState} from "react";
 import styled from "styled-components";
 import ReactPlayer from 'react-player/youtube'
 import Button from "../components/Button";
+import Timerdown from "./Countdown";
 import {
     Dice,
     Rectangle_1,
     Rectangle_2,
     Calon_1, 
     Calon_2,
-}from "../assets/images"
+    Catur,
+    Path,
+}from "../assets/images/imgIndex.js"
 
 export default function Beranda(){
     // Kode Javascript //
@@ -43,17 +46,16 @@ export default function Beranda(){
             
 
             {/* Awal Bagian Hero*/}
-            <div className="hero-container">
-                <div className="text-center">
+            <div className="hero-container text-center">
+                <div>
                     <h1 className="tittle font-squids">kpu ft<br/>2021 </h1>
                     <h4>Pemilihan Umum </h4>
                     <h2 className>Ketua BEM KM FT UGM 2022 </h2>
-                    <img src={Dice} alt="dice"></img>
-                    <Button>Vote Sekarang</Button>
+                    <img className="dice" src={Dice} alt="dice"></img>
+                    <Timerdown/>
+                    <img className="catur" src={Catur} alt="dice"></img>
+                    <img className="path" src={Path} alt="dice"></img>
                 </div>
-                {/* <div className="hero-btn">
-                    <Button/>
-                <div/> */}
             </div>
 
             {/* Akhir Bagian Hero */}
@@ -70,15 +72,19 @@ export default function Beranda(){
                     <img className="foto_calon2" src={Calon_2} alt="dice"></img>
                 </div>
 
-                <div className="desc text-center">
-                    <span className="calon1_desc">
+                <div className="desc1 text-center">
+                    <span className="logo_desc">
+                        <img src={Dice} alt="dice"></img>
+                    </span>
+                    <span className="calon_desc text-center">
                         <h2 className="font-squids">Calon 1 </h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum purus eget feugiat gravida. Sed vel justo sit amet dui aliquam ornare. Duis blandit, metus aliquet dapibus eleifend, enim elit suscipit magna, id pulvinar odio nibh sed velit. Maecenas id cursus dui. </p> 
                     </span>
-                    <span className="calon2_desc">
-                        <h2 className="font-squids">Calon 2 </h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum purus eget feugiat gravida. Sed vel justo sit amet dui aliquam ornare. Duis blandit, metus aliquet dapibus eleifend, enim elit suscipit magna, id pulvinar odio nibh sed velit. Maecenas id cursus dui. </p> 
-                    </span>
+                </div>
+
+                <div className="desc2 text-center">
+                    <h2 className="font-squids">Calon 2 </h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum purus eget feugiat gravida. Sed vel justo sit amet dui aliquam ornare. Duis blandit, metus aliquet dapibus eleifend, enim elit suscipit magna, id pulvinar odio nibh sed velit. Maecenas id cursus dui. </p> 
                 </div>
             </div>
 
@@ -95,6 +101,8 @@ export default function Beranda(){
                     <h2 className="font-squids">Tata Cara Pemilihan </h2>
                     <ReactPlayer className="video" controls={true} url='https://www.youtube.com/watch?v=rhFSQdILOXk&ab_channel=FakultasTeknikUGM' />
                 </div>
+
+                <img className="path" src={Path} alt="dice"></img>
             </div>
 
             {/* Akhir About & Tata Cara */}
@@ -102,7 +110,7 @@ export default function Beranda(){
             {/* Awal Kritik & Saran */}
             <div className="kritik">
                 <form onSubmit={handleSubmit}>
-                    <div className="box"><h4>Kritik Saran</h4></div>
+                    <div className="box"><h4>Kritik & Saran</h4></div>
                     <textarea
                         id="message"
                         name="message" 
@@ -111,7 +119,7 @@ export default function Beranda(){
                         value={message} 
                         onChange={handleChange}>
                     </textarea>
-                    <Button>Sumbit</Button>
+                    <Button>Kirim</Button>
                 </form>
             </div>
 
@@ -124,6 +132,7 @@ export default function Beranda(){
 const Container = styled.div`
 // umum // -------------------------------------------------------
 background-color: var(--color-blue);
+overflow: hidden;
 
 * {
     margin: 0;
@@ -131,17 +140,20 @@ background-color: var(--color-blue);
     color: white;
 }
 
-// judul // -------------------------------------------------------
+// hero // -------------------------------------------------------
 
 .hero-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
 
+    z-index: 0;
+    width: 100%;
     position: relative;
     background-color: var(--color-darkblue);
+    padding: 10vmin 0;
+}
+
+.hero-container .text-center{
     width: 100%;
-    padding: 10vmin;
 }
 
 .hero-container .tittle{
@@ -156,83 +168,61 @@ background-color: var(--color-blue);
     font-weight: bolder;
 }
 
-.hero-container img{
-    width: 10%;
+.hero-container .dice{
+    width: 15vmin;
     padding: 4vmin;
 }
 
 Button{
     margin: auto;
-    padding: 2vmin;
+    padding: 1vmin 2vmin;
     font-weight: bold;
     background-color: var(--color-pink);
 }
 
+.cd {
+    display: flex;
+    padding: 0 25%;
+}
+
+.cd p {
+    border-style: none none none solid; 
+    border-color: var(--color-pink);
+    width: 25%;
+    padding: 2vmin;
+    font-weight: bold;
+}
+
+.cd .last {
+    border-style: none solid; 
+}
+
+.catur{
+    display: none;
+}
+
+.path{
+    display: none;
+}
+
 // Calon // -------------------------------------------------------
 .calon-container{
-    display: flex;
-    overflow: hidden;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
     padding: 5vmin 0 15vmin 0;
 }
 
 .calon1{
     order: 1;
-
-    &:hover .rec1{
-        margin-right: -115%;
-        transition: all 0.2s ease-out; 
-    }
-
-    &:hover .foto_calon1{
-        max-height: 115%;
-        transition: all 0.2s ease-out; 
-    }
-
-    &:hover ~ .desc{
-        visibility: visible;
-        transition: all 0.2s ease-out;
-    }
-    
-    &:hover ~ .desc .calon2_desc{
-        display: none;
-        transition: all 0.2s ease-out;
-    }
 }
 
 .calon2{
-    order: 3;
-
-    &:hover .rec2{
-        margin-left: -115%;
-        transition: all 0.2s ease-out; 
-    }
-    
-    &:hover .foto_calon2{
-        max-height: 115%;
-        transition: all 0.2s ease-out; 
-    }
-    
-    &:hover ~ .desc{
-        visibility: visible;
-        transition: all 0.2s ease-out;
-    }
-    
-    &:hover ~ .desc .calon1_desc{
-        display: none;
-        transition: all 0.2s ease-out;
-    }
-    
-    &:hover ~ .desc .calon2_desc{
-        display: inline;
-        transition: all 0.2s ease-out;
-    }
+    order: 4;
 }
 
 .calon{
     position: relative;
-    width: 35%;
-    height: 75vmin;
+    height: 72.5vmin;
 }
 
 .calon img{
@@ -243,12 +233,12 @@ Button{
 
 .foto_calon1{
     z-index: 1;
-    max-height: 110%;
+    height: 110%;
 }
 
 .foto_calon2{
     z-index: 1;
-    max-height: 110%;
+    height: 110%;
     right: 0;
 }
 
@@ -262,15 +252,19 @@ Button{
     left: 0;
 }
 
-.desc{
+.desc1{
     order: 2;
-    z-index: 1;
-    visibility: hidden;
-    width: 30%;
-    padding: 30vmin 2vmin 0 2vmin;
+    padding-top: 8vmin;
+    margin: auto 2vmin;
 }
 
-.desc .calon2_desc{
+.desc2{
+    order: 3;
+    padding-top: 8vmin;
+    margin: auto 2vmin;
+}
+
+.desc1 .logo_desc img{
     display: none;
 }
 
@@ -278,20 +272,23 @@ Button{
 
 .about-container{
     display: grid;
-    justify-content: center;
-    align-items: center;
-
-    padding: 10vmin 50vmin;
+    z-index: 0;
+    padding: 10vmin 0;
     position: relative;
     background-color: var(--color-darkblue);
     width: 100%;
 }
 
+.about{
+    margin: 0 5%;
+}
+
 .about-container h2{
-    padding: 5vmin;
+    padding: 5vmin 0;
 }
 
 .tatacara{
+    margin: 0 5%;
     padding: 10vmin 0;
 }
 
@@ -301,8 +298,8 @@ Button{
     border-color: var(--color-pink);
     border-radius: 1vmin;
     margin: auto;
-    width: 112vmin !important;
-    height: 63vmin !important;
+    width: 80vmin !important;
+    height: 45vmin !important;
 }
 
 // kritik dan saran // -------------------------------------------------------
@@ -313,7 +310,7 @@ Button{
     padding: 10vmin 0;
     position: relative;
     margin: auto;
-    width: 50%;
+    width: 75%;
 }
 
 .kritik .box{
@@ -345,4 +342,152 @@ Button{
     font-size: calc(0.5rem + 2vmin);
     font-family: "MontBook";
 }
+
+@media (min-width: 961px) {
+    
+    // hero // -------------------------------------------------------
+    .catur{
+        display: inline;
+        position: absolute;
+        z-index: -1;
+        width: 40vmin;
+        right: 0;
+        bottom: 0;
+    }
+
+    .path{
+        display: inline;
+        position: absolute;
+        z-index: -1;
+        width: 60vmin;
+    }
+
+    .hero-container .path{
+        left: 0;
+        top: 0;
+    }
+
+    .hero-container .dice{
+        animation: spinner 5s infinite;
+        animation-timing-function: linear;
+    }
+    
+    @keyframes spinner {
+        90% {
+            transform: rotateY(0deg);
+        }
+        100% {
+            transform: rotateY(360deg);
+        }
+    }
+
+    .cd p {
+        font-size: calc(0.5rem + 1.5vmin);
+    }
+
+    // Calon // -------------------------------------------------------
+    .calon-container{
+        grid-template-columns: 35% 30% 35%;
+    }
+    
+    .calon1{
+        &:hover .rec1{
+            margin-right: -115%;
+            transition: all 0.2s ease-out; 
+        }
+    
+        &:hover .foto_calon1{
+            height: 115%;
+            transition: all 0.2s ease-out; 
+        }
+    
+        &:hover ~ .desc1 .logo_desc{
+            display: none;
+            transition: all 0.5s ease-out;
+        }
+        
+        &:hover ~ .desc1 .calon_desc{
+            display: inline;
+            transition: all 0.5s ease-out;
+        }
+    }
+    
+    .calon2{
+        order: 3;
+    
+        &:hover .rec2{
+            margin-left: -115%;
+            transition: all 0.2s ease-out; 
+        }
+        
+        &:hover .foto_calon2{
+            height: 115%;
+            transition: all 0.2s ease-out; 
+        }
+        
+        &:hover ~ .desc1{
+            display: none;
+            transition: all 0.5s ease-out;
+        }
+        
+        &:hover ~ .desc2{
+            display: inline;
+            transition: all 0.5s ease-out;
+        }
+    }
+
+    .desc1{
+        z-index: 1;
+        margin: auto;
+    }
+
+    .desc2{
+        display: none;
+        order: 2;
+        z-index: 1;
+        margin: auto;
+    }
+
+    .desc1 .logo_desc img{
+        display: inline;
+        padding-top: 5vmin;
+        width: 13vmin ;
+    
+        &:hover{
+            transform: rotateY(360deg);
+            transition: all 0.5s ease-out;
+        }
+    }
+
+    .desc1 .calon_desc{
+        display: none;
+    }
+    
+    // about // -------------------------------------------------------
+
+    .about{
+        margin: 0 20%;
+    }
+    
+    .tatacara{
+        margin: 0 20%;
+    }
+
+    .video{
+        width: 112vmin !important;
+        height: 63vmin !important;
+    }
+
+    .about-container .path{
+        right: 0;
+        bottom: 0;
+
+        transform: rotate(180deg);
+    }
+
+    // kritik dan saran // -------------------------------------------------------
+
+    .kritik{
+        width: 50%;
+    }
 `
