@@ -1,25 +1,24 @@
 import React from "react";
 import styled from "styled-components";
-import HeaderPNG from '../assets/TentangKPU/Header.png'
 import UlarPNG from '../assets/TentangKPU/ular.png'
 import LogoPNG from '../assets/TentangKPU/logo.png'
 import DaduPNG from '../assets/TentangKPU/Dadu.png'
-import FooterPNG from '../assets/TentangKPU/Footer.png'
 import SquadPNG from '../assets/TentangKPU/squad.png'
+import CarouselPanitia from "../components/Carousel";
+import 'antd/dist/antd.css';
+import CarouselPanitia2 from "../components/Carousel2";
 
 
-export default function Beranda(){
+
+
+export default function TentangKPU(){
     // Kode Javascript //
+
 
     return(
         // Kode HTML //
         <Container>
             <body>
-                {/*Header Sementara*/}
-                {/* <div class="Header">
-                    <img src={HeaderPNG} class="header"/>
-                </div> */}
-                {/*Hero atau Judul Halaman*/}
                 <div class="Hero">
                     <img src={UlarPNG} class="ular"/>
                     <div class="title">
@@ -51,12 +50,10 @@ export default function Beranda(){
                 </div>
                 {/*Slide Panitia*/}
                 <div class="Panitia">
-            
+                    <CarouselPanitia />
+                    <CarouselPanitia2 class="Plisss"/>
                 </div>
 
-                {/* <div class="Footer">
-                <img class="footer"src={FooterPNG}/>
-                </div> */}
             </body>
         </Container>
     );
@@ -64,34 +61,18 @@ export default function Beranda(){
 
 const Container = styled.div`
     // Kode CSS //
-@font-face {
-    font-family: 'GameOfSquids';
-    src: url('../assets/TentangKPU/GameOfSquids.otf');
-}
-@font-face {
-    font-family: 'Mont-Light';
-    src: url('../assets/TentangKPU/Mont/Mont-Light.otf');
-}
-@font-face {
-    font-family: 'Mont-Bold';
-    src: url('../assets/TentangKPU/Mont/Mont-Bold.otf');
-}
+
 body {
     margin: 0;
 }
 
-.Header {
-    height: 61px;
-    width: 100%;
-}
-.Header .header{
-    height: 61px;
-}
+
 *{
     background-color: #102037;
+    box-sizing:border-box;
 }
 .Hero{
-    height: 659px;
+    height: auto;
 }
 
 .Hero .ular {
@@ -102,7 +83,7 @@ body {
 
 .Hero .title{
     justify-content: center;
-    padding-top: 150px;
+    padding-top: 210px;
     padding-bottom: 20px;
 }
 .Hero h1{
@@ -146,19 +127,28 @@ body {
 }
 
 .container .deskripsi {
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: auto;
+    margin-right: auto;
     color: #F9F7F8;
-    height: 326px;
+    height: auto;
+    margin-top: 80px;
 }
 
 .deskripsi .desk1 {
     font-size: 28px;
-    font-family: 'Mont-Bold';
+    font-family: "MontBook"
 }
 .deskripsi .desk2 {
     font-size: 24px;
-    font-family: 'Mont-Light';
+    font-family: "MontBook"
+}
+.deskripsi .pemilu{
+    margin-left:150px;
+    margin-right:150px;
+}
+.deskripsi .kpu{
+    margin-left:150px;
+    margin-right:150px;
 }
 .pemilu .desk2 {
     margin-top: 0;
@@ -212,11 +202,114 @@ body {
     background-color: #38445E;
 }
 .Panitia{
-    height: 600px; 
     background-color: #38445E;
 }
-.Footer .footer{
-    height: 218px; 
-    margin-top: 70px;
+.Panitia .Plisss{
+    display:none;
+}
+
+@media (max-width:1000px){
+    .deskripsi{
+        margin-bottom:100px;
+    }
+    .deskripsi .desk2{
+        font-size:16px;
+        text-align:justify;
+    }
+    .deskripsi .desk1{
+        font-size:18px;
+    }
+    .deskripsi .pemilu{
+        margin-left:50px;
+        margin-right:50px;
+    }
+    .deskripsi .kpu{
+        margin-right:50px;
+        margin-left:50px;
+    }
+    .container .Dadu{
+        margin: 225px 0 auto 0;
+        height: 80px;
+    }
+    .Panitia .panitia{
+        width:100%;
+        height:400px
+    }
+}
+
+@media (max-width:670px){
+    .Hero h1{
+        font-size: 24px;   
+    }
+    .Hero .p1{
+        font-size: 24px;
+    }
+    
+    .Hero .p2{
+        font-size: 16px;
+        margin-top: 40;
+    }
+    
+    .Hero .logo {
+        width: 100px;
+        height: 100px;
+    }
+    .Hero .ular {
+        width: 246px; 
+        height: 143px;
+    }
+    .deskripsi .desk2{
+        font-size:12px;
+        text-align:justify;
+    }
+    .deskripsi .desk1{
+        font-size:16px;
+    }
+    .container .deskripsi {
+        margin-top: 150px;
+    }
+    .TextPanitia{
+        font-size: 16px;
+    }
+    .squad{
+        height: 20px;
+        margin-top:5px;
+    }
+    .JudulPanitia{
+        height: 68px;
+    }
+
+@media (max-width:380px){
+    .Hero .title{
+        justify-content: center;
+        padding-top: 170px;
+    }
+    .Hero h1{
+        font-size: 20px;   
+    }
+    .Hero .p1{
+        font-size: 20px;
+    }
+    
+    .Hero .p2{
+        font-size: 14px;
+    }
+}
+@media (max-width:325px){
+    .Hero .title{
+        justify-content: center;
+        padding-top: 140px;
+    }
+    .Hero h1{
+        font-size: 18px;   
+    }
+    .Hero .p1{
+        font-size: 18px;
+    }
+    
+    .Hero .p2{
+        font-size: 12px;
+    }
+
 }
 `
