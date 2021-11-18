@@ -5,6 +5,7 @@ import Calon_1 from './calon1.webp';
 import Calon_2 from './calon2.webp';
 import Catur from './catur.webp';
 import Path from './path.webp'
+import ChooseCandidate from './choosecandidate.webp'
 
 export{
   Dice,
@@ -14,4 +15,5 @@ export{
   Calon_2,
   Catur,
   Path,
+  ChooseCandidate,
 }
