@@ -56,7 +56,7 @@ export default function Beranda(){
                     <div>
                         <h1 className="tittle font-squids">kpu ft<br/>2021 </h1>
                         <h4>Pemilihan Umum </h4>
-                        <h2 className>Ketua BEM KM FT UGM 2022 </h2>
+                        <h2 className>Ketua BEM KMFT UGM 2022 </h2>
                         <img className="dice" src={Dice} alt="dice"></img>
                         <Timerdown/>
                         <img className="catur" src={Catur} alt="dice"></img>
@@ -111,8 +111,8 @@ export default function Beranda(){
                     <img className="path" src={Path} alt="dice"></img>
                 </div>
 
-                <Button>
-                    <a href={process.env.PUBLIC_URL + "vote.html"} >Vote Dummy</a>
+                <Button link={process.env.PUBLIC_URL + "vote.html"}>
+                    Vote Dummy
                 </Button>
 
                 {/* Akhir About & Tata Cara */}

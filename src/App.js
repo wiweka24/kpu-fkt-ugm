@@ -10,6 +10,7 @@ import NotFound from './pages/NotFound';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import TerimaKasih from './pages/TerimaKasih';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/" component={Beranda} />
           <Route path="/infocalon" component={InfoCalon} />
           <Route path="/tentang" component={TentangKPU} />
+          <Route path="/terimakasih" component={TerimaKasih} />
           <Route exact path="/vote" render={() => {window.location.href="vote.html"}} />
           <Route component={NotFound} />
         </Switch>
