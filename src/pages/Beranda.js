@@ -13,6 +13,7 @@ import {
     Path,
 }from "../assets/images/imgIndex.js"
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 export default function Beranda(){
     // Kode Javascript //
@@ -43,93 +44,98 @@ export default function Beranda(){
 
     return(
         // Kode HTML //
-        <Container>
+        <>
+            <Helmet>
+                <title>KPU FT UGM 2021</title>
+            </Helmet>
+            <Container>
             
 
-            {/* Awal Bagian Hero*/}
-            <div className="hero-container text-center">
-                <div>
-                    <h1 className="tittle font-squids">kpu ft<br/>2021 </h1>
-                    <h4>Pemilihan Umum </h4>
-                    <h2 className>Ketua BEM KM FT UGM 2022 </h2>
-                    <img className="dice" src={Dice} alt="dice"></img>
-                    <Timerdown/>
-                    <img className="catur" src={Catur} alt="dice"></img>
+                {/* Awal Bagian Hero*/}
+                <div className="hero-container text-center">
+                    <div>
+                        <h1 className="tittle font-squids">kpu ft<br/>2021 </h1>
+                        <h4>Pemilihan Umum </h4>
+                        <h2 className>Ketua BEM KM FT UGM 2022 </h2>
+                        <img className="dice" src={Dice} alt="dice"></img>
+                        <Timerdown/>
+                        <img className="catur" src={Catur} alt="dice"></img>
+                        <img className="path" src={Path} alt="dice"></img>
+                    </div>
+                </div>
+
+                {/* Akhir Bagian Hero */}
+
+                {/* Awal Calon calon */}
+                <div className="calon-container">
+                    <div className="calon calon1">
+                        <img className="rec1" src={Rectangle_1} alt="dice"></img>
+                        <img className="foto_calon1" src={Calon_1} alt="dice"></img>
+                    </div>
+                    
+                    <div className="calon calon2">
+                        <img className="rec2" src={Rectangle_2} alt="dice"></img>
+                        <img className="foto_calon2" src={Calon_2} alt="dice"></img>
+                    </div>
+
+                    <div className="desc1 text-center">
+                        <span className="logo_desc">
+                            <img src={Dice} alt="dice"></img>
+                        </span>
+                        <span className="calon_desc text-center">
+                            <h2 className="font-squids">Calon 1 </h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum purus eget feugiat gravida. Sed vel justo sit amet dui aliquam ornare. Duis blandit, metus aliquet dapibus eleifend, enim elit suscipit magna, id pulvinar odio nibh sed velit. Maecenas id cursus dui. </p> 
+                        </span>
+                    </div>
+
+                    <div className="desc2 text-center">
+                        <h2 className="font-squids">Calon 2 </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum purus eget feugiat gravida. Sed vel justo sit amet dui aliquam ornare. Duis blandit, metus aliquet dapibus eleifend, enim elit suscipit magna, id pulvinar odio nibh sed velit. Maecenas id cursus dui. </p> 
+                    </div>
+                </div>
+
+                {/* Akhir Calon calon */}
+
+                {/* Awal About & Tata Cara */}
+                <div className="about-container text-center">
+                    <div className="about">
+                        <h2 className="font-squids">Tentang Pemilu FT UGM 2022 </h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum purus eget feugiat gravida. Sed vel justo sit amet dui aliquam ornare. Duis blandit, metus aliquet dapibus eleifend, enim elit suscipit magna, id pulvinar odio nibh sed velit. Maecenas id cursus dui. </p> 
+                    </div>
+                    
+                    <div className="tatacara">
+                        <h2 className="font-squids">Tata Cara Pemilihan </h2>
+                        <ReactPlayer className="video" controls={true} url='https://www.youtube.com/watch?v=rhFSQdILOXk&ab_channel=FakultasTeknikUGM' />
+                    </div>
+
                     <img className="path" src={Path} alt="dice"></img>
                 </div>
-            </div>
 
-            {/* Akhir Bagian Hero */}
+                <Button>
+                    <a href={process.env.PUBLIC_URL + "vote.html"} >Vote Dummy</a>
+                </Button>
 
-            {/* Awal Calon calon */}
-            <div className="calon-container">
-                <div className="calon calon1">
-                    <img className="rec1" src={Rectangle_1} alt="dice"></img>
-                    <img className="foto_calon1" src={Calon_1} alt="dice"></img>
-                </div>
+                {/* Akhir About & Tata Cara */}
                 
-                <div className="calon calon2">
-                    <img className="rec2" src={Rectangle_2} alt="dice"></img>
-                    <img className="foto_calon2" src={Calon_2} alt="dice"></img>
+                {/* Awal Kritik & Saran */}
+                <div className="kritik">
+                    <form onSubmit={handleSubmit}>
+                        <div className="box"><h4>Kritik & Saran</h4></div>
+                        <textarea
+                            id="message"
+                            name="message" 
+                            placeholder="Ketik di sini ..." 
+                            rows="5" 
+                            value={message} 
+                            onChange={handleChange}>
+                        </textarea>
+                        <Button>Kirim</Button>
+                    </form>
                 </div>
 
-                <div className="desc1 text-center">
-                    <span className="logo_desc">
-                        <img src={Dice} alt="dice"></img>
-                    </span>
-                    <span className="calon_desc text-center">
-                        <h2 className="font-squids">Calon 1 </h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum purus eget feugiat gravida. Sed vel justo sit amet dui aliquam ornare. Duis blandit, metus aliquet dapibus eleifend, enim elit suscipit magna, id pulvinar odio nibh sed velit. Maecenas id cursus dui. </p> 
-                    </span>
-                </div>
-
-                <div className="desc2 text-center">
-                    <h2 className="font-squids">Calon 2 </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum purus eget feugiat gravida. Sed vel justo sit amet dui aliquam ornare. Duis blandit, metus aliquet dapibus eleifend, enim elit suscipit magna, id pulvinar odio nibh sed velit. Maecenas id cursus dui. </p> 
-                </div>
-            </div>
-
-            {/* Akhir Calon calon */}
-
-            {/* Awal About & Tata Cara */}
-            <div className="about-container text-center">
-                <div className="about">
-                    <h2 className="font-squids">Tentang Pemilu FT UGM 2022 </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum purus eget feugiat gravida. Sed vel justo sit amet dui aliquam ornare. Duis blandit, metus aliquet dapibus eleifend, enim elit suscipit magna, id pulvinar odio nibh sed velit. Maecenas id cursus dui. </p> 
-                </div>
-                
-                <div className="tatacara">
-                    <h2 className="font-squids">Tata Cara Pemilihan </h2>
-                    <ReactPlayer className="video" controls={true} url='https://www.youtube.com/watch?v=rhFSQdILOXk&ab_channel=FakultasTeknikUGM' />
-                </div>
-
-                <img className="path" src={Path} alt="dice"></img>
-            </div>
-
-            <Button>
-                <a href={process.env.PUBLIC_URL + "vote.html"} >Vote Dummy</a>
-            </Button>
-
-            {/* Akhir About & Tata Cara */}
-            
-            {/* Awal Kritik & Saran */}
-            <div className="kritik">
-                <form onSubmit={handleSubmit}>
-                    <div className="box"><h4>Kritik & Saran</h4></div>
-                    <textarea
-                        id="message"
-                        name="message" 
-                        placeholder="Ketik di sini ..." 
-                        rows="5" 
-                        value={message} 
-                        onChange={handleChange}>
-                    </textarea>
-                    <Button>Kirim</Button>
-                </form>
-            </div>
-
-            {/* Akhir Kritik & Saran */}
-        </Container>
+                {/* Akhir Kritik & Saran */}
+            </Container>
+        </>
     );
 
 }

@@ -6,8 +6,9 @@ import {
     Calon_2,
     ChooseCandidate,
 }from "../assets/images/imgIndex"
+import { Helmet } from "react-helmet";
 
-export function InfoCalon(){
+export default function InfoCalon(){
 
   const [isClicked, setIsClicked] = React.useState(false);
   const [isClicked2, setIsClicked2] = React.useState(false);
@@ -16,7 +17,10 @@ export function InfoCalon(){
   const clickHandler2 = () => setIsClicked2(clicked => !clicked);
 
   return(
-    
+    <>
+    <Helmet>
+      <title>Calon Ketua - BEM KMFT UGM</title>
+    </Helmet>
     <Container isClicked={isClicked} isClicked2={isClicked2}> 
      <div class="background-fixed">
         <img src={Dice} alt="Dice" style={{width: "40vw"}}/>
@@ -101,6 +105,7 @@ export function InfoCalon(){
         </div>
     </div>
     </Container>
+    </>
     )
 }
 
