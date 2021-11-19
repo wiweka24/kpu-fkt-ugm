@@ -5,7 +5,7 @@ import {
     Calon_1, 
     Calon_2,
     ChooseCandidate,
-}from "../assets/images"
+}from "../assets/images/imgIndex"
 
 export function InfoCalon(){
 
