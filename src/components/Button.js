@@ -18,7 +18,7 @@ const ButtonLink = styled.button`
   margin: 0.7vmin 0.7vmin;
   padding: 2vmin 3vmin;
   border-radius: 2vmin;
-  border-style: none;
+  /* border-style: none; */
   border-width: 0.5vmin;
   
   display: flex;
