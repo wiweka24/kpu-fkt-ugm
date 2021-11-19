@@ -129,7 +129,7 @@ export default function Beranda(){
                             value={message} 
                             onChange={handleChange}>
                         </textarea>
-                        <Button>Kirim</Button>
+                         <Button>Kirim</Button>
                     </form>
                 </div>
 

@@ -108,6 +108,10 @@ const FooterContainer = styled.div`
       color: white;
   }
 
+  p{
+    margin: 0;
+  }
+
   /* @media (min-width: 768px) {
   } */
 `;
