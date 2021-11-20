@@ -1,6 +1,6 @@
 import React from "react";
 import Countdown from "react-countdown";
-import Button from "../components/Button";
+import Button from "./Button";
 
 export default function Timerdown(){
 
@@ -16,7 +16,9 @@ export default function Timerdown(){
       // Render Saat Vote
       return (
         <div>
-          <Button>Vote Sekarang</Button>
+          <Button>
+            <a href={process.env.PUBLIC_URL + "vote.html"} >Vote Dummy</a>
+          </Button>
         </div>
       );
     }

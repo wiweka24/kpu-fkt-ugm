@@ -1,8 +1,9 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import ReactPlayer from 'react-player/youtube'
+import { Link } from "react-router-dom";
 import Button from "../components/Button";
-import Timerdown from "./Countdown";
+import Timerdown from "../components/Countdown";
 import {
     Dice,
     Rectangle_1,
@@ -12,7 +13,6 @@ import {
     Catur,
     Path,
 }from "../assets/images/imgIndex.js"
-import { Link } from "react-router-dom";
 
 export default function Beranda(){
     // Kode Javascript //
@@ -61,6 +61,10 @@ export default function Beranda(){
 
             {/* Akhir Bagian Hero */}
 
+            <Button>
+                <a href={process.env.PUBLIC_URL + "vote.html"} >Vote Dummy</a>
+            </Button>
+
             {/* Awal Calon calon */}
             <div className="calon-container">
                 <div className="calon calon1">
@@ -74,15 +78,9 @@ export default function Beranda(){
                 </div>
 
                 <div className="desc1 text-center">
-                    <span className="logo_desc">
-                        <img src={Dice} alt="dice"></img>
-                        <Button link="https://www.youtube.com/">Tentang Calon</Button>
-                    </span>
-                    <span className="calon_desc text-center">
-                        <div className="no"><h5 className="no-number">1</h5></div>
-                        <h2 className="font-squids">ADIAHMAD IRFAN ZIDNY</h2>
-                        <p>Kita kawan, bukan lawan!</p>
-                    </span>
+                    <div className="no"><h5 className="no-number">1</h5></div>
+                    <h2 className="font-squids">ADIAHMAD IRFAN ZIDNY</h2>
+                    <p>Kita kawan, bukan lawan!</p>
                 </div>
 
                 <div className="desc2 text-center">
@@ -94,6 +92,13 @@ export default function Beranda(){
                         <br/>Tak perlu membantah, pasti meriah
                     </p>
                 </div>
+
+                <div className="logo_desc text-center">
+                    <img src={Dice} alt="dice"></img>
+                    <Button>
+                        <Link to="/infocalon">Tentang Calon</Link>
+                    </Button>
+                </div>
             </div>
 
             {/* Akhir Calon calon */}
@@ -102,7 +107,10 @@ export default function Beranda(){
             <div className="about-container text-center">
                 <div className="about">
                     <h2 className="font-squids">Tentang Pemilu FT UGM 2022 </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum purus eget feugiat gravida. Sed vel justo sit amet dui aliquam ornare. Duis blandit, metus aliquet dapibus eleifend, enim elit suscipit magna, id pulvinar odio nibh sed velit. Maecenas id cursus dui. </p> 
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum purus eget feugiat gravida. Sed vel justo sit amet dui aliquam ornare. Duis blandit, metus aliquet dapibus eleifend, enim elit suscipit magna, id pulvinar odio nibh sed velit. Maecenas id cursus dui. </p>
+                    <Button>
+                        <Link to="/tentang">Selengkapnya</Link>
+                    </Button>
                 </div>
                 
                 <div className="tatacara">
@@ -112,10 +120,6 @@ export default function Beranda(){
 
                 <img className="path" src={Path} alt="dice"></img>
             </div>
-
-            <Button>
-                <a href={process.env.PUBLIC_URL + "vote.html"} >Vote Dummy</a>
-            </Button>
 
             {/* Akhir About & Tata Cara */}
             
@@ -201,8 +205,8 @@ overflow: hidden;
 }
 
 Button{
-    margin: auto;
-    padding: 1vmin 2vmin;
+    margin: 3vmin auto auto auto;
+    padding: 0.5vmin 2vmin;
     font-weight: bold;
     background-color: var(--color-pink);
 }
@@ -240,11 +244,13 @@ Button{
 }
 
 .calon1{
-    order: 1;
+    //order: 1;
+    grid-area: 1 / 1;
 }
 
 .calon2{
-    order: 4;
+    //order: 4;
+    grid-area: 2 / 2;
 }
 
 .calon{
@@ -279,21 +285,28 @@ Button{
     left: 0;
 }
 
-.desc1, .desc2{
+.desc1, .desc2, .logo_desc{
     padding-top: 8vmin;
     margin: auto 2vmin;
 }
 
 .desc1{
-    order: 2;
+    //order: 2;
+    grid-area: 1 / 2;
 }
 
 .desc2{
-    order: 3;
+    //order: 3;
+    grid-area: 2 / 1;
 }
 
-.desc1 .logo_desc img{
-    display: none;
+.logo_desc{
+    //order 5 sampai 6
+    grid-area: 3 / 1 / 3 / span 2;
+}
+
+.logo_desc img{
+    display: none
 }
 
 // about // -------------------------------------------------------
@@ -362,7 +375,6 @@ Button{
     border-color: var(--color-pink);
     border-width: thick;
     border-radius: 0 2vmin 2vmin 2vmin;
-    margin-bottom: 3vmin;
     padding: 1vmin;
     width: 100%;
 
@@ -419,6 +431,8 @@ Button{
     }
     
     .calon1{
+        grid-area: 1 / 1;
+
         &:hover .rec1{
             margin-right: -115%;
             transition: all 0.2s ease-out; 
@@ -429,19 +443,19 @@ Button{
             transition: all 0.2s ease-out; 
         }
     
-        &:hover ~ .desc1 .logo_desc{
+        &:hover ~ .logo_desc{
             display: none;
             transition: all 0.5s ease-out;
         }
         
-        &:hover ~ .desc1 .calon_desc{
+        &:hover ~ .desc1{
             display: inline;
             transition: all 0.5s ease-out;
         }
     }
     
     .calon2{
-        order: 3;
+        grid-area: 1 / 3;
     
         &:hover .rec2{
             margin-left: -115%;
@@ -453,7 +467,7 @@ Button{
             transition: all 0.2s ease-out; 
         }
         
-        &:hover ~ .desc1{
+        &:hover ~ .logo_desc{
             display: none;
             transition: all 0.5s ease-out;
         }
@@ -464,31 +478,26 @@ Button{
         }
     }
 
-    .desc1{
-        z-index: 1;
-        margin: auto;
-    }
-
-    .desc2{
+    .desc1, .desc2{
+        grid-area: 1 / 2;
         display: none;
-        order: 2;
         z-index: 1;
         margin: auto;
     }
 
-    .desc1 .logo_desc img{
+    .logo_desc{
+        grid-area: 1 / 2;
         display: inline;
-        padding: 5vmin 0 2vmin 0;
+    }
+
+    .logo_desc img{
+        display: inline;
         width: 13vmin ;
     
         &:hover{
             transform: rotateY(360deg);
             transition: all 0.5s ease-out;
         }
-    }
-
-    .desc1 .calon_desc{
-        display: none;
     }
     
     // about // -------------------------------------------------------
@@ -518,5 +527,5 @@ Button{
     .kritik{
         width: 50%;
     }
-    }
+}
 `
