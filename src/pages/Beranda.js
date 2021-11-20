@@ -149,13 +149,11 @@ const Container = styled.div`
 // umum // -------------------------------------------------------
 background-color: var(--color-blue);
 overflow: hidden;
-
 * {
     margin: 0;
     padding: 0;
     color: white;
 }
-
 .no {
     margin: auto auto 1vmin auto;
     border: solid var(--color-blue);
@@ -164,58 +162,46 @@ overflow: hidden;
     width: calc(1rem + 2.5vmin);
     transform: rotate(45deg); 
 }
-
 .no-number {
     height: calc(1rem + 2.5vmin);
     width: calc(1rem + 2.5vmin);
     transform: rotate(-45deg);
 }
-
 // hero // -------------------------------------------------------
-
 .hero-container{
     display: grid;
-
     z-index: 0;
     width: 100%;
     position: relative;
     background-color: var(--color-darkblue);
     padding: 10vmin 0;
 }
-
 .hero-container .text-center{
     width: 100%;
 }
-
 .hero-container .tittle{
     font-weight: lighter;
 }
-
 .hero-container h4{
     font-weight: lighter;
 }
-
 .hero-container h2{
     font-weight: bolder;
 }
-
 .hero-container .dice{
     width: 15vmin;
     padding: 4vmin;
 }
-
 Button{
     margin: 3vmin auto auto auto;
     padding: 0.5vmin 2vmin;
     font-weight: bold;
     background-color: var(--color-pink);
 }
-
 .cd {
     display: flex;
     padding: 0 25%;
 }
-
 .cd p {
     border-style: none none none solid; 
     border-color: var(--color-pink);
@@ -223,94 +209,75 @@ Button{
     padding: 2vmin;
     font-weight: bold;
 }
-
 .cd .last {
     border-style: none solid; 
 }
-
 .catur{
     display: none;
 }
-
 .path{
     display: none;
 }
-
 // Calon // -------------------------------------------------------
 .calon-container{
     display: grid;
     grid-template-columns: 50% 50%;
     padding: 5vmin 0 15vmin 0;
 }
-
 .calon1{
     //order: 1;
     grid-area: 1 / 1;
 }
-
 .calon2{
     //order: 4;
     grid-area: 2 / 2;
 }
-
 .calon{
     position: relative;
     height: 72.5vmin;
 }
-
 .calon img{
     position: absolute;
     padding-top: 10vmin;
     bottom: 0;
 }
-
 .foto_calon1{
     z-index: 1;
     height: 110%;
 }
-
 .foto_calon2{
     z-index: 1;
     height: 110%;
     right: 0;
 }
-
 .rec1{
     height: 100%;
     right: 0;
 }
-
 .rec2{
     height: 100%;
     left: 0;
 }
-
 .desc1, .desc2, .logo_desc{
     padding-top: 8vmin;
     margin: auto 2vmin;
 }
-
 .desc1{
     //order: 2;
     grid-area: 1 / 2;
 }
-
 .desc2{
     //order: 3;
     grid-area: 2 / 1;
 }
-
 .logo_desc{
     //order 5 sampai 6
     grid-area: 3 / 1 / 3 / span 2;
 }
-
 .logo_desc img{
     display: none
 }
-
 // about // -------------------------------------------------------
-
 .about-container{
     display: grid;
     z-index: 0;
@@ -319,20 +286,16 @@ Button{
     background-color: var(--color-darkblue);
     width: 100%;
 }
-
 .about{
     margin: 0 5%;
 }
-
 .about-container h2{
     padding: 5vmin 0;
 }
-
 .tatacara{
     margin: 0 5%;
     padding: 10vmin 0;
 }
-
 .video{
     border-style: solid;
     border-width: thick;
@@ -342,34 +305,27 @@ Button{
     width: 80vmin !important;
     height: 45vmin !important;
 }
-
 // kritik dan saran // -------------------------------------------------------
-
 .kritik{
     display: grid;
-
     padding: 10vmin 0;
     position: relative;
     margin: auto;
     width: 75%;
 }
-
 .kritik .box{
     display: flex;
 }
-
 .kritik .box h4{
     border-style: solid;
     border-color: var(--color-pink);
     border-radius: 2vmin 2vmin 0 0;
     background-color: var(--color-pink);
-
     color: var(--color-black);
     font-weight: bolder;
     padding: 1vmin;
     text-align: left;
 }
-
 .kritik textarea{
     border-style: solid;
     border-color: var(--color-pink);
@@ -377,12 +333,10 @@ Button{
     border-radius: 0 2vmin 2vmin 2vmin;
     padding: 1vmin;
     width: 100%;
-
     color: var(--color-black);
     font-size: calc(0.5rem + 2vmin);
     font-family: "MontBook";
 }
-
 @media (min-width: 961px) {
     
     // hero // -------------------------------------------------------
@@ -394,19 +348,16 @@ Button{
         right: 0;
         bottom: 0;
     }
-
     .path{
         display: inline;
         position: absolute;
         z-index: -1;
         width: 60vmin;
     }
-
     .hero-container .path{
         left: 0;
         top: 0;
     }
-
     .hero-container .dice{
         animation: spinner 5s infinite;
         animation-timing-function: linear;
@@ -420,11 +371,9 @@ Button{
             transform: rotateY(360deg);
         }
     }
-
     .cd p {
         font-size: calc(0.5rem + 1.5vmin);
     }
-
     // Calon // -------------------------------------------------------
     .calon-container{
         grid-template-columns: 35% 30% 35%;
@@ -432,7 +381,6 @@ Button{
     
     .calon1{
         grid-area: 1 / 1;
-
         &:hover .rec1{
             margin-right: -115%;
             transition: all 0.2s ease-out; 
@@ -477,19 +425,16 @@ Button{
             transition: all 0.5s ease-out;
         }
     }
-
     .desc1, .desc2{
         grid-area: 1 / 2;
         display: none;
         z-index: 1;
         margin: auto;
     }
-
     .logo_desc{
         grid-area: 1 / 2;
         display: inline;
     }
-
     .logo_desc img{
         display: inline;
         width: 13vmin ;
@@ -501,7 +446,6 @@ Button{
     }
     
     // about // -------------------------------------------------------
-
     .about{
         margin: 0 20%;
     }
@@ -509,21 +453,16 @@ Button{
     .tatacara{
         margin: 0 20%;
     }
-
     .video{
         width: 112vmin !important;
         height: 63vmin !important;
     }
-
     .about-container .path{
         right: 0;
         bottom: 0;
-
         transform: rotate(180deg);
     }
-
     // kritik dan saran // -------------------------------------------------------
-
     .kritik{
         width: 50%;
     }
