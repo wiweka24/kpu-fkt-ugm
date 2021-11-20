@@ -7,6 +7,7 @@ import {
     ChooseCandidate,
 }from "../assets/images/imgIndex"
 import { Helmet } from "react-helmet";
+import UnoCard from "../components/UnoCard";
 
 export default function InfoCalon(){
 
@@ -33,8 +34,8 @@ export default function InfoCalon(){
     </div>
     
     <div class="content-container" >
-        <button id="button1" class="button" onClick={clickHandler}></button>
-        <button id="button2" class="button" onClick={clickHandler2}></button>
+        <button id="button1" class="button" onClick={clickHandler}><UnoCard/></button>
+        <button id="button2" class="button" onClick={clickHandler2}><UnoCard/></button>
         <div class="image-background">
             <img src={ChooseCandidate} alt="Choose A Candidate" style={{maxWidth: "100%", height: "auto"}}/>
         </div>
@@ -145,11 +146,11 @@ font-family: GameofSquids;
 .button {
   border: none;
   background-size: cover;
-  min-width: 30%;
-  height: auto;
+  /* min-width: 30%; */
+  /* height: auto; */
   display: inline-flexbox;
   border-radius: 12px;
-  padding: 20% 0%;
+  /* padding: 20% 0%; */
   text-decoration: none;
   margin: 10px 10% 10px 10%;
   transition-duration: 0.2s;
@@ -169,12 +170,12 @@ font-family: GameofSquids;
 
 //Khusus Tombol Kandidat 1
 #button1 {
-  background-image: url(${Calon_1});
+  /* background-image: url(${Calon_1}); */
 }
 
 //Khusus Tombol Kandidat 2
 #button2 {
-  background-image: url(${Calon_2});
+  /* background-image: url(${Calon_2}); */
 }
 
 //Uno
