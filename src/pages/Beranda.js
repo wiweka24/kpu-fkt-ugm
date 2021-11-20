@@ -75,16 +75,23 @@ export default function Beranda(){
                 <div className="desc1 text-center">
                     <span className="logo_desc">
                         <img src={Dice} alt="dice"></img>
+                        <Button link="https://www.youtube.com/">Tentang Calon</Button>
                     </span>
                     <span className="calon_desc text-center">
-                        <h2 className="font-squids">Calon 1 </h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum purus eget feugiat gravida. Sed vel justo sit amet dui aliquam ornare. Duis blandit, metus aliquet dapibus eleifend, enim elit suscipit magna, id pulvinar odio nibh sed velit. Maecenas id cursus dui. </p> 
+                        <div className="no"><h5 className="no-number">1</h5></div>
+                        <h2 className="font-squids">ADIAHMAD IRFAN ZIDNY</h2>
+                        <p>Kita kawan, bukan lawan!</p>
                     </span>
                 </div>
 
                 <div className="desc2 text-center">
-                    <h2 className="font-squids">Calon 2 </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum purus eget feugiat gravida. Sed vel justo sit amet dui aliquam ornare. Duis blandit, metus aliquet dapibus eleifend, enim elit suscipit magna, id pulvinar odio nibh sed velit. Maecenas id cursus dui. </p> 
+                    <div className="no"><h5 className="no-number">2</h5></div>
+                    <h2 className="font-squids">ANJU GERALD</h2>
+                    <p>
+                        Tak janji nonstop, yang pasti top
+                        <br/>Tak banyak berkelit, penting konkrit
+                        <br/>Tak perlu membantah, pasti meriah
+                    </p>
                 </div>
             </div>
 
@@ -138,6 +145,21 @@ overflow: hidden;
     margin: 0;
     padding: 0;
     color: white;
+}
+
+.no {
+    margin: auto auto 1vmin auto;
+    border: solid var(--color-blue);
+    background-color: var(--color-green);
+    height: calc(1rem + 2.5vmin);
+    width: calc(1rem + 2.5vmin);
+    transform: rotate(45deg); 
+}
+
+.no-number {
+    height: calc(1rem + 2.5vmin);
+    width: calc(1rem + 2.5vmin);
+    transform: rotate(-45deg);
 }
 
 // hero // -------------------------------------------------------
@@ -252,16 +274,17 @@ Button{
     left: 0;
 }
 
-.desc1{
-    order: 2;
+.desc1, .desc2{
     padding-top: 8vmin;
     margin: auto 2vmin;
 }
 
+.desc1{
+    order: 2;
+}
+
 .desc2{
     order: 3;
-    padding-top: 8vmin;
-    margin: auto 2vmin;
 }
 
 .desc1 .logo_desc img{
@@ -450,7 +473,7 @@ Button{
 
     .desc1 .logo_desc img{
         display: inline;
-        padding-top: 5vmin;
+        padding: 5vmin 0 2vmin 0;
         width: 13vmin ;
     
         &:hover{
