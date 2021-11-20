@@ -60,6 +60,7 @@ const FooterContainer = styled.div`
   background-color: var(--color-darkblue);
   color: white;
   padding: 10vmin;
+  border-top: 3px solid var(--color-pink);
 
 
   .address:hover{
@@ -103,7 +104,8 @@ const FooterContainer = styled.div`
   }
 
   h4{
-      margin: 5px 0
+      margin: 5px 0;
+      color: white;
   }
 
   /* @media (min-width: 768px) {

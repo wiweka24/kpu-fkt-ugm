@@ -159,6 +159,9 @@ const NavItemsStyled = styled.ul`
   li {
     list-style-type: none;
   }
+  p{
+    margin: 0;
+  }
 
   @media (max-width: 1024px) {
     &.nav-items {
