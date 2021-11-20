@@ -28,7 +28,7 @@ export default function Timerdown(){
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
       // Render Setelah Cd
-      return <Countdown date={"2021-12-01T07:00:00"} renderer={renderer1} />;
+      return <Countdown date={"2021-12-02T00:00:00"} renderer={renderer1} />;
     } else {
       // Render Cd
       return (
@@ -43,6 +43,6 @@ export default function Timerdown(){
   };
 
   return(
-    <Countdown date={"2021-11-29T07:00:00"} renderer={renderer} />
+    <Countdown date={"2021-11-29T00:00:00"} renderer={renderer} />
   );
 }
