@@ -12,6 +12,7 @@ import {
     Catur,
     Path,
 }from "../assets/images/imgIndex.js"
+import { Link } from "react-router-dom";
 
 export default function Beranda(){
     // Kode Javascript //
@@ -111,6 +112,10 @@ export default function Beranda(){
 
                 <img className="path" src={Path} alt="dice"></img>
             </div>
+
+            <Button>
+                <a href={process.env.PUBLIC_URL + "vote.html"} >Vote Dummy</a>
+            </Button>
 
             {/* Akhir About & Tata Cara */}
             
@@ -512,5 +517,6 @@ Button{
 
     .kritik{
         width: 50%;
+    }
     }
 `
