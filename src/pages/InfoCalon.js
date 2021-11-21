@@ -34,8 +34,8 @@ export default function InfoCalon(){
     </div>
     
     <div class="content-container" >
-        <button id="button1" class="button" onClick={clickHandler}><UnoCard/></button>
-        <button id="button2" class="button" onClick={clickHandler2}><UnoCard/></button>
+        <button id="button1" class="button" onClick={clickHandler}><UnoCard name="ADIAHMAD IRFAN ZIDNY" no="1" src={Calon_1}/></button>
+        <button id="button2" class="button" onClick={clickHandler2}><UnoCard name="ANJU GERALD" no="2" src={Calon_2}/></button>
         <div class="image-background">
             <img src={ChooseCandidate} alt="Choose A Candidate" style={{maxWidth: "100%", height: "auto"}}/>
         </div>

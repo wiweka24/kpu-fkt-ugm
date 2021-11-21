@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import { Calon_1 } from "../assets/images/imgIndex";
 
-export default function UnoCard(no) {
+export default function UnoCard(props) {
 
         return (
-            <Container no={no}>
-                <div class="card num-1 green">
+            <Container color={props.color} name={props.name} no={props.no}>
+                <div class="card green">
                     <span class="inner">
-                        <span class="mark"><img className="photo" src={Calon_1}/></span>
+                        <span class="mark"><img className="photo" src={props.src}/></span>
                     </span>
                 </div>
             </Container>
@@ -20,14 +19,13 @@ export default function UnoCard(no) {
 
 const Container = styled.div`
 .card {
-  width:116px;height:178px;float:left;
-  background:#F9F7F8;
+  float:left;
+  /* background:#F9F7F8; */
   border-radius:5px;
   display:table;
-  padding:5px;
+  /* padding:5px; */
   margin:10px;
-  font-family: montBook;
-  font-size:100px;
+  font-family: "GameOfSquids";
   text-shadow:
      1px  1px 0 #211E21,
     -1px -1px 0 #211E21,
@@ -54,14 +52,14 @@ const Container = styled.div`
   vertical-align:middle;
   background:#F9F7F8;
   margin:auto;
-  padding:0 26px;
-  border-radius:100px 60px / 120px 60px;
+  /* padding:0 26px; */
+  border-radius:200px 100px / 200px 100px;
   line-height:1.4;
   overflow: hidden;
 }
 
 .card .photo{
-    width: 80px;
+    width: 40vmin;
     height: auto;
 }
 
@@ -69,8 +67,8 @@ const Container = styled.div`
 .card:after{
   display:inline-block;
   position:absolute;
-  line-height:0;
-  font-size:20px;
+  /* line-height:0; */
+  font-size:calc(0.5rem + 2.5vmin);
   color:#F9F7F8;
   text-shadow:
      1px  1px 0 #211E21,
@@ -87,31 +85,18 @@ const Container = styled.div`
 .card:before{
   top:15px;
   left:10px;
+  text-align: left;
+  content: "${props => props.no}";
 }
 .card:after{
   bottom:15px;
   right:10px;
-  -webkit-transform:rotate(180deg)
-}
-
-.card.blue{
-  color:#0063B3;
+  text-align: right;
+  content: "${props => props.name}";
 }
 
 .card.green .inner{
   background:#126B59;
 }
-
-
-.card.num-1:before,
-.card.num-1:after{
-  content:"1";
-}
-
-.card.num-2:before,
-.card.num-2:after{
-  content:"2";
-}
-
 
 `
