@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Error: Page Tidak Ditemukan</title>
+    <link rel="icon" href="logo-kpu-2021.ico">
+    <style>
+        body {
+            background-color: blue;
+            overflow: hidden;
+        }
+
+        @font-face {
+            font-family: gameOfSquids;
+            src: url(./assets/fonts/GameOfSquids.ttf);
+        }
+
+        @font-face {
+            font-family: montBook;
+            src: url(./assets/fonts/Mont-Book.otf);
+        }
+
+
+        .font-squids {
+            font-family: gameOfSquids;
+        }
+
+        .font-mont {
+            font-family: montBook;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            color: white;
+            box-sizing: border-box;
+        }
+
+        .hero-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 0;
+            width: 100vw;
+            min-height: 100vh;
+            position: relative;
+            background-color: #102037;
+            padding: 10vmin 10vmin;
+            text-align: center;
+        }
+
+        .hero-container,
+        .text-center {
+            width: 100%;
+        }
+
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        h1,
+        h4 {
+            font-weight: lighter;
+        }
+
+        h2 {
+            font-weight: bolder;
+        }
+
+        .card {
+            width: 100vmin;
+        }
+
+        h1 {
+            font-size: calc(0.5rem + 8vmin);
+            white-space: nowrap;
+        }
+
+        h2 {
+            font-size: calc(0.5rem + 4vmin);
+        }
+
+        .button {
+            cursor: pointer;
+            background-color: #FB2481;
+            padding: 1vmin 3vmin;
+            border-radius: 5px;
+            width: 180px;
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-40%, -50%);
+        }
+    </style>
+</head>
+
+<script>
+</script>
+
+<body>
+    <div class="hero-container text-center">
+        <img src="assets/images/cards.webp" class="card" alt="card" />
+        <div class="text">
+            <h1 class="font-squids">ERROR 404</h1>
+            <h2 class="font-mont">Halaman yang Anda cari tidak ditemukan</h2>
+        </div>
+        <a href="/"><button class="button">Kembali</button></a>
+    </div>
+
+</body>
+
+</html>

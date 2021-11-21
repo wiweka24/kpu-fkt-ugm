@@ -7,9 +7,7 @@ import SquadPNG from '../assets/TentangKPU/squad.png'
 import CarouselPanitia from "../components/Carousel";
 import 'antd/dist/antd.css';
 import CarouselPanitia2 from "../components/Carousel2";
-
-
-
+import { Helmet } from "react-helmet";
 
 export default function TentangKPU(){
     // Kode Javascript //
@@ -17,7 +15,11 @@ export default function TentangKPU(){
 
     return(
         // Kode HTML //
-        <Container>
+        <>
+            <Helmet>
+                <title>Tentang KPU FT UGM</title>
+            </Helmet>
+        <   Container>
             <body>
                 <div class="Hero">
                     <img src={UlarPNG} class="ular"/>
@@ -56,6 +58,7 @@ export default function TentangKPU(){
 
             </body>
         </Container>
+        </>
     );
 }
 
@@ -310,6 +313,6 @@ body {
     .Hero .p2{
         font-size: 12px;
     }
-
+    }
 }
 `
