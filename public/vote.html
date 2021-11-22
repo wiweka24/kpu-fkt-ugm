@@ -45,8 +45,20 @@
         <h2 class="font-mont cta">Klik Calon Ketua Pilihanmu!</h2>
 
         <div class="content-container">
-            <button id="button1" class="button" onclick="openModal(), vote(1)"></button>
-            <button id="button2" class="button" onClick="openModal(), vote(2)"></button>
+            <button class="button" onclick="openModal(), vote(1)">
+                <div id="card1" class="card green">
+                    <span class="inner">
+                        <span class="mark"><img className="photo" src="./assets/images/calon1.webp"/></span>
+                    </span>
+                </div>
+            </button>
+            <button class="button" onClick="openModal(), vote(2)">
+                <div id="card2" class="card green">
+                    <span class="inner">
+                        <span class="mark"><img className="photo" src="./assets/images/calon2.webp"/></span>
+                    </span>
+                </div>
+            </button>
         </div>
 
 
