@@ -161,6 +161,7 @@ const NavItemsStyled = styled.ul`
   }
   p{
     margin: 0;
+    padding: 3vmin;
   }
 
   @media (max-width: 1024px) {

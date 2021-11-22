@@ -107,8 +107,8 @@ export default function Beranda(){
             <div className="about-container text-center">
                 <div className="about">
                     <h2 className="font-squids">Tentang Pemilu FT UGM 2022 </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum purus eget feugiat gravida. Sed vel justo sit amet dui aliquam ornare. Duis blandit, metus aliquet dapibus eleifend, enim elit suscipit magna, id pulvinar odio nibh sed velit. Maecenas id cursus dui. </p>
-                    <Button>
+                        Pemilihan Umum Mahasiswa Fakultas Teknik Universitas Gadjah Mada (Pemilu) adalah sarana pelaksanaan kedaulatan mahasiswa berdasarkan Anggaran Dasar/Anggaran Rumah Tangga Keluarga Mahasiswa Fakultas Teknik Universitas Gadjah Mada.                    
+                        <Button>
                         <Link to="/tentang">Selengkapnya</Link>
                     </Button>
                 </div>
