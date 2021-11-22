@@ -1,5 +1,5 @@
 import GlobalStyle from './globalStyle';
-import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import { Switch, Route, HashRouter as Router } from "react-router-dom";
 
 import Beranda from './pages/Beranda';
 import TentangKPU from './pages/TentangKPU'
