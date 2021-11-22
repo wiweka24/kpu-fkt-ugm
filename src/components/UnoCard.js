@@ -59,7 +59,9 @@ const Container = styled.div`
 }
 
 .card .photo{
-    width: 40vmin;
+    width: 25vw;
+    max-width: 325px;
+    min-width: 125px;
     height: auto;
 }
 
@@ -68,7 +70,7 @@ const Container = styled.div`
   display:inline-block;
   position:absolute;
   /* line-height:0; */
-  font-size:calc(0.5rem + 2.5vmin);
+  font-size:calc(0.5rem + 1.5vw);
   color:#F9F7F8;
   text-shadow:
      1px  1px 0 #211E21,
