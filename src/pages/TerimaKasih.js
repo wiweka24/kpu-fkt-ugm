@@ -7,10 +7,6 @@ import Button from "../components/Button";
 
 export default function TerimaKasih() {
     // Kode Javascript //
-
-    var nama = "Christian Ale Perdana".toUpperCase()
-
-    // Kode Javascript //
     const [data, setData] = useState({
         message: "",
     })
@@ -46,11 +42,10 @@ export default function TerimaKasih() {
                 <div class="hero">
                     <img src={UlarPNG} class="ular" />
                     <div class="title font-squids">
-                        <h2 class="font-mont white text-center">Terima Kasih</h2>
-                        <h1 class="pink">{nama}</h1>
+                        <h2 class="font-mont white text-center">Terima Kasih Atas</h2>
+                        <h2 class="font-mont white text-center">Partisipasi Anda Dalam</h2>
                         <img class="logo" src={LogoPNG} alt="Logo KPU FT" />
-                        <h2 class="font-mont white text-center">Atas Partisipasinya Dalam</h2>
-                        <h1 class="white font-mont font-bold">PEMILU FT UGM 2021</h1>
+                        <h1 class="pink font-mont font-bold">PEMILU FT UGM 2021</h1>
                     </div>
                 </div>
 
