@@ -1,5 +1,9 @@
 body {
     background-color: #102037;
+    width: 100vw; 
+    overflow-x: hidden;
+    box-sizing: border-box;
+
 }
 
 @font-face {
