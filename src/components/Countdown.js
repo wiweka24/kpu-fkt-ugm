@@ -1,9 +1,8 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Countdown from "react-countdown";
 import Button from "./Button";
 
 export default function Timerdown(){
-
   const renderer1 = ({completed}) => {
     if (completed) {
       // Render Setelah Vote
@@ -17,7 +16,7 @@ export default function Timerdown(){
       return (
         <div>
           <Button>
-            <a href={process.env.PUBLIC_URL + "vote.html"} >Vote Dummy</a>
+            <a href={process.env.PUBLIC_URL + "vote.html"} >Vote Sekarang</a>
           </Button>
         </div>
       );
@@ -28,16 +27,16 @@ export default function Timerdown(){
   const renderer = ({ days, hours, minutes, seconds, completed }) => {
     if (completed) {
       // Render Setelah Cd
-      return <Countdown date={1638378000000} renderer={renderer1} />;
+      return <Countdown date={1638378000000} renderer={renderer1} />
     } else {
       // Render Cd
       return (
-          <div className="cd">
-            <p>{days}<br/>Hari</p>
-            <p>{hours}<br/>Jam</p>
-            <p>{minutes}<br/>Menit</p>
-            <p className="last">{seconds}<br/>Detik</p>
-          </div>
+        <div className="cd">
+          <p>{days}<br/>Hari</p>
+          <p>{hours}<br/>Jam</p>
+          <p>{minutes}<br/>Menit</p>
+          <p className="last">{seconds}<br/>Detik</p>
+        </div>
       );
     }
   };

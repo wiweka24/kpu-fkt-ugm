@@ -162,6 +162,11 @@ const GlobalStyle = createGlobalStyle`
     /*----------------------*\
             Scrollbar
     \*----------------------*/
+    body {
+        overflow-y: scroll;
+        scrollbar-color: var(--color-pink);
+    } 
+
 
     body::-webkit-scrollbar {
         width: 0.5em;

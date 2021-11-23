@@ -13,6 +13,7 @@ import {
     Catur,
     Path,
 }from "../assets/images/imgIndex.js"
+import BarChart from "../components/BarChart";
 
 export default function Beranda(){
     // Kode Javascript //
@@ -102,6 +103,9 @@ export default function Beranda(){
             </div>
 
             {/* Akhir Calon calon */}
+            <div>
+                <BarChart/>
+            </div>
 
             {/* Awal About & Tata Cara */}
             <div className="about-container text-center">
