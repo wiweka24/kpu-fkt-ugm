@@ -45,8 +45,6 @@ export default function Beranda(){
     return(
         // Kode HTML //
         <Container>
-            
-
             {/* Awal Bagian Hero*/}
             <div className="hero-container text-center">
                 <div>
@@ -54,7 +52,7 @@ export default function Beranda(){
                     <h4>Pemilihan Umum </h4>
                     <h2 className>Ketua BEM KM FT UGM 2022 </h2>
                     <img className="dice" src={Dice} alt="dice"></img>
-                    <Timerdown/>
+                    <div className="wait"><Timerdown/></div>
                     <img className="catur" src={Catur} alt="dice"></img>
                     <img className="path" src={Path} alt="dice"></img>
                 </div>
@@ -103,7 +101,8 @@ export default function Beranda(){
             </div>
 
             {/* Akhir Calon calon */}
-            <div>
+
+            <div className="jumlah-pemilih text-center">
                 <BarChart/>
             </div>
 
@@ -143,6 +142,7 @@ export default function Beranda(){
                 </form>
             </div>
 
+
             {/* Akhir Kritik & Saran */}
         </Container>
     );
@@ -158,19 +158,19 @@ overflow: hidden;
     padding: 0;
     color: white;
 }
-.no {
-    margin: auto auto 1vmin auto;
-    border: solid var(--color-blue);
-    background-color: var(--color-green);
-    height: calc(1rem + 2.5vmin);
-    width: calc(1rem + 2.5vmin);
-    transform: rotate(45deg); 
+.wait {
+    animation: show 2s forwards;
+    opacity: 0;
 }
-.no-number {
-    height: calc(1rem + 2.5vmin);
-    width: calc(1rem + 2.5vmin);
-    transform: rotate(-45deg);
+@keyframes show {
+    65% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
+
 // hero // -------------------------------------------------------
 .hero-container{
     display: grid;
@@ -215,6 +215,12 @@ Button{
 }
 .cd .last {
     border-style: none solid; 
+}
+.endvote {
+    border: 2px var(--color-pink);
+    border-style: solid none; 
+    width: 40%;
+    margin: auto;
 }
 .catur{
     display: none;
@@ -281,6 +287,21 @@ Button{
 .logo_desc img{
     display: none
 }
+.no {
+    margin: auto auto 1vmin auto;
+    border: solid var(--color-blue);
+    background-color: var(--color-green);
+    height: calc(1.6rem + 1.5vmin);
+    width: calc(1.6rem + 1.5vmin);
+    transform: rotate(45deg); 
+}
+.no-number {
+    font-weight: bold;
+    height: calc(1rem + 1.5vmin);
+    width: calc(1rem + 1.5vmin);
+    transform: rotate(-45deg);
+}
+
 // about // -------------------------------------------------------
 .about-container{
     display: grid;
@@ -309,6 +330,7 @@ Button{
     width: 80vmin !important;
     height: 45vmin !important;
 }
+
 // kritik dan saran // -------------------------------------------------------
 .kritik{
     display: grid;
@@ -342,7 +364,6 @@ Button{
     font-family: montBook;
 }
 @media (min-width: 961px) {
-    
     // hero // -------------------------------------------------------
     .catur{
         display: inline;
