@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     img {
-        user-drag: none;
+       -webkit-user-drag: none;
     }
 
     html {
@@ -118,7 +118,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     p{
-        font-size: calc(0.5rem + 1.5vmin);
+        font-size: calc(0.5rem + 1vmin);
     }
     h1{
         font-size: calc(0.5rem + 8vmin);
@@ -158,7 +158,6 @@ const GlobalStyle = createGlobalStyle`
     }
     }
 
-
     /*----------------------*\
             Scrollbar
     \*----------------------*/
@@ -166,7 +165,6 @@ const GlobalStyle = createGlobalStyle`
         overflow-y: scroll;
         scrollbar-color: var(--color-pink);
     } 
-
 
     body::-webkit-scrollbar {
         width: 0.5em;
