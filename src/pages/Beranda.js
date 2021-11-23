@@ -14,6 +14,7 @@ import {
     Path,
 }from "../assets/images/imgIndex.js"
 import BarChart from "../components/BarChart";
+import moment from "moment-timezone"
 
 export default function Beranda(){
     // Kode Javascript //
@@ -41,6 +42,10 @@ export default function Beranda(){
             console.log(err)
         }
     }
+
+    //Coba2
+    console.log(Date.now())
+    console.log(moment().valueOf())
 
     return(
         // Kode HTML //
@@ -274,14 +279,17 @@ Button{
 }
 .desc1{
     //order: 2;
+    z-index: 2;
     grid-area: 1 / 2;
 }
 .desc2{
     //order: 3;
+    z-index: 2;
     grid-area: 2 / 1;
 }
 .logo_desc{
     //order 5 sampai 6
+    z-index: 2;
     grid-area: 3 / 1 / 3 / span 2;
 }
 .logo_desc img{

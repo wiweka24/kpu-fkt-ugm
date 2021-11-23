@@ -41,7 +41,6 @@ export default function BarChart(){
     return () => clearInterval(intervalId);
   }, [])
   var seconds = time.unixtime
-  console.log(seconds)
 
   //Merge Data
   const DataComb = MenuDept.map(item => ({
