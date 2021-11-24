@@ -4,6 +4,7 @@ import ReactPlayer from 'react-player/youtube'
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import Timerdown from "../components/Countdown";
+import BarChart from "../components/BarChart";
 import {
     Dice,
     Rectangle_1,
@@ -13,7 +14,6 @@ import {
     Catur,
     Path,
 }from "../assets/images/imgIndex.js"
-import BarChart from "../components/BarChart";
 
 export default function Beranda(){
     // Kode Javascript //
@@ -59,12 +59,7 @@ export default function Beranda(){
                     <img className="path" src={Path} alt="dice"></img>
                 </div>
             </div>
-
             {/* Akhir Bagian Hero */}
-
-            <Button>
-                <a href={process.env.PUBLIC_URL + "vote.html"} >Vote Dummy</a>
-            </Button>
 
             {/* Awal Calon calon */}
             <div className="calon-container">
@@ -101,9 +96,9 @@ export default function Beranda(){
                     </Button>
                 </div>
             </div>
-
             {/* Akhir Calon calon */}
 
+            {/* Bar % Pemilih */}
             <div className="jumlah-pemilih text-center">
                 <BarChart/>
             </div>
@@ -125,7 +120,6 @@ export default function Beranda(){
 
                 <img className="path" src={Path} alt="dice"></img>
             </div>
-
             {/* Akhir About & Tata Cara */}
             
             {/* Awal Kritik & Saran */}
@@ -143,12 +137,9 @@ export default function Beranda(){
                     <Button>Kirim</Button>
                 </form>
             </div>
-
-
             {/* Akhir Kritik & Saran */}
         </Container>
     );
-
 }
 
 const Container = styled.div`

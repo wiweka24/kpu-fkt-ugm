@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Button from "./Button";
 import axios from "axios";
-import moment from "moment-timezone";
+import moment from "moment-timezone"; //cad kalau tanpa timeapi
 
 export default function Timerdown(){
   const [posts, setPosts] = useState([])
@@ -10,7 +10,7 @@ export default function Timerdown(){
   useEffect(() => {
     const intervalId = setInterval(() => {
       axios
-      .get('https://kpuftugm.id/timeapi')
+      .get('https://kpuftugm.id/timeinfo.php')
       .then(res => {
         //console.log(res)
         setPosts(res.data)
@@ -18,19 +18,19 @@ export default function Timerdown(){
       .catch(err => {
         //console.log(err)
       })
-    }, 1000) 
+    }, 1000) //every 1 sec
     return () => clearInterval(intervalId);
   }, [])
+  //29 Nov 2021 = 1638118800
+  var seconds = 1638118800 - posts
 
-  //Get Time
+  //Get Time tanpa api
   // useEffect(() => {
   //   const intervalId = setInterval(() => {
   //     setPosts(moment().unix())
   //   }, 1000) 
   //   return () => clearInterval(intervalId);
   // }, [])
-  
-  var seconds = 1638118800 - (posts.unixtime)
 
   //Convert
   var Hari = Math.floor(seconds / (3600*24))
@@ -44,32 +44,34 @@ export default function Timerdown(){
       return(
         <div><p>tunggu ...</p></div>
       )
-    }
-    else if (seconds > 0){
-      return(
-        <div className="cd">
-          <p>{Hari}<br/>Hari</p>
-          <p>{Jam}<br/>Jam</p>
-          <p>{Menit}<br/>Menit</p>
-          <p className="last">{Detik}<br/>Detik</p>
-        </div>
-      )
     } else {
-      if ((seconds+345600) >= 0) {
-        return (
-          <div>
-            <Button>
-              <a href={process.env.PUBLIC_URL + "vote.html"}>Vote Sekarang</a>
-            </Button>
+      if (seconds > 0){
+        return(
+          <div className="cd">
+            <p>{Hari}<br/>Hari</p>
+            <p>{Jam}<br/>Jam</p>
+            <p>{Menit}<br/>Menit</p>
+            <p className="last">{Detik}<br/>Detik</p>
           </div>
         )
       } else {
-        return (
-          <div>
-            <h3 className="endvote">Vote Ditutup</h3>
-          </div>
-        );
-      }
+        //345600 = 3hari 29 Nov to 1 Dec
+        if ((seconds + 259200) >= 0) {
+          return (
+            <div>
+              <Button>
+                <a href={process.env.PUBLIC_URL + "vote.html"}>Vote Sekarang</a>
+              </Button>
+            </div>
+          )
+        } else {
+          return (
+            <div>
+              <h3 className="endvote">Vote Ditutup</h3>
+            </div>
+          );
+        }
+      } 
     }
   }
 
