@@ -208,6 +208,7 @@ Button{
     padding: 0 25%;
 }
 .cd p {
+    font-size: calc(0.5rem + 1.5vmin);
     border-style: none none none solid; 
     border-color: var(--color-pink);
     width: 25%;
