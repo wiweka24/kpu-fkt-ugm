@@ -2,7 +2,7 @@ import React, {useState, useEffect, useReducer} from "react";
 import axios from "axios"
 import { MenuDept } from "./MenuDept";
 import styled from "styled-components";
-import moment from "moment-timezone"
+import moment from "moment-timezone" //cad kalau tanpa timeapi
 
 export default function BarChart(){
   const [posts, setPosts] = useState([])
@@ -21,7 +21,7 @@ export default function BarChart(){
           //console.log(err)
         })
       
-      }, 10000 * 1) //minutes
+      }, 10000 * 10) //minutes
     return () => clearInterval(intervalId);
   }, [])
 
@@ -29,7 +29,7 @@ export default function BarChart(){
   useEffect(() => {
     const intervalId = setInterval(() => {
       axios
-      .get('https://kpuftugm.id/status')
+      .get('https://kpuftugm.id/timeinfo.php')
       .then(res => {
         //console.log(res)
         setTime(res.data)
@@ -37,12 +37,12 @@ export default function BarChart(){
       .catch(err => {
         //console.log(err)
       })
-    }, 10000 * 5) //minutes
+    }, 1000) //every second
     return () => clearInterval(intervalId);
   }, [])
   var seconds = time.unixtime
 
-  //Get Time
+  //Get Time tanpa api
   // useEffect(() => {
   //   const intervalId = setInterval(() => {
   //     setTime(moment().unix())
@@ -62,9 +62,9 @@ export default function BarChart(){
     height: `${Number((dat.count / dat.student) * 100).toFixed(1)}%`
   }))
 
-  //Display //Sementara ditampilkan dulu
+  //Display //29 Nov 2021 = 1638118800
   const Bar=()=>{
-    if (seconds < 1637671487 || seconds==undefined){
+    if (seconds < 1638118800 || seconds==undefined){
       return (<></>)
     }
     else{
