@@ -2,7 +2,7 @@ import React, {useState, useEffect, useReducer} from "react";
 import axios from "axios"
 import { MenuDept } from "./MenuDept";
 import styled from "styled-components";
-import Select from "rc-select";
+import moment from "moment-timezone"
 
 export default function BarChart(){
   const [posts, setPosts] = useState([])
@@ -12,7 +12,7 @@ export default function BarChart(){
   useEffect(() => {    
     const intervalId = setInterval(() => {
       axios
-        .get('https://kpuftugm.tryitout21.online/status')
+        .get('https://kpuftugm.id/status')
         .then(res => {
           //console.log(res)
           setPosts(res.data)
@@ -21,7 +21,7 @@ export default function BarChart(){
           //console.log(err)
         })
       
-      }, 10000 * 5) //minutes
+      }, 10000 * 1) //minutes
     return () => clearInterval(intervalId);
   }, [])
 
@@ -29,18 +29,27 @@ export default function BarChart(){
   useEffect(() => {
     const intervalId = setInterval(() => {
       axios
-      .get('https://worldtimeapi.org/api/timezone/Asia/Jakarta')
+      .get('https://kpuftugm.id/status')
       .then(res => {
         //console.log(res)
         setTime(res.data)
       })
       .catch(err => {
-       // console.log(err)
+        //console.log(err)
       })
     }, 10000 * 5) //minutes
     return () => clearInterval(intervalId);
   }, [])
   var seconds = time.unixtime
+
+  //Get Time
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     setTime(moment().unix())
+  //   }, 1000) 
+  //   return () => clearInterval(intervalId);
+  // }, [])
+  // var seconds = time
 
   //Merge Data
   const DataComb = MenuDept.map(item => ({
@@ -96,12 +105,14 @@ li {
   list-style: none
 }
 .box {
-  font-size: calc(0.5rem + 1.5vmin);
   display: grid;
   width: 90%;
   grid-template-columns : repeat(8, 12.5%);
   padding: 5vmin 0;
   margin: auto;
+}
+.box p{
+  font-size: calc(0.5rem + 1vmin);
 }
 .bar {
   position: relative;

@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Button from "./Button";
-import moment from "moment-timezone";
 import axios from "axios";
+import moment from "moment-timezone";
 
 export default function Timerdown(){
   const [posts, setPosts] = useState([])
@@ -10,7 +10,7 @@ export default function Timerdown(){
   useEffect(() => {
     const intervalId = setInterval(() => {
       axios
-      .get('https://worldtimeapi.org/api/timezone/Asia/Jakarta')
+      .get('https://kpuftugm.id/timeapi')
       .then(res => {
         //console.log(res)
         setPosts(res.data)
@@ -40,7 +40,12 @@ export default function Timerdown(){
 
   //Display
   const Timeleft=()=>{
-    if (seconds > 0){
+    if (seconds == NaN || seconds == 1638118800){
+      return(
+        <div><p>tunggu ...</p></div>
+      )
+    }
+    else if (seconds > 0){
       return(
         <div className="cd">
           <p>{Hari}<br/>Hari</p>
@@ -54,7 +59,7 @@ export default function Timerdown(){
         return (
           <div>
             <Button>
-              <a href={process.env.PUBLIC_URL + "vote.html"} >Vote Sekarang</a>
+              <a href={process.env.PUBLIC_URL + "vote.html"}>Vote Sekarang</a>
             </Button>
           </div>
         )

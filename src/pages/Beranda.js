@@ -14,7 +14,6 @@ import {
     Path,
 }from "../assets/images/imgIndex.js"
 import BarChart from "../components/BarChart";
-import moment from "moment-timezone"
 
 export default function Beranda(){
     // Kode Javascript //
@@ -39,7 +38,7 @@ export default function Beranda(){
             
             document.getElementById("message").value = "";
         } catch (err) {
-            console.log(err)
+            //console.log(err)
         }
     }
 
@@ -53,7 +52,9 @@ export default function Beranda(){
                     <h4>Pemilihan Umum </h4>
                     <h2 className>Ketua BEM KM FT UGM 2022 </h2>
                     <img className="dice" src={Dice} alt="dice"></img>
-                    <div className="wait"><Timerdown/></div>
+                    <div className="wait">
+                        <Timerdown/>
+                    </div>
                     <img className="catur" src={Catur} alt="dice"></img>
                     <img className="path" src={Path} alt="dice"></img>
                 </div>
@@ -160,11 +161,11 @@ overflow: hidden;
     color: white;
 }
 .wait {
-    animation: show 2s forwards;
+    animation: show 2.5s forwards;
     opacity: 0;
 }
 @keyframes show {
-    65% {
+    60% {
         opacity: 0;
     }
     100% {
@@ -208,7 +209,7 @@ Button{
     padding: 0 25%;
 }
 .cd p {
-    font-size: calc(0.5rem + 1.5vmin);
+    font-size: calc(0.5rem + 1vmin);
     border-style: none none none solid; 
     border-color: var(--color-pink);
     width: 25%;
