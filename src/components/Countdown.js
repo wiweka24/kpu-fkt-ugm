@@ -16,7 +16,7 @@ export default function Timerdown(){
         setPosts(res.data)
       })
       .catch(err => {
-       // console.log(err)
+        //console.log(err)
       })
     }, 1000) 
     return () => clearInterval(intervalId);
@@ -30,7 +30,7 @@ export default function Timerdown(){
   //   return () => clearInterval(intervalId);
   // }, [])
   
-  var seconds = 1638118800 - (posts.unix())
+  var seconds = 1638118800 - (posts.unixtime)
 
   //Convert
   var Hari = Math.floor(seconds / (3600*24))

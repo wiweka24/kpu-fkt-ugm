@@ -96,6 +96,7 @@ li {
   list-style: none
 }
 .box {
+  font-size: calc(0.5rem + 1.5vmin);
   display: grid;
   width: 90%;
   grid-template-columns : repeat(8, 12.5%);
