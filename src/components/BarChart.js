@@ -29,7 +29,7 @@ export default function BarChart(){
   useEffect(() => {
     const intervalId = setInterval(() => {
       axios
-      .get('http://worldtimeapi.org/api/timezone/Asia/Jakarta')
+      .get('https://worldtimeapi.org/api/timezone/Asia/Jakarta')
       .then(res => {
         //console.log(res)
         setTime(res.data)

@@ -43,10 +43,6 @@ export default function Beranda(){
         }
     }
 
-    //Coba2
-    console.log(Date.now())
-    console.log(moment().valueOf())
-
     return(
         // Kode HTML //
         <Container>

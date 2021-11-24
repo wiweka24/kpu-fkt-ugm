@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import Button from "./Button";
+import moment from "moment-timezone";
 import axios from "axios";
 
 export default function Timerdown(){
@@ -9,7 +10,7 @@ export default function Timerdown(){
   useEffect(() => {
     const intervalId = setInterval(() => {
       axios
-      .get('http://worldtimeapi.org/api/timezone/Asia/Jakarta')
+      .get('https://worldtimeapi.org/api/timezone/Asia/Jakarta')
       .then(res => {
         //console.log(res)
         setPosts(res.data)
@@ -20,7 +21,15 @@ export default function Timerdown(){
     }, 1000) 
     return () => clearInterval(intervalId);
   }, [])
-  var seconds = 1638118800 - (posts.unixtime)
+
+  //Get Time
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     setPosts(moment().unix())
+  //   }, 1000) 
+  //   return () => clearInterval(intervalId);
+  // }, [])
+  // var seconds = 1638118800 - (posts)
 
   //Convert
   var Hari = Math.floor(seconds / (3600*24))
