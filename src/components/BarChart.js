@@ -64,7 +64,7 @@ export default function BarChart(){
 
   //Display //29 Nov 2021 = 1638118800 //600 delay 10 menit biar dibuka di 00.10 //25 nov u coba = 1637798400
   const Bar=()=>{
-    if (seconds < (1638118800 + 600) || seconds==undefined){
+    if (seconds < (1637798400 + 600) || seconds==undefined){
       return (<></>)
     }
     else{
