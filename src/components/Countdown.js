@@ -21,8 +21,8 @@ export default function Timerdown(){
     }, 1000) //every 1 sec
     return () => clearInterval(intervalId);
   }, [])
-  //29 Nov 2021 = 1638118800
-  var seconds = 1638118800 - posts
+  //29 Nov 2021 = 1638118800 //25 nov u coba = 1637798400
+  var seconds = 1637798400 - posts
 
   //Get Time tanpa api
   // useEffect(() => {
