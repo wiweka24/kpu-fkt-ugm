@@ -60,7 +60,7 @@ export default function Timerdown(){
           return (
             <div>
               <Button>
-                <a href={process.env.PUBLIC_URL + "vote.html"}>Vote Sekarang</a>
+                <a href={"https://kpuftugm.id/dashboard"}>Vote Sekarang</a>
               </Button>
             </div>
           )
