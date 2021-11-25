@@ -60,7 +60,7 @@ export default function Timerdown(){
           return (
             <div>
               <Button>
-                <a href={"https://kpuftugm.id/dashboard"}>Vote Sekarang</a>
+                <a href={"https://kpuftugm.id/auth/google"}>Vote Sekarang</a>
               </Button>
             </div>
           )
