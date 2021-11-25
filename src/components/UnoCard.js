@@ -59,7 +59,9 @@ const Container = styled.div`
 }
 
 .card .photo{
-    width: 40vmin;
+    width: 15vw;
+    max-width: 325px;
+    min-width: 125px;
     height: auto;
 }
 

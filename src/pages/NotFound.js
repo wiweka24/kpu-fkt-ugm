@@ -18,8 +18,17 @@ export default function NotFound() {
                     <img src={Cards} className="card" alt="card"/>
                     <div class="text">
                         <h1 className="font-squids">ERROR 404</h1>
-                        <h2>Halaman yang Anda cari tidak ditemukan</h2>
                     </div>
+                </div>
+                <div style={{padding: '10vmin', alignItems:'center', display:'flex', flexDirection: 'column'}}>
+                    <h3>
+                        <b>Mengapa halaman ini muncul? Kemungkinan:</b>
+                    </h3>
+                    <ul>
+                        <li>Anda telah memilih dan tidak diperkenankan memilih kembali</li>
+                        <li>Email Anda tidak terdaftar di Daftar Pemilih Tetap KPU FT UGM</li>
+                        <li>Anda tidak memiliki akses pada halaman ini</li>
+                    </ul>
                 </div>
             </Container>
         </>

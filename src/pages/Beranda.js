@@ -4,6 +4,7 @@ import ReactPlayer from 'react-player/youtube'
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import Timerdown from "../components/Countdown";
+import BarChart from "../components/BarChart";
 import {
     Dice,
     Rectangle_1,
@@ -37,15 +38,13 @@ export default function Beranda(){
             
             document.getElementById("message").value = "";
         } catch (err) {
-            console.log(err)
+            //console.log(err)
         }
     }
 
     return(
         // Kode HTML //
         <Container>
-            
-
             {/* Awal Bagian Hero*/}
             <div className="hero-container text-center">
                 <div>
@@ -53,17 +52,14 @@ export default function Beranda(){
                     <h4>Pemilihan Umum </h4>
                     <h2 className>Ketua BEM KM FT UGM 2022 </h2>
                     <img className="dice" src={Dice} alt="dice"></img>
-                    <Timerdown/>
+                    <div className="wait">
+                        <Timerdown/>
+                    </div>
                     <img className="catur" src={Catur} alt="dice"></img>
                     <img className="path" src={Path} alt="dice"></img>
                 </div>
             </div>
-
             {/* Akhir Bagian Hero */}
-
-            <Button>
-                <a href={process.env.PUBLIC_URL + "vote.html"} >Vote Dummy</a>
-            </Button>
 
             {/* Awal Calon calon */}
             <div className="calon-container">
@@ -100,14 +96,18 @@ export default function Beranda(){
                     </Button>
                 </div>
             </div>
-
             {/* Akhir Calon calon */}
+
+            {/* Bar % Pemilih */}
+            <div className="text-center">
+                <BarChart/>
+            </div>
 
             {/* Awal About & Tata Cara */}
             <div className="about-container text-center">
                 <div className="about">
                     <h2 className="font-squids">Tentang Pemilu FT UGM 2022 </h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur condimentum purus eget feugiat gravida. Sed vel justo sit amet dui aliquam ornare. Duis blandit, metus aliquet dapibus eleifend, enim elit suscipit magna, id pulvinar odio nibh sed velit. Maecenas id cursus dui. </p>
+                    Pemilihan Umum Mahasiswa Fakultas Teknik Universitas Gadjah Mada (Pemilu) adalah sarana pelaksanaan kedaulatan mahasiswa berdasarkan Anggaran Dasar/Anggaran Rumah Tangga Keluarga Mahasiswa Fakultas Teknik Universitas Gadjah Mada.                    
                     <Button>
                         <Link to="/tentang">Selengkapnya</Link>
                     </Button>
@@ -120,7 +120,6 @@ export default function Beranda(){
 
                 <img className="path" src={Path} alt="dice"></img>
             </div>
-
             {/* Akhir About & Tata Cara */}
             
             {/* Awal Kritik & Saran */}
@@ -138,11 +137,9 @@ export default function Beranda(){
                     <Button>Kirim</Button>
                 </form>
             </div>
-
             {/* Akhir Kritik & Saran */}
         </Container>
     );
-
 }
 
 const Container = styled.div`
@@ -154,19 +151,19 @@ overflow: hidden;
     padding: 0;
     color: white;
 }
-.no {
-    margin: auto auto 1vmin auto;
-    border: solid var(--color-blue);
-    background-color: var(--color-green);
-    height: calc(1rem + 2.5vmin);
-    width: calc(1rem + 2.5vmin);
-    transform: rotate(45deg); 
+.wait {
+    animation: show 2.5s forwards;
+    opacity: 0;
 }
-.no-number {
-    height: calc(1rem + 2.5vmin);
-    width: calc(1rem + 2.5vmin);
-    transform: rotate(-45deg);
+@keyframes show {
+    60% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
+
 // hero // -------------------------------------------------------
 .hero-container{
     display: grid;
@@ -203,6 +200,7 @@ Button{
     padding: 0 25%;
 }
 .cd p {
+    font-size: calc(0.5rem + 1vmin);
     border-style: none none none solid; 
     border-color: var(--color-pink);
     width: 25%;
@@ -211,6 +209,12 @@ Button{
 }
 .cd .last {
     border-style: none solid; 
+}
+.endvote {
+    border: 2px var(--color-pink);
+    border-style: solid none; 
+    width: 40%;
+    margin: auto;
 }
 .catur{
     display: none;
@@ -264,19 +268,37 @@ Button{
 }
 .desc1{
     //order: 2;
+    z-index: 2;
     grid-area: 1 / 2;
 }
 .desc2{
     //order: 3;
+    z-index: 2;
     grid-area: 2 / 1;
 }
 .logo_desc{
     //order 5 sampai 6
+    z-index: 2;
     grid-area: 3 / 1 / 3 / span 2;
 }
 .logo_desc img{
     display: none
 }
+.no {
+    margin: auto auto 1vmin auto;
+    border: solid var(--color-blue);
+    background-color: var(--color-green);
+    height: calc(1.6rem + 1.5vmin);
+    width: calc(1.6rem + 1.5vmin);
+    transform: rotate(45deg); 
+}
+.no-number {
+    font-weight: bold;
+    height: calc(1rem + 1.5vmin);
+    width: calc(1rem + 1.5vmin);
+    transform: rotate(-45deg);
+}
+
 // about // -------------------------------------------------------
 .about-container{
     display: grid;
@@ -305,6 +327,7 @@ Button{
     width: 80vmin !important;
     height: 45vmin !important;
 }
+
 // kritik dan saran // -------------------------------------------------------
 .kritik{
     display: grid;
@@ -338,7 +361,6 @@ Button{
     font-family: montBook;
 }
 @media (min-width: 961px) {
-    
     // hero // -------------------------------------------------------
     .catur{
         display: inline;
