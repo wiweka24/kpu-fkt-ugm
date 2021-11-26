@@ -40,7 +40,8 @@ export default function CarouselPanitia() {
                     </div>
                     <div className="container-panitia">
                         <img className="panitia" style={contentStyle} src={MEDPUB}/>
-                    </div>                    <div className="container-panitia">
+                    </div>                    
+                    <div className="container-panitia">
                         <img className="panitia" style={contentStyle} src={HUMAS}/>
                     </div>
             </Carousel>
