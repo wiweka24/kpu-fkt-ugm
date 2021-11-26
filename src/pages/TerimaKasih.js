@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import UlarPNG from '../assets/TentangKPU/ular.png'
-import LogoPNG from '../assets/TentangKPU/logo.png'
+import UlarPNG from '../assets/images/path.webp'
+import LogoPNG from '../assets/images/logo.webp'
 import { Helmet } from "react-helmet";
 import Button from "../components/Button";
 
