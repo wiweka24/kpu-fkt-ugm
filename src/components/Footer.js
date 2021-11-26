@@ -8,7 +8,7 @@ function Footer() {
       <div className="grid-container p-3">
         <div className="m-0">
           <h4 className="font-squids">Komisi Pemilihan Umum 2021 <br/> 
-          Fakultas Teknik Universitas Gadjah Mada</h4>
+          Fakultas Teknik <br/>Universitas Gadjah Mada</h4>
           <p>
             <a
                 href="https://goo.gl/maps/bWu9pE1hgutwyZy8A"

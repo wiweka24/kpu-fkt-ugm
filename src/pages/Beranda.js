@@ -99,7 +99,7 @@ export default function Beranda(){
             {/* Akhir Calon calon */}
 
             {/* Bar % Pemilih */}
-            <div className="jumlah-pemilih text-center">
+            <div className="text-center">
                 <BarChart/>
             </div>
 
@@ -107,8 +107,8 @@ export default function Beranda(){
             <div className="about-container text-center">
                 <div className="about">
                     <h2 className="font-squids">Tentang Pemilu FT UGM 2022 </h2>
-                        Pemilihan Umum Mahasiswa Fakultas Teknik Universitas Gadjah Mada (Pemilu) adalah sarana pelaksanaan kedaulatan mahasiswa berdasarkan Anggaran Dasar/Anggaran Rumah Tangga Keluarga Mahasiswa Fakultas Teknik Universitas Gadjah Mada.                    
-                        <Button>
+                    Pemilihan Umum Mahasiswa Fakultas Teknik Universitas Gadjah Mada (Pemilu) adalah sarana pelaksanaan kedaulatan mahasiswa berdasarkan Anggaran Dasar/Anggaran Rumah Tangga Keluarga Mahasiswa Fakultas Teknik Universitas Gadjah Mada.                    
+                    <Button>
                         <Link to="/tentang">Selengkapnya</Link>
                     </Button>
                 </div>
