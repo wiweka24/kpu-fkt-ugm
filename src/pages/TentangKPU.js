@@ -1,9 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import UlarPNG from '../assets/TentangKPU/ular.png'
-import LogoPNG from '../assets/TentangKPU/logo.png'
-import DaduPNG from '../assets/TentangKPU/Dadu.png'
-import SquadPNG from '../assets/TentangKPU/squad.png'
+import {
+    Path,
+    Dice,
+    Squad,
+    Logo
+}from "../assets/images/imgKPU.js"
 import CarouselPanitia from "../components/Carousel";
 import 'antd/dist/antd.css';
 import CarouselPanitia2 from "../components/Carousel2";
@@ -21,17 +23,17 @@ export default function TentangKPU(){
             </Helmet>
         <   Container>
                 <div class="Hero">
-                    <img src={UlarPNG} class="ular"/>
+                    <img src={Path} class="ular"/>
                     <div class="title">
                         <h1 class="white">TENTANG KAMI</h1>
-                        <img class="logo" src={LogoPNG} alt="Logo KPU FT"/>
+                        <img class="logo" src={Logo} alt="Logo KPU FT"/>
                         <h1 class="p1 white">KOMISI PEMILIHAN UMUM</h1>
                         <h2 class="p2 pink">FAKULTAS TEKNIK UGM 2021</h2>
                     </div>
                 </div>
                 {/*Deskripsi dari KPU*/}
                 <div class="container">
-                    <img src={DaduPNG} class="Dadu"/>
+                    <img src={Dice} class="Dadu"/>
                     <div class="deskripsi">
                         <div class="pemilu">
                             <h3 class="desk1 font-squids pink">PEMILU FAKULTAS TEKNIK UGM</h3>
@@ -56,7 +58,7 @@ export default function TentangKPU(){
                 {/*Judul Panitia*/}
                 <div class="JudulPanitia">
                     <h1 class="TextPanitia white"> Panitia KPU FT UGM 2021 </h1>
-                    <img src={SquadPNG} class="squad"/>
+                    <img src={Squad} class="squad"/>
                 </div>
                 {/*Slide Panitia*/}
                 <div class="Panitia">

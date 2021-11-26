@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import Button from "../components/Button";
 
-import LogoPNG from '../assets/TentangKPU/logo.png'
+import LogoPNG from '../assets/images/logo.webp'
 import Cards from '../assets/images/cards.webp'
 
 export default function NotFound() {
