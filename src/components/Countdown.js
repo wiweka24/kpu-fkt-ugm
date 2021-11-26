@@ -22,7 +22,7 @@ export default function Timerdown(){
     return () => clearInterval(intervalId);
   }, [])
   //29 Nov 2021 = 1638118800 //25 nov u coba = 1637798400
-  var seconds = 1638118800  - posts
+  var seconds = 1638118800 - posts
 
   //Get Time tanpa api
   // useEffect(() => {

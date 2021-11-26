@@ -6,24 +6,68 @@ import moment from "moment-timezone" //cad kalau tanpa timeapi
 
 export default function BarChart(){
   const [posts, setPosts] = useState([])
+  const [total, setTotal] = useState([])
   const [time, setTime] = useState([])
 
   //Get Data
+  useEffect(() => {    
+      axios
+        .get('https://kpuftugm.id/status')
+        .then(res => {
+          //console.log(res)
+          console.log("1")
+          setPosts(res.data)
+        })
+        .catch(err => {
+          //console.log(err)
+        })
+  }, [])
+
   useEffect(() => {    
     const intervalId = setInterval(() => {
       axios
         .get('https://kpuftugm.id/status')
         .then(res => {
           //console.log(res)
+          console.log("repeat")
           setPosts(res.data)
         })
         .catch(err => {
           //console.log(err)
         })
-      
-      }, 1000) //every second
+      }, 60000 * 10) //every 10 minutes
     return () => clearInterval(intervalId);
   }, [])
+
+  //Get Total Data
+  useEffect(() => {    
+      axios
+        .get('https://kpuftugm.id/allstatus')
+        .then(res => {
+          //console.log(res)
+          setTotal(res.data)
+        })
+        .catch(err => {
+          //console.log(err)
+        })
+  }, [])
+
+  useEffect(() => {    
+    const intervalId = setInterval(() => {
+      axios
+        .get('https://kpuftugm.id/allstatus')
+        .then(res => {
+          //console.log(res)
+          setTotal(res.data)
+        })
+        .catch(err => {
+          //console.log(err)
+        })
+      }, 60000 * 10) //every second
+    return () => clearInterval(intervalId);
+  }, [])
+  var totaldata = total.count
+  var totalpercent = `${Number((totaldata / 6075) * 100).toFixed(1)}%`
 
   //Get Time
   useEffect(() => {
@@ -82,6 +126,13 @@ export default function BarChart(){
               </li>
             ))}
           </div>
+          <div className="total text-center">
+            <div className="bartotal">
+              <div className="totalname"><p>Total</p></div>
+              <div className="totalpercent"><p>{totalpercent} ({totaldata})</p></div>
+              <div className="totallevel" style={{width: totalpercent}}></div>
+            </div>
+          </div>
         </Container>
       )
     }
@@ -104,15 +155,34 @@ const Container = styled.div`
 li {
   list-style: none
 }
-.box {
-  display: grid;
+.box, .total{
   width: 90%;
-  grid-template-columns : repeat(8, 12.5%);
-  padding: 5vmin 0;
   margin: auto;
 }
-.box p{
-  font-size: calc(0.5rem + 1vmin);
+.total{
+  margin: 1vmin auto 10vmin auto;
+}
+.total .bartotal{
+  display: grid;
+  grid-template-columns: 10% 12.5% auto ;
+  width: 97.5%;
+  border: 2px solid;
+  margin: auto;
+}
+.total .bartotal .totalname{
+  background-color: var(--color-green);
+}
+.total .bartotal .totalpercent{
+  background-color: var(--color-pink);
+}
+.total .totallevel{
+  border: 1px var(--color-pink) solid;
+  background-color: var(--color-pink);
+}
+.box {
+  display: grid;
+  grid-template-columns : repeat(8, 12.5%);
+  padding: 5vmin 0 0 0;
 }
 .bar {
   position: relative;
@@ -141,8 +211,9 @@ li {
   border: 2px var(--color-white);
   border-style: none solid solid;
 }
+
 @media (min-width: 961px) {
-  .box {
+  .box, .total{
     width: 60%;
   }
   .bar, .dept, .persen {

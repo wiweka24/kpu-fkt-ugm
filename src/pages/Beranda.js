@@ -14,6 +14,7 @@ import {
     Catur,
     Path,
 }from "../assets/images/imgIndex.js"
+import CarouselTataCara from "../components/Carousel_TataCara";
 
 export default function Beranda(){
     // Kode Javascript //
@@ -99,27 +100,28 @@ export default function Beranda(){
             {/* Akhir Calon calon */}
 
             {/* Bar % Pemilih */}
-            <div className="text-center">
+            <div className="bar-container text-center">
                 <BarChart/>
             </div>
 
             {/* Awal About & Tata Cara */}
             <div className="about-container text-center">
                 <div className="about">
-                    <h2 className="font-squids">Tentang Pemilu FT UGM 2022 </h2>
-                    Pemilihan Umum Mahasiswa Fakultas Teknik Universitas Gadjah Mada (Pemilu) adalah sarana pelaksanaan kedaulatan mahasiswa berdasarkan Anggaran Dasar/Anggaran Rumah Tangga Keluarga Mahasiswa Fakultas Teknik Universitas Gadjah Mada.                    
+                    <h2 className="font-squids">Tentang Pemilu FT UGM 2021 </h2>
+                    <p> Pemilihan Umum Mahasiswa Fakultas Teknik Universitas Gadjah Mada (Pemilu) adalah sarana pelaksanaan kedaulatan mahasiswa berdasarkan Anggaran Dasar/Anggaran Rumah Tangga Keluarga Mahasiswa Fakultas Teknik Universitas Gadjah Mada. </p>                     
                     <Button>
                         <Link to="/tentang">Selengkapnya</Link>
                     </Button>
                 </div>
                 
-                <div className="tatacara">
+                <div className="tatacara text-center">
                     <h2 className="font-squids">Tata Cara Pemilihan </h2>
-                    <ReactPlayer className="video" controls={true} url='https://www.youtube.com/watch?v=rhFSQdILOXk&ab_channel=FakultasTeknikUGM' />
+                    <CarouselTataCara/>
                 </div>
 
-                <img className="path" src={Path} alt="dice"></img>
+                <img className="path" src={Path} alt="path"></img>
             </div>
+
             {/* Akhir About & Tata Cara */}
             
             {/* Awal Kritik & Saran */}
@@ -301,7 +303,6 @@ Button{
 
 // about // -------------------------------------------------------
 .about-container{
-    display: grid;
     z-index: 0;
     padding: 10vmin 0;
     position: relative;
@@ -309,25 +310,18 @@ Button{
     width: 100%;
 }
 .about{
-    margin: 0 5%;
+    width: 100%;
+    padding: 0 5%;
 }
 .about-container h2{
-    padding: 5vmin 0;
+    padding: 5vmin 0 2vmin 0;
 }
 .tatacara{
-    margin: 0 5%;
-    padding: 10vmin 0;
+    padding: 0;
 }
-.video{
-    border-style: solid;
-    border-width: thick;
-    border-color: var(--color-pink);
-    border-radius: 1vmin;
-    margin: auto;
-    width: 80vmin !important;
-    height: 45vmin !important;
+.bar-container p{
+  font-size: calc(0.5rem + 1vmin);
 }
-
 // kritik dan saran // -------------------------------------------------------
 .kritik{
     display: grid;
@@ -469,21 +463,18 @@ Button{
     
     // about // -------------------------------------------------------
     .about{
-        margin: 0 20%;
+        padding: 0 10%;
     }
-    
-    .tatacara{
-        margin: 0 20%;
-    }
-    .video{
-        width: 112vmin !important;
-        height: 63vmin !important;
-    }
+
     .about-container .path{
         right: 0;
         bottom: 0;
         transform: rotate(180deg);
     }
+    .tatacara{
+        padding: 0 10%;
+    }
+
     // kritik dan saran // -------------------------------------------------------
     .kritik{
         width: 50%;
