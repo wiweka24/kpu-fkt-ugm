@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import Timerdown from "../components/Countdown";
 import BarChart from "../components/BarChart";
+import Fade from "react-reveal/Fade"
 import {
     Dice,
     Rectangle_1,
@@ -15,6 +16,7 @@ import {
     Path,
 }from "../assets/images/imgIndex.js"
 import CarouselTataCara from "../components/Carousel_TataCara";
+import { Helmet } from "react-helmet";
 
 export default function Beranda(){
     // Kode Javascript //
@@ -46,24 +48,39 @@ export default function Beranda(){
     return(
         // Kode HTML //
         <Container>
+            <Helmet>
+                <title>Beranda KPU FT UGM</title>
+            </Helmet>
             {/* Awal Bagian Hero*/}
             <div className="hero-container text-center">
                 <div>
-                    <h1 className="tittle font-squids">kpu ft<br/>2021 </h1>
+                    <Fade>
+                        <h1 className="tittle font-squids">kpu ft<br/>2021 </h1>
+                        <h4>Pemilihan Umum </h4>
+                        <h2 className>Ketua BEM KMFT UGM 2022 </h2>
+                    </Fade>
+                    {/* <h1 className="tittle font-squids">kpu ft<br/>2021 </h1>
                     <h4>Pemilihan Umum </h4>
-                    <h2 className>Ketua BEM KM FT UGM 2022 </h2>
+                    <h2 className>Ketua BEM KM FT UGM 2022 </h2> */}
+                    <Fade>
                     <img className="dice" src={Dice} alt="dice"></img>
+                    </Fade>
                     <div className="wait">
+                    <Fade>
                         <Timerdown/>
+                    </Fade>
                     </div>
+                    <Fade>
                     <img className="catur" src={Catur} alt="dice"></img>
                     <img className="path" src={Path} alt="dice"></img>
+                    </Fade>
                 </div>
             </div>
             {/* Akhir Bagian Hero */}
 
             {/* Awal Calon calon */}
             <div className="calon-container">
+                <Fade>
                 <div className="calon calon1">
                     <img className="rec1" src={Rectangle_1} alt="dice"></img>
                     <img className="foto_calon1" src={Calon_1} alt="dice"></img>
@@ -73,6 +90,8 @@ export default function Beranda(){
                     <img className="rec2" src={Rectangle_2} alt="dice"></img>
                     <img className="foto_calon2" src={Calon_2} alt="dice"></img>
                 </div>
+                </Fade>
+
 
                 <div className="desc1 text-center">
                     <div className="no"><h5 className="no-number">1</h5></div>
@@ -106,6 +125,7 @@ export default function Beranda(){
 
             {/* Awal About & Tata Cara */}
             <div className="about-container text-center">
+                <Fade>
                 <div className="about">
                     <h2 className="font-squids">Tentang Pemilu FT UGM 2021 </h2>
                     <p> Pemilihan Umum Mahasiswa Fakultas Teknik Universitas Gadjah Mada (Pemilu) adalah sarana pelaksanaan kedaulatan mahasiswa berdasarkan Anggaran Dasar/Anggaran Rumah Tangga Keluarga Mahasiswa Fakultas Teknik Universitas Gadjah Mada. </p>                     
@@ -118,6 +138,8 @@ export default function Beranda(){
                     <h2 className="font-squids">Tata Cara Pemilihan </h2>
                     <CarouselTataCara/>
                 </div>
+                </Fade>
+
 
                 <img className="path" src={Path} alt="path"></img>
             </div>
@@ -156,6 +178,7 @@ overflow: hidden;
 .wait {
     animation: show 2.5s forwards;
     opacity: 0;
+    min-height: 15vmin;
 }
 @keyframes show {
     60% {

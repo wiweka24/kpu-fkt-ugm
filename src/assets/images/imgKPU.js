@@ -1,26 +1,29 @@
-import Dice from './Dadu.png';
-import Rectangle_1 from './rectangle1.webp';
-import Rectangle_2 from './rectangle2.webp';
-import ACARA from '../ImgPanitia/ACARA.png'
-import HUMAS from '../ImgPanitia/HUMAS.png'
-import IT from '../ImgPanitia/IT.png'
-import KETUA from '../ImgPanitia/KETUA.png'
-import MEDPUB from '../ImgPanitia/MEDPUB.png'
-import KSK from '../ImgPanitia/KSK.png'
-import ACARA2 from '../ImgPanitia/ACARA2.png'
-import HUMAS2 from '../ImgPanitia/HUMAS2.png'
-import IT2 from '../ImgPanitia/IT2.png'
-import KETUA2 from '../ImgPanitia/KETUA2.png'
-import MEDPUB2 from '../ImgPanitia/MEDPUB2.png'
-import KSK2 from '../ImgPanitia/KSK2.png'
+import Dice from './dice.webp';
+import Squad from './squad.webp';
+import Logo from './logo.webp';
+import Path from './path.webp';
+
+import ACARA from './imgPanitia/ACARA.webp'
+import HUMAS from './imgPanitia/HUMAS.webp'
+import IT from './imgPanitia/IT.webp'
+import KETUA from './imgPanitia/KETUA.webp'
+import MEDPUB from './imgPanitia/MEDPUB.webp'
+import KSK from './imgPanitia/KSK.webp'
+import ACARA2 from './imgPanitia/ACARA2.webp'
+import HUMAS2 from './imgPanitia/HUMAS2.webp'
+import IT2 from './imgPanitia/IT2.webp'
+import KETUA2 from './imgPanitia/KETUA2.webp'
+import MEDPUB2 from './imgPanitia/MEDPUB2.webp'
+import KSK2 from './imgPanitia/KSK2.webp'
 
 
 
 
 export{
+  Path,
   Dice,
-  Rectangle_1,
-  Rectangle_2,
+  Squad,
+  Logo,
   ACARA,
   HUMAS,
   IT,

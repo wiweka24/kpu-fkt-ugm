@@ -1,9 +1,8 @@
 body {
     background-color: #102037;
-    width: 100vw; 
+    width: 100%; 
     overflow-x: hidden;
     box-sizing: border-box;
-
 }
 
 @font-face {
@@ -60,7 +59,7 @@ p {
 
 .hero-container {
     z-index: 0;
-    width: 100vw;
+    /* width: 100%; */
     min-height: 100vh;
     /* display: flex;
     flex-direction: column;
@@ -77,6 +76,7 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding: 5vmin;
 }
 
 
@@ -228,7 +228,7 @@ button {
         margin-bottom: 10%;
     }
     .cta {
-        margin: 40px;
+        margin: 3vmin;
     }
     .path {
         display: none;
@@ -242,7 +242,7 @@ button {
     display:table;
     /* padding:5px; */
     margin:10px;
-    font-family: "GameOfSquids";
+    font-family: montBook;
     text-shadow:
        1px  1px 0 #211E21,
       -1px -1px 0 #211E21,
@@ -276,7 +276,7 @@ button {
   }
 
   img{
-      width: 40vmin;
+      width: 30vmin;
   }
   
   .card:before,
@@ -284,7 +284,7 @@ button {
     display:inline-block;
     position:absolute;
     /* line-height:0; */
-    font-size:calc(0.5rem + 2.5vmin);
+    font-size:calc(0.5rem + 2vmin);
     color:#F9F7F8;
     text-shadow:
        1px  1px 0 #211E21,

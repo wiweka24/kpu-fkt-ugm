@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import UlarPNG from '../assets/TentangKPU/ular.png'
-import LogoPNG from '../assets/TentangKPU/logo.png'
+import UlarPNG from '../assets/images/path.webp'
+import LogoPNG from '../assets/images/logo.webp'
 import { Helmet } from "react-helmet";
 import Button from "../components/Button";
 
@@ -46,6 +46,9 @@ export default function TerimaKasih() {
                         <h2 class="font-mont white text-center">Partisipasi Anda Dalam</h2>
                         <img class="logo" src={LogoPNG} alt="Logo KPU FT" />
                         <h1 class="pink font-mont font-bold">PEMILU FT UGM 2021</h1>
+                    </div>
+                    <div class="buttons">
+                        <Button target="_blank" link="http://bit.ly/EvalKPUFT21" fontSize="calc(0.5rem + 1.2vmin)">ISI EVALUASI</Button>
                     </div>
                 </div>
 
@@ -148,5 +151,17 @@ h1{
     color: var(--color-black);
     font-size: calc(0.5rem + 2vmin);
     font-family: "MontBook";
+}
+
+.buttons{
+    display: flex;
+    width: 50%;
+    align-self: center;
+    justify-content: space-around;
+
+    button{
+        margin: 5vmin;
+        white-space: nowrap;
+    }
 }
 `

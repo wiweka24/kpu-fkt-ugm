@@ -1,13 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import UlarPNG from '../assets/TentangKPU/ular.png'
-import LogoPNG from '../assets/TentangKPU/logo.png'
-import DaduPNG from '../assets/TentangKPU/Dadu.png'
-import SquadPNG from '../assets/TentangKPU/squad.png'
+import {
+    Path,
+    Dice,
+    Squad,
+    Logo
+}from "../assets/images/imgKPU.js"
 import CarouselPanitia from "../components/Carousel";
 import 'antd/dist/antd.css';
 import CarouselPanitia2 from "../components/Carousel2";
 import { Helmet } from "react-helmet";
+import Fade from "react-reveal/Fade"
 
 export default function TentangKPU(){
     // Kode Javascript //
@@ -15,26 +18,28 @@ export default function TentangKPU(){
 
     return(
         // Kode HTML //
-        <>
+        <   Container> 
             <Helmet>
                 <title>Tentang KPU FT UGM</title>
             </Helmet>
-        <   Container>
                 <div class="Hero">
-                    <img src={UlarPNG} class="ular"/>
+                    <img src={Path} class="ular"/>
+                    <Fade>
                     <div class="title">
                         <h1 class="white">TENTANG KAMI</h1>
-                        <img class="logo" src={LogoPNG} alt="Logo KPU FT"/>
+                        <img class="logo" src={Logo} alt="Logo KPU FT"/>
                         <h1 class="p1 white">KOMISI PEMILIHAN UMUM</h1>
                         <h2 class="p2 pink">FAKULTAS TEKNIK UGM 2021</h2>
                     </div>
+                    </Fade>
                 </div>
                 {/*Deskripsi dari KPU*/}
                 <div class="container">
-                    <img src={DaduPNG} class="Dadu"/>
+                    <img src={Dice} class="Dadu"/>
                     <div class="deskripsi">
+                    <Fade left>
                         <div class="pemilu">
-                            <h3 class="desk1 font-squids pink">PEMILU FAKULTAS TEKNIK UGM</h3>
+                            <h3 class="desk1  pink font-squids ">PEMILU FAKULTAS TEKNIK UGM</h3>
                             <p class="desk2">
                                 <b>Pemilihan Umum</b> Mahasiswa Fakultas Teknik Universitas Gadjah Mada (Pemilu) adalah sarana pelaksanaan kedaulatan mahasiswa berdasarkan Anggaran Dasar/Anggaran Rumah Tangga Keluarga Mahasiswa Fakultas Teknik Universitas Gadjah Mada.
                                 <br/><br/><b>Peserta Pemilu</b> adalah kandidat calon Ketua BEM KMFT UGM yang telah lolos verifikasi oleh KPU.
@@ -43,20 +48,21 @@ export default function TentangKPU(){
                             </p>
                         </div>
 
-                        <div class="kpu">
-                            <h3 class="desk1 font-squids pink">KPU FAKULTAS TEKNIK UGM</h3>
+                        <div class="kpu" style={{marginTop: "10vmin"}}>
+                            <h3 class="desk1 pink font-squids ">KPU FAKULTAS TEKNIK UGM</h3>
                             <p class="desk2"><b>Komisi Pemilihan Umum</b> Fakultas Teknik Universitas Gadjah Mada yang selanjutnya disebut
                             KPU adalah suatu komisi yang menyelenggarakan Pemilu berdasarkan Undang-Undang
                             KMFT UGM tentang Pemilu dan terdiri dari SC KPU, OC KPU, Panitia Pengawas Pemilu
                             dan Mahkamah Pemilu.
                             </p>
                         </div>
+                    </Fade>
                     </div>
                 </div>
                 {/*Judul Panitia*/}
                 <div class="JudulPanitia">
                     <h1 class="TextPanitia white"> Panitia KPU FT UGM 2021 </h1>
-                    <img src={SquadPNG} class="squad"/>
+                    <img src={Squad} class="squad"/>
                 </div>
                 {/*Slide Panitia*/}
                 <div class="Panitia">
@@ -65,7 +71,6 @@ export default function TentangKPU(){
                 </div>
 
         </Container>
-        </>
     );
 }
 
@@ -82,20 +87,25 @@ h1{
 }
 .Hero{
     height: auto;
+    padding: 10vmin 10vmin;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .Hero .ular {
     position: absolute;
     width: 45vmin; 
     height: auto;
+    left: 0;
+    top: 5vmin;
 }
 
 .Hero .title{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 5vmin 10vmin;
-    min-height: 100vh;
     /* padding-bottom: 10vmin; */
     /* height: 100vh; */
 }
@@ -149,26 +159,23 @@ h1{
     margin-left:150px;
     margin-right:150px;
 } */
-.pemilu .desk2 {
-    /* margin-top: 0;
-    margin-bottom: 0; */
+/* .pemilu .desk2 {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .pemilu .desk1 {
     margin-top: 0;
     margin-bottom: 14px;
-}
+} */
 
-.kpu{
-    margin-top: 10vmin;
-}
-.kpu .desk2 {
+/* .kpu .desk2 {
     margin-top: 0;
     margin-bottom: 0;
 }
 .kpu .desk1 {
     margin-top: 0;
     margin-bottom: 14px;
-}
+} */
 .container .Dadu{
     float: right;
     clear: both;

@@ -8,6 +8,9 @@ import {
 }from "../assets/images/imgIndex"
 import { Helmet } from "react-helmet";
 import UnoCard from "../components/UnoCard";
+import Fade from "react-reveal/Fade"
+import Slide from "react-reveal/Slide"
+
 
 export default function InfoCalon(){
 
@@ -32,18 +35,26 @@ export default function InfoCalon(){
 
     <div class="title-container">
         <div class="page-title">
-            <h1 style={{fontSize: "calc(0.5rem + 4.5vw)"}}>Calon Ketua</h1>
+          <Fade top>
+            <h1 style={{fontSize:"calc(0.5rem + 5vmin)"}} >Calon Ketua <br/>BEM KMFT UGM 2022</h1>
+          </Fade>
         </div>
     </div>
     
     <div class="content-container" >
       <div class="button-container">
-        <button id="button1" class="button" onClick={clickHandler}><UnoCard name="ADIAHMAD IRFAN ZIDNY" no="1" src={Calon_1}/></button>
-        <button id="button2" class="button" onClick={clickHandler2}><UnoCard name="ANJU GERALD" no="2" src={Calon_2}/></button>
+        <Fade left>
+          <UnoCard name="ADIAHMAD IRFAN ZIDNY" no="1" src={Calon_1}/>
+        </Fade>
+        <Fade right>
+        <UnoCard  name="ANJU GERALD" no="2" src={Calon_2}/>
+        </Fade >
       </div>  
       
       <div class="image-background">
+        <Fade bottom>
           <img src={ChooseCandidate} alt="Choose A Candidate" style={{maxWidth: "100%", height: "auto"}}/>
+        </Fade>
       </div>  
     </div>
 
@@ -123,6 +134,7 @@ const Container = styled.div`
 background-color: var(--color-darkblue);
 font-family: GameofSquids;
 overflow: hidden;
+padding: 5vmin 10vmin;
 
 * {
     margin: 0;
@@ -160,7 +172,7 @@ overflow: hidden;
 }
 
 //Tombol Kandidat
-.button {
+/* .button {
   border: none;
   background-size: cover;
   border-radius: 12px;
@@ -168,7 +180,7 @@ overflow: hidden;
   margin: 10px 10% 10px 10%;
   transition-duration: 0.2s;
   cursor: pointer;
-}
+} */
 
 
 .button:hover{
@@ -193,7 +205,7 @@ overflow: hidden;
 
 //Uno
 .image-background{
-  width: calc(100px + 40vw);
+  width: calc(100px + 50vmin);
   position: relative;
   padding: 6% 0%;
   margin: auto;
