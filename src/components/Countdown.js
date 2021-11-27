@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Button from "./Button";
 import axios from "axios";
-import moment from "moment-timezone"; //cad kalau tanpa timeapi
+import moment from "moment-timezone"; //cafaangan kalau tanpa timeapi
 
 export default function Timerdown(){
   const [posts, setPosts] = useState([])
@@ -56,7 +56,7 @@ export default function Timerdown(){
           </div>
         )
       } else {
-        //345600 = 3hari 29 Nov to 1 Dec
+        //259200 = 3hari 29 Nov to 1 Dec
         if ((seconds + 259200) >= 0) {
           return (
             <div>

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import ReactPlayer from 'react-player/youtube'
-import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import Timerdown from "../components/Countdown";
 import BarChart from "../components/BarChart";
 import Fade from "react-reveal/Fade"
+import CarouselTataCara from "../components/Carousel_TataCara";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import {
     Dice,
     Rectangle_1,
@@ -15,8 +16,6 @@ import {
     Catur,
     Path,
 }from "../assets/images/imgIndex.js"
-import CarouselTataCara from "../components/Carousel_TataCara";
-import { Helmet } from "react-helmet";
 
 export default function Beranda(){
     // Kode Javascript //
@@ -41,7 +40,7 @@ export default function Beranda(){
             
             document.getElementById("message").value = "";
         } catch (err) {
-            //console.log(err)
+            console.log(err)
         }
     }
 
