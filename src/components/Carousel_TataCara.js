@@ -2,35 +2,35 @@ import React from 'react'
 import styled from "styled-components";
 import { Carousel } from 'antd';
 import {
-    KETUA,
-    IT,
-    MEDPUB,
-    ACARA,
-    HUMAS,
-    KSK
-}from "../assets/images/imgKPU"
+    Tahap0,
+    Tahap1,
+    Tahap2,
+    Tahap3,
+    Tahap4,
+    Tahap5,
+}from "../assets/images/imgTataCara"
 
 export default function CarouselTataCara() {
     return(
         <Container>
             <Carousel autoplay>
                 <div className="container-panitia">
-                    <img className="panitia" src={KETUA}/>
+                    <img className="panitia" src={Tahap0}/>
                 </div>
                 <div className="container-panitia">
-                    <img className="panitia" src={KSK}/>
+                    <img className="panitia" src={Tahap1}/>
                 </div>
                 <div className="container-panitia">
-                    <img className="panitia" src={ACARA}/>
+                    <img className="panitia" src={Tahap2}/>
                 </div>
                 <div className="container-panitia">
-                    <img className="panitia" src={IT}/>
+                    <img className="panitia" src={Tahap3}/>
                 </div>
                 <div className="container-panitia">
-                    <img className="panitia" src={MEDPUB}/>
+                    <img className="panitia" src={Tahap4}/>
                 </div>                    
                 <div className="container-panitia">
-                    <img className="panitia" src={HUMAS}/>
+                    <img className="panitia" src={Tahap5}/>
                 </div>
             </Carousel>
         </Container>

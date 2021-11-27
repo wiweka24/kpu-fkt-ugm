@@ -4,7 +4,7 @@ import styled from "styled-components";
 export default function Button(props) {
 
     return (
-      <a href={props.link}>
+      <a href={props.link} target={props.target} rel="noopener noreferrer">
         <ButtonLink  bgColor={props.bgColor} textColor={props.textColor} fontSize={props.fontSize}>
             {/* Use color format as variable in globalstyle (example: "--color-darkblue") */}
             {props.children}

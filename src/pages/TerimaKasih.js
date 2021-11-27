@@ -47,6 +47,9 @@ export default function TerimaKasih() {
                         <img class="logo" src={LogoPNG} alt="Logo KPU FT" />
                         <h1 class="pink font-mont font-bold">PEMILU FT UGM 2021</h1>
                     </div>
+                    <div class="buttons">
+                        <Button target="_blank" link="http://bit.ly/EvalKPUFT21" fontSize="calc(0.5rem + 1.2vmin)">ISI EVALUASI</Button>
+                    </div>
                 </div>
 
                 <div className="kritik">
@@ -148,5 +151,17 @@ h1{
     color: var(--color-black);
     font-size: calc(0.5rem + 2vmin);
     font-family: "MontBook";
+}
+
+.buttons{
+    display: flex;
+    width: 50%;
+    align-self: center;
+    justify-content: space-around;
+
+    button{
+        margin: 5vmin;
+        white-space: nowrap;
+    }
 }
 `
