@@ -13,7 +13,7 @@ import {
 export default function CarouselTataCara() {
     return(
         <Container>
-            <Carousel autoplay>
+            <Carousel autoplay accessibility="true">
                 <div className="container-panitia">
                     <img className="panitia" src={Tahap0}/>
                 </div>

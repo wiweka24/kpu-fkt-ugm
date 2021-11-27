@@ -96,7 +96,11 @@ export default function Beranda(){
                 <div className="desc1 text-center">
                     <div className="no"><h5 className="no-number">1</h5></div>
                     <h2 className="font-squids">ADIAHMAD IRFAN ZIDNY</h2>
-                    <p>Kita kawan, bukan lawan!</p>
+                    <p>
+                        Kita Kawan, Bukan Lawan!
+                        <br/>#KarenaKitaTeknik
+                        <br/>#TeknikBersihBerkah
+                    </p>
                 </div>
 
                 <div className="desc2 text-center">
@@ -136,7 +140,7 @@ export default function Beranda(){
                 
                 <div className="tatacara text-center">
                     <h2 className="font-squids">Tata Cara Pemilihan </h2>
-                    <CarouselTataCara/>
+                    <div className="tatacarabox"><CarouselTataCara/> </div>
                 </div>
                 </Fade>
 
@@ -193,10 +197,11 @@ overflow: hidden;
 .hero-container{
     display: grid;
     z-index: 0;
+    min-height: 92.5vh;
     width: 100%;
     position: relative;
     background-color: var(--color-darkblue);
-    padding: 10vmin 0;
+    padding: 20vh 0;
 }
 .hero-container .text-center{
     width: 100%;
@@ -222,7 +227,7 @@ Button{
 }
 .cd {
     display: flex;
-    padding: 0 25%;
+    padding: 0 20%;
 }
 .cd p {
     font-size: calc(0.5rem + 1vmin);
@@ -270,13 +275,11 @@ Button{
     padding-top: 10vmin;
     bottom: 0;
 }
-.foto_calon1{
+.foto_calon1, .foto_calon2{
     z-index: 1;
-    height: 110%;
+    height: 97.5%;
 }
 .foto_calon2{
-    z-index: 1;
-    height: 110%;
     right: 0;
 }
 .rec1{
@@ -377,8 +380,11 @@ Button{
     font-size: calc(0.5rem + 2vmin);
     font-family: montBook;
 }
-@media (min-width: 961px) {
+@media (min-width: 1025px) {
     // hero // -------------------------------------------------------
+    .hero-container{
+        padding: 10vh 0;
+    }
     .catur{
         display: inline;
         position: absolute;
@@ -410,6 +416,9 @@ Button{
             transform: rotateY(360deg);
         }
     }
+    .cd {
+        padding: 0 25%;
+    }
     .cd p {
         font-size: calc(0.5rem + 1.5vmin);
     }
@@ -417,7 +426,9 @@ Button{
     .calon-container{
         grid-template-columns: 35% 30% 35%;
     }
-    
+    .foto_calon1, .foto_calon2{
+        height: 110%;
+    }
     .calon1{
         grid-area: 1 / 1;
         &:hover .rec1{
@@ -495,7 +506,12 @@ Button{
         transform: rotate(180deg);
     }
     .tatacara{
-        padding: 0 10%;
+        padding: 0 17.5%;
+    }
+    .tatacarabox{
+        //overflow: hidden;
+        border-radius: 5px;
+        border: 4px var(--color-pink) solid;
     }
 
     // kritik dan saran // -------------------------------------------------------

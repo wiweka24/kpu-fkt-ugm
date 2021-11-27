@@ -164,12 +164,13 @@ li {
 }
 .total .bartotal{
   display: grid;
-  grid-template-columns: 10% 12.5% auto ;
-  width: 97.5%;
+  grid-template-columns: 12.5% 12.5% auto ;
+  width: 98.5%;
   border: 2px solid;
   margin: auto;
 }
 .total .bartotal .totalname{
+  border-right: 2px var(--color-white) solid;
   background-color: var(--color-green);
 }
 .total .bartotal .totalpercent{
@@ -212,12 +213,16 @@ li {
   border-style: none solid solid;
 }
 
-@media (min-width: 961px) {
+@media (min-width: 1025px) {
   .box, .total{
     width: 60%;
   }
   .bar, .dept, .persen {
     width: 80%;
+  }
+  .total .bartotal{
+    grid-template-columns: 10% 12.5% auto ;
+    width: 97.5%;
   }
 }
 `
