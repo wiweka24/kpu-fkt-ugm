@@ -44,10 +44,10 @@ export default function InfoCalon(){
     <div class="content-container" >
       <div class="button-container">
         <Fade left>
-          <UnoCard onClick={clickHandler} name="ADIAHMAD IRFAN ZIDNY" no="1" src={Calon_1}/>
+          <UnoCard name="ADIAHMAD IRFAN ZIDNY" no="1" src={Calon_1}/>
         </Fade>
         <Fade right>
-        <UnoCard onClick={clickHandler2} name="ANJU GERALD" no="2" src={Calon_2}/>
+        <UnoCard  name="ANJU GERALD" no="2" src={Calon_2}/>
         </Fade >
       </div>  
       
