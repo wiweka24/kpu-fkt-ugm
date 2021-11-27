@@ -88,6 +88,10 @@ h1{
 .Hero{
     height: auto;
     padding: 10vmin 10vmin;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .Hero .ular {
@@ -102,7 +106,6 @@ h1{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 100vh;
     /* padding-bottom: 10vmin; */
     /* height: 100vh; */
 }
