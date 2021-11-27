@@ -170,10 +170,11 @@ overflow: hidden;
 .hero-container{
     display: grid;
     z-index: 0;
+    min-height: 92.5vh;
     width: 100%;
     position: relative;
     background-color: var(--color-darkblue);
-    padding: 10vmin 0;
+    padding: 20vh 0;
 }
 .hero-container .text-center{
     width: 100%;
@@ -199,7 +200,7 @@ Button{
 }
 .cd {
     display: flex;
-    padding: 0 25%;
+    padding: 0 20%;
 }
 .cd p {
     font-size: calc(0.5rem + 1vmin);
@@ -354,8 +355,11 @@ Button{
     font-size: calc(0.5rem + 2vmin);
     font-family: montBook;
 }
-@media (min-width: 961px) {
+@media (min-width: 1025px) {
     // hero // -------------------------------------------------------
+    .hero-container{
+        padding: 10vh 0;
+    }
     .catur{
         display: inline;
         position: absolute;
@@ -386,6 +390,9 @@ Button{
         100% {
             transform: rotateY(360deg);
         }
+    }
+    .cd {
+        padding: 0 25%;
     }
     .cd p {
         font-size: calc(0.5rem + 1.5vmin);
