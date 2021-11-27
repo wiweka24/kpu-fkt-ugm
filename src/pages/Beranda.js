@@ -96,7 +96,11 @@ export default function Beranda(){
                 <div className="desc1 text-center">
                     <div className="no"><h5 className="no-number">1</h5></div>
                     <h2 className="font-squids">ADIAHMAD IRFAN ZIDNY</h2>
-                    <p>Kita kawan, bukan lawan!</p>
+                    <p>
+                        Kita Kawan, Bukan Lawan!
+                        <br/>#KarenaKitaTeknik
+                        <br/>#TeknikBersihBerkah
+                    </p>
                 </div>
 
                 <div className="desc2 text-center">
@@ -136,7 +140,7 @@ export default function Beranda(){
                 
                 <div className="tatacara text-center">
                     <h2 className="font-squids">Tata Cara Pemilihan </h2>
-                    <CarouselTataCara/>
+                    <div className="tatacarabox"><CarouselTataCara/> </div>
                 </div>
                 </Fade>
 
@@ -271,13 +275,11 @@ Button{
     padding-top: 10vmin;
     bottom: 0;
 }
-.foto_calon1{
+.foto_calon1, .foto_calon2{
     z-index: 1;
-    height: 110%;
+    height: 97.5%;
 }
 .foto_calon2{
-    z-index: 1;
-    height: 110%;
     right: 0;
 }
 .rec1{
@@ -424,7 +426,9 @@ Button{
     .calon-container{
         grid-template-columns: 35% 30% 35%;
     }
-    
+    .foto_calon1, .foto_calon2{
+        height: 110%;
+    }
     .calon1{
         grid-area: 1 / 1;
         &:hover .rec1{
@@ -502,7 +506,12 @@ Button{
         transform: rotate(180deg);
     }
     .tatacara{
-        padding: 0 10%;
+        padding: 0 17.5%;
+    }
+    .tatacarabox{
+        //overflow: hidden;
+        border-radius: 5px;
+        border: 4px var(--color-pink) solid;
     }
 
     // kritik dan saran // -------------------------------------------------------
