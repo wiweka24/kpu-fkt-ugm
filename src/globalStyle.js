@@ -118,7 +118,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     p{
-        font-size: calc(0.5rem + 1.5vmin);
+        font-size: calc(0.5rem + 1.2vmin);
     }
     h1{
         font-size: calc(0.5rem + 8vmin);
@@ -166,11 +166,12 @@ const GlobalStyle = createGlobalStyle`
         scrollbar-color: var(--color-pink);
     } 
 
-    body::-webkit-scrollbar {
+    *::-webkit-scrollbar {
         width: 0.5em;
+        background-color: var(--color-white);
     }
     
-    body::-webkit-scrollbar-thumb {
+    *::-webkit-scrollbar-thumb {
         border-radius: 5vmin;
         background-color: var(--color-pink);
     }

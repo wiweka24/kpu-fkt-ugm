@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import LogoKPU from "../assets/images/logo-kpu-2021.webp"
+import LogoKPU from "../assets/images/logo-kpu.webp"
 
 export default class Header extends Component {
   state = { clicked: false, modalIsOpen: false };
