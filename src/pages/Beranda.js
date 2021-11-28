@@ -48,7 +48,7 @@ export default function Beranda(){
         // Kode HTML //
         <Container>
             <Helmet>
-                <title>Beranda KPU FT UGM</title>
+                <title>KPU FT UGM</title>
             </Helmet>
             {/* Awal Bagian Hero*/}
             <div className="hero-container text-center">

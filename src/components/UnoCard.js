@@ -70,6 +70,7 @@ const Container = styled.div`
     max-width: 325px;
     min-width: 125px;
     height: auto;
+    margin-top: 1vw;
 }
 
 .card:before,

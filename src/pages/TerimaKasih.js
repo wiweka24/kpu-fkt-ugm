@@ -48,7 +48,7 @@ export default function TerimaKasih() {
                         <h1 class="pink font-mont font-bold">PEMILU FT UGM 2021</h1>
                     </div>
                     <div class="buttons">
-                        <Button target="_blank" link="http://bit.ly/EvalKPUFT21" fontSize="calc(0.5rem + 1.2vmin)">ISI EVALUASI</Button>
+                        <Button target="_blank" link="http://bit.ly/EvalKPUFT21" fontSize="calc(0.5rem + 1.2vmin)"><b>Evaluasi</b></Button>
                     </div>
                 </div>
 
