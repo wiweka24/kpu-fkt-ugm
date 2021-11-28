@@ -136,15 +136,6 @@ export default function InfoCalon() {
               <iframe src="https://drive.google.com/file/d/1y3GZoSAdIPZ6RGIngSO7nLxBoFdU_FaL/preview" width="640" height="480" allow="autoplay"></iframe>
             </div>
 
-            {/* <div class="modal-body">
-              <h3>Visi</h3>
-              <p>Menjadi Pelayan FT UGM</p>
-            </div>
-
-            <div class="modal-body">
-
-            </div> */}
-
             <div class="modal-body">
               <h3>Profil</h3>
               <p>Sebuah gagasan tidak akan hadir tanpa kemerdekaan, sebuah gerakan tidak akan hadir tanpa kesetaraan, sebuah entitas tidak akan hadir tanpa solidaritas. Dan tentu, semua ini tidak mungkin berjalan tanpa kemanusiaan. Dengan pertimbangan rekan dalam persaudaraan, itulah yang dirangkum Anju Gerald, calon ketua BEM KMFT UGM nomor urut dua. Karenapun jabatan hanya sementara, namun peninggalan adalah selama-lamanya, maka ini bukanlah akhir dari segala-galanya, namun permulaan dari apa yang ingin kita bangun kedepannya!
@@ -232,7 +223,7 @@ align-items: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 80%;
+  max-width: 100%;
   margin: auto;
 }
 

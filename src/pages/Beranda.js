@@ -106,9 +106,8 @@ export default function Beranda(){
                     <div className="no"><h5 className="no-number">2</h5></div>
                     <h2 className="font-squids">ANJU GERALD</h2>
                     <p>
-                        Tak janji nonstop, yang pasti top
-                        <br/>Tak banyak berkelit, penting konkrit
-                        <br/>Tak perlu membantah, pasti meriah
+                        Salam dari kami,
+                        <br/>Salam Dua Jari.
                     </p>
                 </div>
 

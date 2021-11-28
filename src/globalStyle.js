@@ -166,11 +166,12 @@ const GlobalStyle = createGlobalStyle`
         scrollbar-color: var(--color-pink);
     } 
 
-    body::-webkit-scrollbar {
+    *::-webkit-scrollbar {
         width: 0.5em;
+        background-color: var(--color-white);
     }
     
-    body::-webkit-scrollbar-thumb {
+    *::-webkit-scrollbar-thumb {
         border-radius: 5vmin;
         background-color: var(--color-pink);
     }
