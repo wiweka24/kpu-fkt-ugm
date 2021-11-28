@@ -275,7 +275,7 @@ Button{
     bottom: 0;
 }
 .foto_calon1, .foto_calon2{
-    z-index: 1;
+    z-index: 0;
     height: 97.5%;
 }
 .foto_calon2{
@@ -295,17 +295,17 @@ Button{
 }
 .desc1{
     //order: 2;
-    z-index: 2;
+    z-index: 1;
     grid-area: 1 / 2;
 }
 .desc2{
     //order: 3;
-    z-index: 2;
+    z-index: 1;
     grid-area: 2 / 1;
 }
 .logo_desc{
     //order 5 sampai 6
-    z-index: 2;
+    z-index: 1;
     grid-area: 3 / 1 / 3 / span 2;
 }
 .logo_desc img{
@@ -321,8 +321,8 @@ Button{
 }
 .no-number {
     font-weight: bold;
-    height: calc(1rem + 1.5vmin);
-    width: calc(1rem + 1.5vmin);
+    height: calc(1.5rem + 1.5vmin);
+    width: calc(1.5rem + 1.5vmin);
     transform: rotate(-45deg);
 }
 
@@ -492,6 +492,10 @@ Button{
             transform: rotateY(360deg);
             transition: all 0.5s ease-out;
         }
+    }
+    .no-number {
+        height: calc(1rem + 1.5vmin);
+        width: calc(1rem + 1.5vmin);
     }
     
     // about // -------------------------------------------------------
