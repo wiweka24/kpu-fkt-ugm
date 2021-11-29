@@ -6,7 +6,7 @@ import {
   Calon_2,
   ChooseCandidate,
 } from "../assets/images/imgIndex"
-import CVAnjuGerald from "../assets/cv-anju-gerald.pdf"
+// import CVAnjuGerald from "https://drive.google.com/file/d/18CZcl2ZxHVuGl7VliovqSB_zxE3OYR2N/view?usp=sharing"
 import { Helmet } from "react-helmet";
 import UnoCard from "../components/UnoCard";
 import Fade from "react-reveal/Fade"
@@ -20,6 +20,10 @@ export default function InfoCalon() {
   const clickHandler = () => setIsClicked(clicked => !clicked);
   const clickHandler2 = () => setIsClicked2(clicked => !clicked);
 
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
+  }
+  
   return (
     <>
       <Helmet>
@@ -161,13 +165,19 @@ export default function InfoCalon() {
               </p>
               <h3>Daftar Riwayat Hidup</h3>
               <div class="modal-cv">
-                <iframe
+                {/* <iframe
                   title="Daftar Riwayat Hidup Anju Gerald"
-                  src={CVAnjuGerald}
+                  src="https://drive.google.com/file/d/18CZcl2ZxHVuGl7VliovqSB_zxE3OYR2N/view?usp=sharing"
                   width="100%"
                   height="500px"
                   allow="autoplay"
-                ></iframe>
+                ></iframe> */}
+                <iframe 
+                title="Daftar Riwayat Hidup Anju Gerald"
+                width="100%"
+                height= "300"
+                onLoad="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';"
+                src="https://drive.google.com/file/d/18CZcl2ZxHVuGl7VliovqSB_zxE3OYR2N/preview"allow="autoplay"></iframe>
                 </div>
             </div>
 
