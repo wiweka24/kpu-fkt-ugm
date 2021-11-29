@@ -57,6 +57,9 @@ export default function Beranda(){
                         <h1 className="tittle font-squids">kpu ft<br/>2021 </h1>
                         <h4>Pemilihan Umum </h4>
                         <h2 className>Ketua BEM KMFT UGM 2022 </h2>
+                        <div>
+                        <h4 style={{color:"var(--color-yellow)"}}>29 November - 1 Desember 2021</h4>
+                        </div>
                     </Fade>
                     {/* <h1 className="tittle font-squids">kpu ft<br/>2021 </h1>
                     <h4>Pemilihan Umum </h4>
