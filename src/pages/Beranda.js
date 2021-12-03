@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Button from "../components/Button";
-import Timerdown from "../components/Countdown";
 import BarChart from "../components/BarChart";
 import Fade from "react-reveal/Fade"
 import CarouselTataCara from "../components/Carousel_TataCara";
@@ -69,7 +68,7 @@ export default function Beranda(){
                     </Fade>
                     <div className="wait">
                     <Fade>
-                        <Timerdown/>
+                        <h3 className="endvote">Vote Ditutup</h3>
                     </Fade>
                     </div>
                     <Fade>
