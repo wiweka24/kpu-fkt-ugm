@@ -4,7 +4,8 @@ import {
     Path,
     Dice,
     Squad,
-    Logo
+    Logo,
+    BACKGROUND2
 }from "../assets/images/imgKPU.js"
 import CarouselPanitia from "../components/Carousel";
 import 'antd/dist/antd.css';
@@ -20,7 +21,7 @@ export default function TentangKPU(){
         // Kode HTML //
         <   Container> 
             <Helmet>
-                <title>Tentang KPU FT UGM</title>
+                <title>Tentang KPUM FKT UGM</title>
             </Helmet>
                 <div class="Hero">
                     <img src={Path} class="ular"/>
@@ -28,8 +29,8 @@ export default function TentangKPU(){
                     <div class="title">
                         <h1 class="white">TENTANG KAMI</h1>
                         <img class="logo" src={Logo} alt="Logo KPU FT"/>
-                        <h1 class="p1 white">KOMISI PEMILIHAN UMUM</h1>
-                        <h2 class="p2 pink">FAKULTAS TEKNIK UGM 2021</h2>
+                        <h1 class="p1 white">KOMISI PEMILIHAN UMUM MAHASISWA</h1>
+                        <h2 class="p2 pink">FAKULTAS KEHUTANAN UGM 2021</h2>
                     </div>
                     </Fade>
                 </div>
@@ -39,7 +40,7 @@ export default function TentangKPU(){
                     <div class="deskripsi">
                     <Fade left>
                         <div class="pemilu">
-                            <h3 class="desk1  pink font-squids ">PEMILU FAKULTAS TEKNIK UGM</h3>
+                            <h3 class="desk1  pink font-squids ">PEMILU FAKULTAS KEHUTANAN UGM</h3>
                             <p class="desk2">
                                 <b>Pemilihan Umum</b> Mahasiswa Fakultas Teknik Universitas Gadjah Mada (Pemilu) adalah sarana pelaksanaan kedaulatan mahasiswa berdasarkan Anggaran Dasar/Anggaran Rumah Tangga Keluarga Mahasiswa Fakultas Teknik Universitas Gadjah Mada.
                                 <br/><br/><b>Peserta Pemilu</b> adalah kandidat calon Ketua BEM KMFT UGM yang telah lolos verifikasi oleh KPU.
@@ -49,7 +50,7 @@ export default function TentangKPU(){
                         </div>
 
                         <div class="kpu" style={{marginTop: "10vmin"}}>
-                            <h3 class="desk1 pink font-squids ">KPU FAKULTAS TEKNIK UGM</h3>
+                            <h3 class="desk1 pink font-squids ">KPUM FAKULTAS KEHUTANAN UGM</h3>
                             <p class="desk2"><b>Komisi Pemilihan Umum</b> Fakultas Teknik Universitas Gadjah Mada yang selanjutnya disebut
                             KPU adalah suatu komisi yang menyelenggarakan Pemilu berdasarkan Undang-Undang
                             KMFT UGM tentang Pemilu dan terdiri dari SC KPU, OC KPU, Panitia Pengawas Pemilu
@@ -61,13 +62,13 @@ export default function TentangKPU(){
                 </div>
                 {/*Judul Panitia*/}
                 <div class="JudulPanitia">
-                    <h1 class="TextPanitia white"> Panitia KPU FT UGM 2021 </h1>
-                    <img src={Squad} class="squad"/>
+                    <h1 class="TextPanitia white"> Panitia KPUM FKT UGM 2021 </h1>
+                    {/* <img src={Squad} class="squad"/> */}
                 </div>
                 {/*Slide Panitia*/}
                 <div class="Panitia">
                     <CarouselPanitia />
-                    <CarouselPanitia2 class="Plisss"/>
+                    {/* <CarouselPanitia2 class="Plisss"/> */}
                 </div>
 
         </Container>
@@ -139,6 +140,7 @@ h1{
     margin-right: auto;
     margin-bottom: 5vmin;
     margin-top: 5vmin;
+    border-radius: 50%;
 }
 
 .container {
@@ -187,8 +189,9 @@ h1{
     /* font-size: 24px; */
     margin: 0;
     text-align: center;
-    background-color: #38445E;
-    padding-top: 10px;
+    background-image: url(${BACKGROUND2});
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .squad{
@@ -203,10 +206,13 @@ h1{
     /* height: 126px;
     margin-top: 100px; */
     padding: 0 10vmin;
-    background-color: #38445E;
+    background-image: url(${BACKGROUND2});
+    border-bottom: 2px solid #3E6456;
+    border-top: 2px solid #3E6456;
+    // background-color: #38445E;
 }
 .Panitia{
-    background-color: #38445E;
+    // background-color: #38445E;
 }
 .Panitia .Plisss{
     display:none;
