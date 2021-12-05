@@ -20,7 +20,6 @@ import {
     BgGreen,
     BgBlack
 }from "../assets/images/imgIndex.js"
-import {MenuCalon} from "./MenuCalon"
 
 export default function Beranda(){
     // Kode Javascript //
@@ -78,12 +77,12 @@ export default function Beranda(){
         // Kode HTML //
         <Container>
             <Helmet>
-                <title>KPU FT UGM</title>
+                <title>KPUM FT UGM</title>
             </Helmet>
             {/* Awal Bagian Hero*/}
             <div className="hero-container text-center">
                     <Fade>
-                        <h1 className="tittle font-squids">
+                        <h1 className="tittle Bright">
                             <img className="wind" src={WindL} alt="wind"></img>
                             KPUM FKT
                             <img className="wind" src={WindR} alt="wind"></img>
@@ -123,20 +122,8 @@ export default function Beranda(){
                     </div>
                 </div>
                 <div className="calon-info">
-                    {MenuCalon.map(data => (
-                        <li key={data.func}>
-                            {
-                                data.func? 
-                                <div className="desk-calon1">
-                                    <div>
-                                        <img className="foto-calon" src={Calon_1} alt="dice"></img>
-                                    </div>
-                                </div> :null
-                            }
-                        </li>
-                    ))}
-                    {/* {
-                        test? 
+                    {
+                        show1? 
                         <div className="desk-calon1">
                             <div>
                                 <img className="foto-calon" src={Calon_1} alt="dice"></img>
@@ -157,7 +144,7 @@ export default function Beranda(){
                         <div className="desk-calon3">
                             deskrpsi3
                         </div> :null
-                    } */}
+                    }
                 </div>
             </div>
             {/* Akhir Calon calon */}
@@ -171,15 +158,15 @@ export default function Beranda(){
             <div className="about-container text-center">
                 <Fade>
                 <div className="about">
-                    <h2 className="font-squids">Tentang Pemilu FT UGM 2021 </h2>
-                    <p> Pemilihan Umum Mahasiswa Fakultas Teknik Universitas Gadjah Mada (Pemilu) adalah sarana pelaksanaan kedaulatan mahasiswa berdasarkan Anggaran Dasar/Anggaran Rumah Tangga Keluarga Mahasiswa Fakultas Teknik Universitas Gadjah Mada. </p>                     
+                    <h2 className="font-title">Tentang Pemilwa FKT UGM <span className="font-number">2021</span> </h2>
+                    <p> Pemilihan Umum Mahasiswa Fakultas Teknik Universitas Gadjah Mada (Pemilwa) adalah sarana pelaksanaan kedaulatan mahasiswa berdasarkan Anggaran Dasar/Anggaran Rumah Tangga Keluarga Mahasiswa Fakultas Teknik Universitas Gadjah Mada. </p>                     
                     <Button>
                         <Link to="/tentang">Selengkapnya</Link>
                     </Button>
                 </div>
                 
                 <div className="tatacara text-center">
-                    <h2 className="font-squids">Tata Cara Pemilihan </h2>
+                    <h2 className="font-title">Tata Cara Pemilihan </h2>
                     <div className="tatacarabox"><CarouselTataCara/> </div>
                 </div>
                 </Fade>
@@ -366,7 +353,7 @@ Button{
     width: 100%;
     color: var(--color-black);
     font-size: calc(0.5rem + 2vmin);
-    font-family: montBook;
+    font-family: Montserrat;
 }
 @media (min-width: 1025px) {
     // hero // -------------------------------------------------------

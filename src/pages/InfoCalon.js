@@ -120,7 +120,7 @@ export default function InfoCalon() {
 
 
             <div class="modal-footer">
-              <h3>KPU FT UGM 2021</h3>
+              <h3>KPUM FKT UGM <span className="font-number">2021</span></h3>
             </div>
           </div>
         </div>
@@ -182,7 +182,7 @@ export default function InfoCalon() {
             </div>
 
             <div class="modal-footer">
-              <h3>KPU FT UGM 2021</h3>
+              <h3>KPUM FKT UGM <span className="font-number">2021</span></h3>
             </div>
           </div>
         </div>
@@ -193,7 +193,7 @@ export default function InfoCalon() {
 
 const Container = styled.div`
 background-color: var(--color-darkblue);
-font-family: GameofSquids;
+font-family: Bright;
 overflow: hidden;
 padding: 5vmin 10vmin;
 min-height: 95vh;
@@ -304,7 +304,7 @@ align-items: center;
   overflow: auto;
   background-color: rgba(0,0,0,0.4);
   color: white;
-  font-family: MontBook;
+  font-family: Montserrat;
 }
 
 //Bagian box Modal
@@ -314,7 +314,7 @@ align-items: center;
   margin: 7% auto;
   position: relative;
   padding: 1% 4% 3% 4%;
-  border: 5px solid var(--color-blue);
+  border: 5px solid var(--color-green);
   width: 70%;
   animation-name: animatetop;
   animation-duration: 1s;
@@ -322,7 +322,7 @@ align-items: center;
 
 //Nama Kandidat
 .modal-header{
-  font-family: GameofSquids;
+  font-family: Bright;
   text-align: center;
   margin: 2% 0px 0px 0px;
   padding: 0.5% 10%;
@@ -371,7 +371,7 @@ align-items: center;
 
 .modal-body h3{
   margin: 2% 0% auto;
-  font-family: GameOfSquids;
+  font-family: Bright;
 }
 
 .modal-cv {

@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import LogoKPU from "../assets/images/logo-kpu.webp"
+import greenBG from "../assets/images/bg-green.webp";
 
 export default class Header extends Component {
   state = { clicked: false, modalIsOpen: false };
@@ -29,8 +30,8 @@ export default class Header extends Component {
             className="logo"
             onClick={this.state.clicked ? this.handleClick : this.nothing()}
           >
-            <img src={LogoKPU} alt="Logo KPU FT UGM 2021" />
-            <h4>KPU FT UGM 2021</h4>
+            <img src={LogoKPU} alt="Logo KPU FKT UGM 2021" />
+            <h4>KPUM FKT UGM <span className="font-number">2021</span></h4>
           </Link>
 
           {/* Right-corner desktop & dropdown menu mobile: Menu Navigasi  */}
@@ -71,17 +72,20 @@ const Container = styled.header`
   //Give block with same height as absolute navbar
   display: inline-block;
   width: 100%;
+    margin: 0;
   box-sizing: border-box;
+  background-image: url(${greenBG});
+  background-repeat: repeat;
+    overflow: hidden;
   height: calc(0.5rem + 6vmin);
   z-index: 20;
   position: relative;
-  background-color: var(--color-darkblue);
   
 
   .navbar {
     //Container style
     z-index: 3;
-    background-color: var(--color-darkblue);
+    background-image: url(${greenBG});
     box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
     padding: 0.6vmin;
     width: 100%;
@@ -124,7 +128,6 @@ const Container = styled.header`
         }
       }
     }
-    background: var(--color-darkblue);
     box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2);
     height: calc(0.5rem + 8vmin);
     width: 100%;

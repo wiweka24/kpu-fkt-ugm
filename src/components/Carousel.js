@@ -1,12 +1,12 @@
 import React from 'react'
 import { Carousel } from 'antd';
 import {
-    KETUA,
-    IT,
-    MEDPUB,
-    ACARA,
+    RAFRES,
+    PDD,
+    BENDAHARA,
+    PERKAP,
     HUMAS,
-    KSK
+    ACARA
 }from "../assets/images/imgKPU"
 import styled from "styled-components";
 
@@ -27,22 +27,22 @@ export default function CarouselPanitia() {
         <Container>
             <Carousel autoplay>
                     <div className="container-panitia">
-                        <img className="panitia" style={contentStyle} src={KETUA}/>
+                        <img className="panitia" style={contentStyle} src={RAFRES}/>
                     </div>
                     <div className="container-panitia">
-                        <img className="panitia" style={contentStyle} src={KSK}/>
+                        <img className="panitia" style={contentStyle} src={BENDAHARA}/>
                     </div>
                     <div className="container-panitia">
                         <img className="panitia" style={contentStyle} src={ACARA}/>
                     </div>
                     <div className="container-panitia">
-                        <img className="panitia" style={contentStyle} src={IT}/>
+                        <img className="panitia" style={contentStyle} src={HUMAS}/>
                     </div>
                     <div className="container-panitia">
-                        <img className="panitia" style={contentStyle} src={MEDPUB}/>
+                        <img className="panitia" style={contentStyle} src={PERKAP}/>
                     </div>                    
                     <div className="container-panitia">
-                        <img className="panitia" style={contentStyle} src={HUMAS}/>
+                        <img className="panitia" style={contentStyle} src={PDD}/>
                     </div>
             </Carousel>
         </Container>
@@ -62,12 +62,9 @@ const Container = styled.div`
     
 }
 .slick-dots{
-    background-color:#38445E;
+    background-color:#302F2B;
+    width: 140px;
+    margin: auto;
 }
 
-@media (max-width: 670px){
-    *{
-        display:none;
-    }
-}
 `

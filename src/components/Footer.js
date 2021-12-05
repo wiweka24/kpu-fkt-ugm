@@ -1,14 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import SocialMedia from "./SocialMedia";
+import greenBG from "../assets/images/bg-green.webp";
 
 function Footer() {
   return (
     <FooterContainer>
       <div className="grid-container p-3">
         <div className="m-0">
-          <h4 className="font-squids">Komisi Pemilihan Umum 2021 <br/> 
-          Fakultas Teknik <br/>Universitas Gadjah Mada</h4>
+          <h4 className="font-title">Komisi Pemilihan Umum Mahasiswa <span className="font-number">2021</span> <br/> 
+          Fakultas Kehutanan <br/>Universitas Gadjah Mada</h4>
           <p>
             <a
                 href="https://goo.gl/maps/bWu9pE1hgutwyZy8A"
@@ -57,10 +58,15 @@ export default Footer;
 const FooterContainer = styled.div`
   width: 100%;
   min-width: 140px;
-  background-color: var(--color-darkblue);
   color: white;
   padding: 10vmin;
   border-top: 3px solid var(--color-pink);
+  width: 100%;
+    margin: 0;
+  box-sizing: border-box;
+  background-image: url(${greenBG});
+  background-repeat: repeat;
+    overflow: hidden;
 
 
   .address:hover{

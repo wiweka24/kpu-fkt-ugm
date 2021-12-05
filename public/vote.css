@@ -6,13 +6,13 @@ body {
 }
 
 @font-face {
-    font-family: gameOfSquids;
-    src: url(./assets/fonts/GameOfSquids.ttf);
+    font-family: Bright;
+    src: url(./assets/fonts/Bright.otf);
 }
 
 @font-face {
-    font-family: montBook;
-    src: url(./assets/fonts/Mont-Book.otf);
+    font-family: Montserrat;
+    src: url(./assets/fonts/Montserrat-Regular.ttf);
 }
 
 * {
@@ -22,12 +22,12 @@ body {
     box-sizing: border-box;
 }
 
-.font-squids {
-    font-family: gameOfSquids;
+.font-title {
+    font-family: Bright;
 }
 
 .font-mont {
-    font-family: montBook;
+    font-family: Monserrat;
 }
 
 h1 {
@@ -171,7 +171,7 @@ p {
     width: 80vw;
     min-height: 70%;
     z-index: 6;
-    font-family: montBook;
+    font-family: Montserrat;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -242,7 +242,7 @@ button {
     display:table;
     /* padding:5px; */
     margin:10px;
-    font-family: montBook;
+    font-family: Montserrat;
     text-shadow:
        1px  1px 0 #211E21,
       -1px -1px 0 #211E21,
