@@ -36,16 +36,16 @@ export default function TerimaKasih() {
         // Kode HTML //
         <>
             <Helmet>
-                <title>Pemilu FT UGM 2021</title>
+                <title>Pemilwa FKT UGM 2021</title>
             </Helmet>
             <   Container>
                 <div class="hero">
                     <img src={UlarPNG} class="ular" />
-                    <div class="title font-squids">
+                    <div class="title font-title">
                         <h2 class="font-mont white text-center">Terima Kasih Atas</h2>
                         <h2 class="font-mont white text-center">Partisipasi Anda Dalam</h2>
                         <img class="logo" src={LogoPNG} alt="Logo KPU FT" />
-                        <h1 class="pink font-mont font-bold">PEMILU FT UGM 2021</h1>
+                        <h1 class="pink font-mont font-bold">PEMILWA FKT UGM <span className="font-number">2021</span></h1>
                     </div>
                     <div class="buttons">
                         <Button target="_blank" link="http://bit.ly/EvalKPU21" fontSize="calc(0.5rem + 1.2vmin)"><b>Evaluasi</b></Button>
@@ -73,7 +73,7 @@ export default function TerimaKasih() {
 
 const Container = styled.div`
     // Kode CSS //
-    background-color: var(--color-blue);
+    background-color: var(--color-green);
 
 *{
     box-sizing:border-box;
@@ -150,7 +150,7 @@ h1{
 
     color: var(--color-black);
     font-size: calc(0.5rem + 2vmin);
-    font-family: "MontBook";
+    font-family: "Monserrat";
 }
 
 .buttons{

@@ -17,7 +17,7 @@ export default function NotFound() {
                 <div className="hero-container text-center">
                     <img src={Cards} className="card" alt="card"/>
                     <div class="text">
-                        <h1 className="font-squids">ERROR 404</h1>
+                        <h1 className="font-title">ERROR 404</h1>
                     </div>
                 </div>
                 <div style={{padding: '10vmin', alignItems:'center', display:'flex', flexDirection: 'column'}}>
@@ -26,7 +26,7 @@ export default function NotFound() {
                     </h3>
                     <ul>
                         <li>Anda telah memilih dan tidak diperkenankan memilih kembali</li>
-                        <li>Email Anda tidak terdaftar di Daftar Pemilih Tetap KPU FT UGM</li>
+                        <li>Email Anda tidak terdaftar di Daftar Pemilih Tetap KPUM FKT UGM</li>
                         <li>Anda tidak memiliki akses pada halaman ini</li>
                     </ul>
                 </div>
@@ -36,7 +36,7 @@ export default function NotFound() {
 }
 
 const Container = styled.div`
-background-color: var(--color-blue);
+background-color: var(--color-green);
 overflow: hidden;
 
 * {
