@@ -11,7 +11,8 @@ import CarouselPanitia from "../components/Carousel";
 import 'antd/dist/antd.css';
 import CarouselPanitia2 from "../components/Carousel2";
 import { Helmet } from "react-helmet";
-import Fade from "react-reveal/Fade"
+import Fade from "react-reveal/Fade";
+import blackBG from "../assets/images/bg-black.webp";
 
 export default function TentangKPU(){
     // Kode Javascript //
@@ -30,7 +31,7 @@ export default function TentangKPU(){
                         <h1 class="white">TENTANG KAMI</h1>
                         <img class="logo" src={Logo} alt="Logo KPU FT"/>
                         <h1 class="p1 white">KOMISI PEMILIHAN UMUM MAHASISWA</h1>
-                        <h2 class="p2 pink">FAKULTAS KEHUTANAN UGM 2021</h2>
+                        <h2 class="p2 pink">FAKULTAS KEHUTANAN UGM <span className="font-number">2021</span></h2>
                     </div>
                     </Fade>
                 </div>
@@ -40,7 +41,7 @@ export default function TentangKPU(){
                     <div class="deskripsi">
                     <Fade left>
                         <div class="pemilu">
-                            <h3 class="desk1  pink font-squids ">PEMILU FAKULTAS KEHUTANAN UGM</h3>
+                            <h3 class="desk1  pink font-title ">PEMILWA FAKULTAS KEHUTANAN UGM</h3>
                             <p class="desk2">
                                 <b>Pemilihan Umum</b> Mahasiswa Fakultas Teknik Universitas Gadjah Mada (Pemilu) adalah sarana pelaksanaan kedaulatan mahasiswa berdasarkan Anggaran Dasar/Anggaran Rumah Tangga Keluarga Mahasiswa Fakultas Teknik Universitas Gadjah Mada.
                                 <br/><br/><b>Peserta Pemilu</b> adalah kandidat calon Ketua BEM KMFT UGM yang telah lolos verifikasi oleh KPU.
@@ -50,7 +51,7 @@ export default function TentangKPU(){
                         </div>
 
                         <div class="kpu" style={{marginTop: "10vmin"}}>
-                            <h3 class="desk1 pink font-squids ">KPUM FAKULTAS KEHUTANAN UGM</h3>
+                            <h3 class="desk1 pink font-title ">KPUM FAKULTAS KEHUTANAN UGM</h3>
                             <p class="desk2"><b>Komisi Pemilihan Umum</b> Fakultas Teknik Universitas Gadjah Mada yang selanjutnya disebut
                             KPU adalah suatu komisi yang menyelenggarakan Pemilu berdasarkan Undang-Undang
                             KMFT UGM tentang Pemilu dan terdiri dari SC KPU, OC KPU, Panitia Pengawas Pemilu
@@ -62,7 +63,7 @@ export default function TentangKPU(){
                 </div>
                 {/*Judul Panitia*/}
                 <div class="JudulPanitia">
-                    <h1 class="TextPanitia white"> Panitia KPUM FKT UGM 2021 </h1>
+                    <h1 class="TextPanitia white"> Panitia KPUM FKT UGM <span className="font-number">2021</span> </h1>
                     {/* <img src={Squad} class="squad"/> */}
                 </div>
                 {/*Slide Panitia*/}
@@ -79,7 +80,9 @@ const Container = styled.div`
     // Kode CSS //
     width: 100%;
     margin: 0;
-    background-color: #102037;
+  box-sizing: border-box;
+  background-image: url(${blackBG});
+  background-repeat: repeat;
     overflow: hidden;
     color: var(--color-white);
 
@@ -111,7 +114,7 @@ h1{
     /* height: 100vh; */
 }
 .Hero h1{
-    font-family: 'GameOfSquids';
+    font-family: Bright;
     text-align: center;
     margin: 0;
     top: 111px;
@@ -119,14 +122,14 @@ h1{
 }
 .Hero .p1{
     /* font-size: 36px; */
-    font-family: 'GameOfSquids';
+    font-family: Bright;
     text-align: center;
     margin: 0;
 }
 
 .Hero .p2{
     /* font-size: 24px; */
-    font-family: 'GameOfSquids';
+    font-family: Bright;
     text-align: center;
     margin: 0 0 0 0;
     margin-top: 40;
@@ -185,7 +188,7 @@ h1{
     height: 139px;
 }
 .TextPanitia{
-    font-family: 'GameOfSquids';
+    font-family: Bright;
     /* font-size: 24px; */
     margin: 0;
     text-align: center;

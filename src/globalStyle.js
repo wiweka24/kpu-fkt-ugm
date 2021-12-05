@@ -1,20 +1,16 @@
 import { createGlobalStyle } from "styled-components";
-import GameOfSquids from "./assets/fonts/GameOfSquids.ttf";
-import MontBook from "./assets/fonts/Mont-Book.otf";
+import Bright from "./assets/fonts/Bright.otf";
+import Quacker from "./assets/fonts/Quacker.ttf";
+import Montserrat from "./assets/fonts/Montserrat-Regular.ttf";
 
 const GlobalStyle = createGlobalStyle`
     /*----------------------*\
           Global Variable
     \*----------------------*/
     html {
-        --color-red: #B5223F;
-        --color-blue: #304B72;
-        --color-green: #126B59;
-        --color-black: #211E21;
-        --color-darkblue: #102037;
-        --color-yellow: #E0CD2A;
-        --color-pink: #FB2481;
-        --color-white: #F9F7F8;
+        --color-green: #3e6456;
+        --color-black: #302f2b;
+        --color-white: #d0c8b3;
 
         --delay-multiplier: 0.1s;
         --spacer: 1rem;
@@ -36,25 +32,33 @@ const GlobalStyle = createGlobalStyle`
                Font
     \*----------------------*/
     @font-face {
-        font-family: 'GameOfSquids';
+        font-family: 'Bright';
         font-style: normal;
         font-weight: normal;
-        src: local("GameOfSquids"), url(${GameOfSquids}) format('truetype');
+        src: local("Bright"), url(${Bright}) format('opentype');
         font-display: swap;
     }
 
     @font-face {
-        font-family: 'MontBook';
+        font-family: 'Quacker';
         font-style: normal;
         font-weight: normal;
-        src: local("MontBook"), url(${MontBook}) format('opentype');
+        src: local("Quacker"), url(${Quacker}) format('truetype');
+        font-display: swap;
+    }
+
+    @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: normal;
+        src: local("Montserrat"), url(${Montserrat}) format('truetype');
         font-display: swap;
     }
 
     body {
         width:100%;
         margin: 0;
-        font-family: "MontBook";
+        font-family: "Montserrat";
     }
 
     .font-bold {
@@ -69,23 +73,9 @@ const GlobalStyle = createGlobalStyle`
     /*----------------------*\
               Color
     \*----------------------*/
-    .red {
-        color: var(--color-red);
-    }
-    .blue {
-        color: var(--color-blue);
-    }
+
     .green {
         color: var(--color-green);
-    }
-    .darkblue {
-        color: var(--color-darkblue);
-    }
-    .yellow {
-        color: var(--color-yellow);
-    }
-    .pink {
-        color: var(--color-pink);
     }
     .black {
         color: var(--color-black);
@@ -109,12 +99,16 @@ const GlobalStyle = createGlobalStyle`
         text-align: right;
     }
 
-    .font-squids {
-        font-family: "GameOfSquids";
+    .font-title {
+        font-family: "Bright";
     }
 
-    .font-mont {
-        font-family: "MontBook";
+    .font-number {
+        font-family: "Quacker";
+    }
+
+    .font-default {
+        font-family: "Montserrat";
     }
 
     p{
@@ -163,7 +157,7 @@ const GlobalStyle = createGlobalStyle`
     \*----------------------*/
     body {
         overflow-y: scroll;
-        scrollbar-color: var(--color-pink);
+        scrollbar-color: var(--color-black);
     } 
 
     *::-webkit-scrollbar {
@@ -173,7 +167,7 @@ const GlobalStyle = createGlobalStyle`
     
     *::-webkit-scrollbar-thumb {
         border-radius: 5vmin;
-        background-color: var(--color-pink);
+        background-color: var(--color-black);
     }
 `;
 

@@ -47,20 +47,20 @@ export default function Beranda(){
         // Kode HTML //
         <Container>
             <Helmet>
-                <title>KPU FT UGM</title>
+                <title>KPUM FT UGM</title>
             </Helmet>
             {/* Awal Bagian Hero*/}
             <div className="hero-container text-center">
                 <div>
                     <Fade>
-                        <h1 className="tittle font-squids">kpu ft<br/>2021 </h1>
-                        <h4>Pemilihan Umum </h4>
-                        <h2 className>Ketua BEM KMFT UGM 2022 </h2>
+                        <h1 className="tittle font-title">KPUM FKT<br/><span className="font-number">2021</span> </h1>
+                        <h4>Pemilihan Umum Mahasiswa </h4>
+                        <h2 className>FKT UGM 2022 </h2>
                         <div>
                         <h4 style={{color:"var(--color-yellow)"}}>29 November - 1 Desember 2021</h4>
                         </div>
                     </Fade>
-                    {/* <h1 className="tittle font-squids">kpu ft<br/>2021 </h1>
+                    {/* <h1 className="tittle font-title">kpu ft<br/>2021 </h1>
                     <h4>Pemilihan Umum </h4>
                     <h2 className>Ketua BEM KM FT UGM 2022 </h2> */}
                     <Fade>
@@ -96,7 +96,7 @@ export default function Beranda(){
 
                 <div className="desc1 text-center">
                     <div className="no"><h5 className="no-number">1</h5></div>
-                    <h2 className="font-squids">ADIAHMAD IRFAN ZIDNY</h2>
+                    <h2 className="font-title">ADIAHMAD IRFAN ZIDNY</h2>
                     <p>
                         Kita Kawan, Bukan Lawan!
                         <br/>#KarenaKitaTeknik
@@ -106,7 +106,7 @@ export default function Beranda(){
 
                 <div className="desc2 text-center">
                     <div className="no"><h5 className="no-number">2</h5></div>
-                    <h2 className="font-squids">ANJU GERALD</h2>
+                    <h2 className="font-title">ANJU GERALD</h2>
                     <p>
                         Salam dari kami,
                         <br/>Salam Dua Jari.
@@ -131,15 +131,15 @@ export default function Beranda(){
             <div className="about-container text-center">
                 <Fade>
                 <div className="about">
-                    <h2 className="font-squids">Tentang Pemilu FT UGM 2021 </h2>
-                    <p> Pemilihan Umum Mahasiswa Fakultas Teknik Universitas Gadjah Mada (Pemilu) adalah sarana pelaksanaan kedaulatan mahasiswa berdasarkan Anggaran Dasar/Anggaran Rumah Tangga Keluarga Mahasiswa Fakultas Teknik Universitas Gadjah Mada. </p>                     
+                    <h2 className="font-title">Tentang Pemilwa FKT UGM <span className="font-number">2021</span> </h2>
+                    <p> Pemilihan Umum Mahasiswa Fakultas Teknik Universitas Gadjah Mada (Pemilwa) adalah sarana pelaksanaan kedaulatan mahasiswa berdasarkan Anggaran Dasar/Anggaran Rumah Tangga Keluarga Mahasiswa Fakultas Teknik Universitas Gadjah Mada. </p>                     
                     <Button>
                         <Link to="/tentang">Selengkapnya</Link>
                     </Button>
                 </div>
                 
                 <div className="tatacara text-center">
-                    <h2 className="font-squids">Tata Cara Pemilihan </h2>
+                    <h2 className="font-title">Tata Cara Pemilihan </h2>
                     <div className="tatacarabox"><CarouselTataCara/> </div>
                 </div>
                 </Fade>
@@ -172,7 +172,7 @@ export default function Beranda(){
 
 const Container = styled.div`
 // umum // -------------------------------------------------------
-background-color: var(--color-blue);
+background-color: var(--color-green);
 overflow: hidden;
 * {
     margin: 0;
@@ -314,7 +314,7 @@ Button{
 }
 .no {
     margin: auto auto 1vmin auto;
-    border: solid var(--color-blue);
+    border: solid var(--color-green);
     background-color: var(--color-green);
     height: calc(1.6rem + 1.5vmin);
     width: calc(1.6rem + 1.5vmin);
@@ -378,7 +378,7 @@ Button{
     width: 100%;
     color: var(--color-black);
     font-size: calc(0.5rem + 2vmin);
-    font-family: montBook;
+    font-family: Montserrat;
 }
 @media (min-width: 1025px) {
     // hero // -------------------------------------------------------
