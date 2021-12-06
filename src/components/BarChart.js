@@ -49,8 +49,9 @@ export default function BarChart(){
 
 const Container = styled.div`
 .live{
-    background-color: var(--color-pink);
+    background-color: var(--color-white);
     border-radius: 1vmin;
+    color: var(--color-black);
     padding: 0 1vmin;
 }
 .live-judul{
@@ -75,14 +76,14 @@ li {
 }
 .total .bartotal .totalname{
   border-right: 2px var(--color-white) solid;
-  background-color: var(--color-green);
+  background-color: var(--color-black);
 }
 .total .bartotal .totalpercent{
-  background-color: var(--color-pink);
+  background-color: var(--color-green);
 }
 .total .totallevel{
-  border: 1px var(--color-pink) solid;
-  background-color: var(--color-pink);
+  border: 1px var(--color-green) solid;
+  background-color: var(--color-green);
 }
 .box {
   display: grid;
@@ -102,17 +103,17 @@ li {
 .dept{
   overflow: hidden;
   border: 2px var(--color-white) solid;
-  background-color: var(--color-green);
+  background-color: var(--color-black);
 }
 .barlevel {
   position: absolute;
-  border: 1px var(--color-pink) solid;
-  background-color: var(--color-pink);
+  border: 1px var(--color-green) solid;
+  background-color: var(--color-green);
   width: 100%;
   bottom: 0;
 }
 .persen{
-  background-color: var(--color-pink);
+  background-color: var(--color-green);
   border: 2px var(--color-white);
   border-style: none solid solid;
 }

@@ -7,17 +7,25 @@ import CarouselTataCara from "../components/Carousel_TataCara";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import {
-    Dice,
-    Rectangle_1,
-    Rectangle_2,
     Calon_1, 
     Calon_2,
+    Calon_3,
+    Calon_1_Polos,
+    Calon_2_Polos,
+    Calon_3_Polos,
     Catur,
     Path,
-}from "../assets/images/imgIndex.js"
+    WindL,
+    WindR,
+    BgGreen,
+    BgBlack,
+    no
+}from "../assets/images/imgIndex.js" 
 
 export default function Beranda(){
     // Kode Javascript //
+
+    // Kesan Pesan
     const [data, setData] = useState({
         message: "",
       })
@@ -43,81 +51,126 @@ export default function Beranda(){
         }
     }
 
+    // Show Hide
+    const [show1,setShow1] = useState(false)
+    const [show2,setShow2] = useState(false)
+    const [show3,setShow3] = useState(false)
+
+    function reveal1(){
+        setShow1(!show1)
+        setShow2(false)
+        setShow3(false)
+    }
+
+    function reveal2(){
+        setShow1(false)
+        setShow2(!show2)
+        setShow3(false)
+    }
+
+    function reveal3(){
+        setShow1(false)
+        setShow2(false)
+        setShow3(!show3)
+    }
+
     return(
         // Kode HTML //
-        <Container>
+        <Container className="font-default">
             <Helmet>
                 <title>KPUM FT UGM</title>
             </Helmet>
             {/* Awal Bagian Hero*/}
             <div className="hero-container text-center">
-                <div>
                     <Fade>
-                        <h1 className="tittle font-title">KPUM FKT<br/><span className="font-number">2021</span> </h1>
-                        <h4>Pemilihan Umum Mahasiswa </h4>
-                        <h2 className>FKT UGM 2022 </h2>
-                        <div>
-                        <h4 style={{color:"var(--color-yellow)"}}>29 November - 1 Desember 2021</h4>
+                        <h1 className="tittle font-title">
+                            <img className="wind" src={WindL} alt="wind"></img>
+                            KPUM FKT
+                            <img className="wind" src={WindR} alt="wind"></img>
+                            <br/>2021
+                        </h1>
+                        <h2 className='text'>
+                            Pemilihan Umum Mahasiswa
+                            <h4 style={{color:"var(--color-yellow)"}}>8 Desember - ? Desember 2021</h4>
+                        </h2>
+                        <h2 className='text'>Ketua LEM &emsp;&emsp; Ketua DPM &emsp;&emsp; Ketua UF</h2>
+                    </Fade>
+                    <Fade>
+                        <div className="wait">
+                        <Button>
+                            <a href={"https://kpuftugm.id/auth/google"}>Vote Sekarang</a>
+                        </Button>
                         </div>
                     </Fade>
-                    {/* <h1 className="tittle font-title">kpu ft<br/>2021 </h1>
-                    <h4>Pemilihan Umum </h4>
-                    <h2 className>Ketua BEM KM FT UGM 2022 </h2> */}
                     <Fade>
-                    <img className="dice" src={Dice} alt="dice"></img>
+                        <img className="catur" src={Catur} alt="dice"></img>
+                        <img className="path" src={Path} alt="dice"></img>
                     </Fade>
-                    <div className="wait">
-                    <Fade>
-                        <h3 className="endvote">Vote Ditutup</h3>
-                    </Fade>
-                    </div>
-                    <Fade>
-                    <img className="catur" src={Catur} alt="dice"></img>
-                    <img className="path" src={Path} alt="dice"></img>
-                    </Fade>
-                </div>
             </div>
             {/* Akhir Bagian Hero */}
 
             {/* Awal Calon calon */}
             <div className="calon-container">
-                <Fade>
-                <div className="calon calon1">
-                    <img className="rec1" src={Rectangle_1} alt="dice"></img>
-                    <img className="foto_calon1" src={Calon_1} alt="dice"></img>
+                <div className="calon">
+                    <div className="calon1" onClick={reveal1}>
+                        <img className="foto-calon" src={Calon_1} alt="dice"></img>
+                    </div>
+                    <div className="calon2" onClick={reveal2}>
+                        <img className="foto-calon" src={Calon_2} alt="dice"></img>
+                    </div>
+                    <div className="calon3" onClick={reveal3}>
+                        <img className="foto-calon" src={Calon_3} alt="dice"></img>
+                    </div>
                 </div>
-                
-                <div className="calon calon2">
-                    <img className="rec2" src={Rectangle_2} alt="dice"></img>
-                    <img className="foto_calon2" src={Calon_2} alt="dice"></img>
-                </div>
-                </Fade>
-
-
-                <div className="desc1 text-center">
-                    <div className="no"><h5 className="no-number">1</h5></div>
-                    <h2 className="font-title">ADIAHMAD IRFAN ZIDNY</h2>
-                    <p>
-                        Kita Kawan, Bukan Lawan!
-                        <br/>#KarenaKitaTeknik
-                        <br/>#TeknikBersihBerkah
-                    </p>
-                </div>
-
-                <div className="desc2 text-center">
-                    <div className="no"><h5 className="no-number">2</h5></div>
-                    <h2 className="font-title">ANJU GERALD</h2>
-                    <p>
-                        Salam dari kami,
-                        <br/>Salam Dua Jari.
-                    </p>
-                </div>
-
-                <div className="logo_desc text-center">
-                    <img src={Dice} alt="dice"></img>
-                    <Button>
-                        <Link to="/infocalon">Tentang Calon</Link>
-                    </Button>
+                <div className="calon-info">
+                    {
+                        show1? 
+                        <div className="desk-calon">
+                            <div>
+                                <img className="foto-calon" src={Calon_1_Polos} alt="dice"></img>
+                            </div>
+                            <div className="desk-tiap-calon text-center">
+                                <h2 className="font-title">CALON KETUA LEM</h2>
+                                <img src={no} alt="nomor urut"></img>
+                                <h3>DIMAS RAMADHAN</h3>
+                                <p>"Merajut Kolaboari Ciptakan Kreasi"</p>
+                            </div>
+                        </div> :null
+                    }
+                    {
+                        show2? 
+                        <div className="desk-calon">
+                            <div>
+                                <img className="foto-calon" src={Calon_2_Polos} alt="dice"></img>
+                            </div>
+                            <div className="desk-tiap-calon text-center">
+                                <h2 className="font-title">CALON KETUA DPM</h2>
+                                <img src={no} alt="nomor urut"></img>
+                                <h3>AURORA TARISA M.</h3>
+                                <p>
+                                    "Narasikan Gagasan, Wujudkan Kebermanfaatan Jangan
+                                    <br/>Hanya Menunggu, Tapi Ciptakan Aksimu Sendiri"
+                                </p>
+                            </div>
+                        </div> :null
+                    }
+                    {
+                        show3? 
+                        <div className="desk-calon">
+                            <div>
+                                <img className="foto-calon" src={Calon_3_Polos} alt="dice"></img>
+                            </div>
+                            <div className="desk-tiap-calon text-center">
+                                <h2 className="font-title">CALON KETUA DPM UF</h2>
+                                <img src={no} alt="nomor urut"></img>
+                                <h3>DHAFIN ANDRIAN</h3>
+                                <p>
+                                    "Ekspresikian Diri, Satukan Aspirasi,
+                                    <br/>Sempurnakan Demokrasi"
+                                </p>
+                            </div>
+                        </div> :null
+                    }
                 </div>
             </div>
             {/* Akhir Calon calon */}
@@ -172,12 +225,13 @@ export default function Beranda(){
 
 const Container = styled.div`
 // umum // -------------------------------------------------------
-background-color: var(--color-green);
+background-image: url(${BgBlack});
+background-repeat: round;
 overflow: hidden;
 * {
     margin: 0;
     padding: 0;
-    color: white;
+    color: #D0C8B3;
 }
 .wait {
     animation: show 2.5s forwards;
@@ -192,7 +246,31 @@ overflow: hidden;
         opacity: 1;
     }
 }
-
+Button{
+    margin: 3vmin auto auto auto;
+    padding: 0.5vmin 2vmin;
+    font-weight: bold;
+    background-color: var(--color-white);
+}
+Button Link{
+    color: var(--color-black);
+    &:hover{
+        color: var(--color-gren);
+    }
+}
+Button a{
+    color: var(--color-black);
+    &:hover{
+        color: var(--color-gren);
+    }
+}
+.kritik Button{
+    background-color: var(--color-green);
+    color: var(--color-white);
+    &:hover{
+        color: var(--color-black);
+    }
+}
 // hero // -------------------------------------------------------
 .hero-container{
     display: grid;
@@ -200,11 +278,11 @@ overflow: hidden;
     min-height: 92.5vh;
     width: 100%;
     position: relative;
-    background-color: var(--color-darkblue);
+    background-image: url(${BgGreen});
     padding: 20vh 0;
 }
-.hero-container .text-center{
-    width: 100%;
+.hero-container .text{
+    padding: 2.5vmin 0;
 }
 .hero-container .tittle{
     font-weight: lighter;
@@ -215,16 +293,6 @@ overflow: hidden;
 .hero-container h2{
     font-weight: bolder;
 }
-.hero-container .dice{
-    width: 15vmin;
-    padding: 4vmin;
-}
-Button{
-    margin: 3vmin auto auto auto;
-    padding: 0.5vmin 2vmin;
-    font-weight: bold;
-    background-color: var(--color-pink);
-}
 .cd {
     display: flex;
     padding: 0 20%;
@@ -232,7 +300,7 @@ Button{
 .cd p {
     font-size: calc(0.5rem + 1vmin);
     border-style: none none none solid; 
-    border-color: var(--color-pink);
+    border-color: var(--color-white);
     width: 25%;
     padding: 2vmin;
     font-weight: bold;
@@ -241,7 +309,7 @@ Button{
     border-style: none solid; 
 }
 .endvote {
-    border: 2px var(--color-pink);
+    border: 2px var(--color-white);
     border-style: solid none; 
     width: 40%;
     margin: auto;
@@ -252,79 +320,47 @@ Button{
 .path{
     display: none;
 }
+.wind{
+    height: 10vmin;
+}
 // Calon // -------------------------------------------------------
 .calon-container{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    padding: 5vmin 0 15vmin 0;
-}
-.calon1{
-    //order: 1;
-    grid-area: 1 / 1;
-}
-.calon2{
-    //order: 4;
-    grid-area: 2 / 2;
+    margin: 10vmin 0;
 }
 .calon{
-    position: relative;
-    height: 72.5vmin;
+    padding: 5vmin 20%;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
 }
-.calon img{
-    position: absolute;
-    padding-top: 10vmin;
-    bottom: 0;
+.calon1, .calon2, .calon3{
+    padding: 0 3vmin;
+    width: 100%;
 }
-.foto_calon1, .foto_calon2{
-    z-index: 0;
-    height: 97.5%;
+.calon .foto-calon{
+    width: 100%;
 }
-.foto_calon2{
-    right: 0;
+.calon-info{
+    padding: 2vmin 22.5%;
 }
-.rec1{
-    height: 100%;
-    right: 0;
+.desk-calon{
+    width: 100%;
+    border: 10px solid var(--color-green);
+    display: grid;
+    grid-template-columns: 35% 65%;
+    padding: 3vmin;
 }
-.rec2{
-    height: 100%;
-    left: 0;
+.desk-calon .foto-calon{
+    width: 100%;
 }
-.desc1, .desc2, .logo_desc{
-    padding-top: 8vmin;
-    margin: auto 2vmin;
+.desk-tiap-calon{
+    margin: auto;
 }
-.desc1{
-    //order: 2;
-    z-index: 1;
-    grid-area: 1 / 2;
+.desk-tiap-calon img{
+    width: 7vmin;
 }
-.desc2{
-    //order: 3;
-    z-index: 1;
-    grid-area: 2 / 1;
-}
-.logo_desc{
-    //order 5 sampai 6
-    z-index: 1;
-    grid-area: 3 / 1 / 3 / span 2;
-}
-.logo_desc img{
-    display: none
-}
-.no {
-    margin: auto auto 1vmin auto;
-    border: solid var(--color-green);
-    background-color: var(--color-green);
-    height: calc(1.6rem + 1.5vmin);
-    width: calc(1.6rem + 1.5vmin);
-    transform: rotate(45deg); 
-}
-.no-number {
-    font-weight: bold;
-    height: calc(1.5rem + 1.5vmin);
-    width: calc(1.5rem + 1.5vmin);
-    transform: rotate(-45deg);
+.desk-tiap-calon h3{
+    font-weight: bolder;
+    padding-bottom: 7vmin;
 }
 
 // about // -------------------------------------------------------
@@ -332,7 +368,7 @@ Button{
     z-index: 0;
     padding: 10vmin 0;
     position: relative;
-    background-color: var(--color-darkblue);
+    background-image: url(${BgGreen});
     width: 100%;
 }
 .about{
@@ -361,19 +397,19 @@ Button{
 }
 .kritik .box h4{
     border-style: solid;
-    border-color: var(--color-pink);
-    border-radius: 2vmin 2vmin 0 0;
-    background-color: var(--color-pink);
-    color: var(--color-black);
+    border-color: var(--color-white);
+    border-radius: 1vmin 1vmin 0 0;
+    background-color: var(--color-white);
+    color: var(--color-green);
     font-weight: bolder;
     padding: 1vmin;
     text-align: left;
 }
 .kritik textarea{
     border-style: solid;
-    border-color: var(--color-pink);
+    border-color: var(--color-white);
     border-width: thick;
-    border-radius: 0 2vmin 2vmin 2vmin;
+    border-radius: 0 1vmin 1vmin 1vmin;
     padding: 1vmin;
     width: 100%;
     color: var(--color-black);
@@ -403,19 +439,6 @@ Button{
         left: 0;
         top: 0;
     }
-    .hero-container .dice{
-        animation: spinner 5s infinite;
-        animation-timing-function: linear;
-    }
-    
-    @keyframes spinner {
-        90% {
-            transform: rotateY(0deg);
-        }
-        100% {
-            transform: rotateY(360deg);
-        }
-    }
     .cd {
         padding: 0 25%;
     }
@@ -423,81 +446,7 @@ Button{
         font-size: calc(0.5rem + 1.5vmin);
     }
     // Calon // -------------------------------------------------------
-    .calon-container{
-        grid-template-columns: 35% 30% 35%;
-    }
-    .foto_calon1, .foto_calon2{
-        height: 110%;
-    }
-    .calon1{
-        grid-area: 1 / 1;
-        &:hover .rec1{
-            margin-right: -115%;
-            transition: all 0.2s ease-out; 
-        }
     
-        &:hover .foto_calon1{
-            height: 115%;
-            transition: all 0.2s ease-out; 
-        }
-    
-        &:hover ~ .logo_desc{
-            display: none;
-            transition: all 0.5s ease-out;
-        }
-        
-        &:hover ~ .desc1{
-            display: inline;
-            transition: all 0.5s ease-out;
-        }
-    }
-    
-    .calon2{
-        grid-area: 1 / 3;
-    
-        &:hover .rec2{
-            margin-left: -115%;
-            transition: all 0.2s ease-out; 
-        }
-        
-        &:hover .foto_calon2{
-            height: 115%;
-            transition: all 0.2s ease-out; 
-        }
-        
-        &:hover ~ .logo_desc{
-            display: none;
-            transition: all 0.5s ease-out;
-        }
-        
-        &:hover ~ .desc2{
-            display: inline;
-            transition: all 0.5s ease-out;
-        }
-    }
-    .desc1, .desc2{
-        grid-area: 1 / 2;
-        display: none;
-        z-index: 1;
-        margin: auto;
-    }
-    .logo_desc{
-        grid-area: 1 / 2;
-        display: inline;
-    }
-    .logo_desc img{
-        display: inline;
-        width: 13vmin ;
-    
-        &:hover{
-            transform: rotateY(360deg);
-            transition: all 0.5s ease-out;
-        }
-    }
-    .no-number {
-        height: calc(1rem + 1.5vmin);
-        width: calc(1rem + 1.5vmin);
-    }
     
     // about // -------------------------------------------------------
     .about{
@@ -515,7 +464,7 @@ Button{
     .tatacarabox{
         //overflow: hidden;
         border-radius: 5px;
-        border: 4px var(--color-pink) solid;
+        border: 4px var(--color-white) solid;
     }
 
     // kritik dan saran // -------------------------------------------------------
