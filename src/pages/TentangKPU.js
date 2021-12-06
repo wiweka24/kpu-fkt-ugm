@@ -5,7 +5,9 @@ import {
     Dice,
     Squad,
     Logo,
-    BACKGROUND2
+    BACKGROUND2,
+    LINE,
+    JAM
 }from "../assets/images/imgKPU.js"
 import CarouselPanitia from "../components/Carousel";
 import 'antd/dist/antd.css';
@@ -13,6 +15,7 @@ import CarouselPanitia2 from "../components/Carousel2";
 import { Helmet } from "react-helmet";
 import Fade from "react-reveal/Fade";
 import blackBG from "../assets/images/bg-black.webp";
+import greenBG from "../assets/images/bg-green.webp";
 
 export default function TentangKPU(){
     // Kode Javascript //
@@ -25,7 +28,7 @@ export default function TentangKPU(){
                 <title>Tentang KPUM FKT UGM</title>
             </Helmet>
                 <div class="Hero">
-                    <img src={Path} class="ular"/>
+                    {/* <img src={Path} class="ular"/> */}
                     <Fade>
                     <div class="title">
                         <h1 class="white">TENTANG KAMI</h1>
@@ -34,10 +37,11 @@ export default function TentangKPU(){
                         <h2 class="p2 pink">FAKULTAS KEHUTANAN UGM <span className="font-number">2021</span></h2>
                     </div>
                     </Fade>
+                    <img class="line" src={LINE}></img>
                 </div>
                 {/*Deskripsi dari KPU*/}
                 <div class="container">
-                    <img src={Dice} class="Dadu"/>
+                    {/* <img src={Dice} class="Dadu"/> */}
                     <div class="deskripsi">
                     <Fade left>
                         <div class="pemilu">
@@ -59,6 +63,7 @@ export default function TentangKPU(){
                             </p>
                         </div>
                     </Fade>
+                    <img src={JAM} class="jam"></img>
                     </div>
                 </div>
                 {/*Judul Panitia*/}
@@ -81,7 +86,7 @@ const Container = styled.div`
     width: 100%;
     margin: 0;
   box-sizing: border-box;
-  background-image: url(${blackBG});
+  background-image: url(${greenBG});
   background-repeat: repeat;
     overflow: hidden;
     color: var(--color-white);
@@ -145,6 +150,11 @@ h1{
     margin-top: 5vmin;
     border-radius: 50%;
 }
+.Hero .line {
+    position:absolute;
+    left: -250px;
+    top: 325px;
+}
 
 .container {
     /* height: 514px; */
@@ -152,7 +162,7 @@ h1{
 
 .container .deskripsi {
     height: auto;
-    /* margin-top: 80px; */
+    margin-top: 80px;
     padding: 10vmin 20vmin 20vmin 20vmin;
 }
 
@@ -192,9 +202,17 @@ h1{
     /* font-size: 24px; */
     margin: 0;
     text-align: center;
-    background-image: url(${BACKGROUND2});
+    // background-image: url(${BACKGROUND2});
     padding-top: 30px;
     padding-bottom: 30px;
+}
+ 
+.jam {
+    position: absolute;
+    top: 1300px;
+    left: 85%;
+    width: 20%;
+    opacity: 0.8;
 }
 
 .squad{
@@ -209,13 +227,14 @@ h1{
     /* height: 126px;
     margin-top: 100px; */
     padding: 0 10vmin;
-    background-image: url(${BACKGROUND2});
-    border-bottom: 2px solid #3E6456;
-    border-top: 2px solid #3E6456;
+    // background-image: url(${BACKGROUND2});
+    // border-bottom: 2px solid #3E6456;
+    // border-top: 2px solid #3E6456;
     // background-color: #38445E;
 }
 .Panitia{
     // background-color: #38445E;
+    margin-bottom: 70px;
 }
 .Panitia .Plisss{
     display:none;
