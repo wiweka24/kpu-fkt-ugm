@@ -52,13 +52,14 @@ export default function CarouselPanitia() {
 const Container = styled.div`
 .panitia{
     height:600px;
-    width:100%;
+    width:75%;
     margin: 0 auto;
     display:none;
+    border: 1px solid #d0c8b3;
 }
 .container-panitia{
     width: 100%;
-    background-color:#38445E;
+    // background-color:#38445E;
     
 }
 .slick-dots{
