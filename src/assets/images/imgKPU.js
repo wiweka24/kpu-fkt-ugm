@@ -10,6 +10,8 @@ import PDD from './imgPanitia/PDD.png'
 import PERKAP from './imgPanitia/PERKAP.png'
 import BACKGROUND2 from './imgPanitia/Background2.png'
 import SUDUT from './imgPanitia/sudut.png'
+import LINE from './imgPanitia/line.png'
+import JAM from './imgPanitia/jam.png'
 
 export{
   Path,
@@ -24,4 +26,6 @@ export{
   PERKAP,
   BACKGROUND2,
   SUDUT,
+  LINE,
+  JAM,
 }
