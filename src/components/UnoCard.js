@@ -25,14 +25,14 @@ const Container = styled.div`
 .card {
   cursor: pointer;
   background-color: var(--color-white);
-  padding: 8px;
+  padding: calc(0px + 0.75vw);
   float:left;
   /* background:#F9F7F8; */
   border-radius:5px;
   display:table;
   /* padding:5px; */
-  margin: 3vmin 5vmin;
-  font-family: "Monserrat";
+  margin: 3vw 5vw;
+  font-family: Bright;
   text-shadow:
      1px  1px 0 #211E21,
     -1px -1px 0 #211E21,
@@ -46,6 +46,7 @@ const Container = styled.div`
   /* box-shadow:0 0 10px #aaaaaa; */
   text-align:center;
   position:relative;
+  transition-duration: 0.25s;
 }
 .card .inner{
   display:table-cell;
@@ -66,11 +67,9 @@ const Container = styled.div`
 }
 
 .card .photo{
-    width: 15vw;
-    max-width: 325px;
-    min-width: 125px;
+    width: calc(10px + 20vw);
     height: auto;
-    margin-top: 1vw;
+    margin-top: -1vw;
 }
 
 .card:before,
@@ -78,7 +77,7 @@ const Container = styled.div`
   display:inline-block;
   position:absolute;
   /* line-height:0; */
-  font-size:calc(0.5rem + 1.5vmin);
+  font-size:calc(0.5rem + 1.5vw);
   color:#F9F7F8;
   text-shadow:
      1px  1px 0 #211E21,
@@ -111,7 +110,8 @@ const Container = styled.div`
 
 .card:hover{
   transform: scale(1.02);
-  box-shadow: 0 12px 100px 0 rgba(251, 36, 129, 0.9), 0 5px 70px 0 rgba(181, 34, 63, 0.9);
+  box-shadow: 0 12px 100px 0 rgba(208, 200, 179, 0.9), 0 5px 70px 0 rgba(62, 100, 86, 1);
+  transition-duration: 0.25s;
 }
 
 .card:active{
@@ -119,4 +119,9 @@ const Container = styled.div`
   transition-duration: 0.05s;
 }
 
+@media only screen and (max-width: 750px) {
+  .card {
+    margin: 3vw 2vw;
+}
+}
 `

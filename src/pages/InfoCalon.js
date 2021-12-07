@@ -1,12 +1,20 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import {
-  Dice,
-  Calon_1,
+  Calon_1, 
   Calon_2,
+  Calon_3,
+  Calon_1_Polos,
+  Calon_2_Polos,
+  Calon_3_Polos,
+  Catur,
+  Path,
+  WindL,
+  WindR,
+  BgGreen,
+  BgBlack,
   ChooseCandidate,
 } from "../assets/images/imgIndex"
-// import CVAnjuGerald from "https://drive.google.com/file/d/18CZcl2ZxHVuGl7VliovqSB_zxE3OYR2N/view?usp=sharing"
 import { Helmet } from "react-helmet";
 import UnoCard from "../components/UnoCard";
 import Fade from "react-reveal/Fade"
@@ -16,9 +24,11 @@ export default function InfoCalon() {
 
   const [isClicked, setIsClicked] = React.useState(false);
   const [isClicked2, setIsClicked2] = React.useState(false);
+  const [isClicked3, setIsClicked3] = React.useState(false);
 
   const clickHandler = () => setIsClicked(clicked => !clicked);
   const clickHandler2 = () => setIsClicked2(clicked => !clicked);
+  const clickHandler3 = () => setIsClicked3(clicked => !clicked);
 
   function resizeIframe(obj) {
     obj.style.height = obj.contentWindow.document.documentElement.scrollHeight + 'px';
@@ -48,10 +58,13 @@ export default function InfoCalon() {
         <div class="content-container" >
           <div class="button-container">
             <Fade left>
-              <UnoCard onClick={clickHandler} name="ADIAHMAD IRFAN ZIDNY" no="1" src={Calon_1} />
+              <UnoCard onClick={clickHandler} name="NO 1" no="1" src={Calon_1_Polos} />
+            </Fade>
+            <Fade middle>
+              <UnoCard onClick={clickHandler2} name="NO 2" no="2" src={Calon_2_Polos} />
             </Fade>
             <Fade right>
-              <UnoCard onClick={clickHandler2} name="ANJU GERALD" no="2" src={Calon_2} />
+              <UnoCard onClick={clickHandler3} name="NO 3" no="3" src={Calon_3_Polos} />
             </Fade >
           </div>
 
@@ -192,20 +205,20 @@ export default function InfoCalon() {
 }
 
 const Container = styled.div`
-background-color: var(--color-darkblue);
+background-image: url(${BgGreen});
 font-family: Bright;
 overflow: hidden;
 padding: 5vmin 10vmin;
-min-height: 95vh;
+min-height: 60vh;
 display: flex;
 flex-direction: column;
 justify-content: center;
-align-items: center;
+//align-items: center;
 
 * {
     margin: 0;
     padding: 0;
-    color: white;
+    color: var(--color-white);
 }
 
 //Container Judul
@@ -214,6 +227,7 @@ align-items: center;
   height: auto;
   position: relative;
   padding: 3% 0% 2% 0%;
+  border: 5px solid yellow;
 }
 
 //Teks Calon Ketua
@@ -227,6 +241,7 @@ align-items: center;
 .content-container{
   width: 100%;
   position: relative;
+  //border: 5px solid blue;
 }
 
 .button-container {
@@ -437,6 +452,15 @@ align-items: center;
 }
 
 @media only screen and (max-width: 750px) {
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin: auto;
+    border: 5px solid red;
+  }
 
   //Bagian box Modal
   .modal-content {
