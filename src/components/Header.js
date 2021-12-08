@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import LogoKPU from "../assets/images/logo-kpu.webp"
+import LogoKPU from "../assets/images/logo-kpu.png"
 import greenBG from "../assets/images/bg-green.webp";
 
 export default class Header extends Component {
@@ -30,8 +30,8 @@ export default class Header extends Component {
             className="logo"
             onClick={this.state.clicked ? this.handleClick : this.nothing()}
           >
-            <img src={LogoKPU} alt="Logo KPU FKT UGM 2021" />
-            <h4>KPUM FKT UGM <span className="font-number">2021</span></h4>
+            <img src={LogoKPU} alt="Logo KPUM FKT UGM 2021" />
+            <h4>KPUM FKT UGM <span className="font-number" style={{fontSize: "calc(0.5rem + 4vmin)"}}>2021</span></h4>
           </Link>
 
           {/* Right-corner desktop & dropdown menu mobile: Menu Navigasi  */}
@@ -123,7 +123,7 @@ const Container = styled.header`
         margin: 0;
 
         &:hover {
-          color: var(--color-pink);
+          color: var(--color-black);
           transition: all 0.2s ease-out;
         }
       }
@@ -181,7 +181,7 @@ const NavItemsStyled = styled.ul`
     }
 
     &.nav-items.active {
-      background: var(--color-darkblue);
+      background-image: url(${greenBG});
       top: calc(0.5rem + 8vmin);
       left: 0;
       opacity: 1;
@@ -197,7 +197,7 @@ const NavItemsStyled = styled.ul`
     margin: 0;
 
     &:hover {
-      color: var(--color-pink);
+      color: var(--color-black);
       transition: all 0.2s ease-out;
     }
 
@@ -207,7 +207,7 @@ const NavItemsStyled = styled.ul`
       padding: 1vh 0 1vh 0;
 
       &:hover {
-        background-color: var(--color-pink);
+        background-color: var(--color-black);
         color: var(--color-white);
         transition: all 0.2s ease-out;
       }
@@ -227,7 +227,7 @@ const NavIconStyled = styled.image`
       color: var(--color-white);
     }
     .fa-icon:hover {
-      color: var(--color-pink);
+      color: var(--color-black);
       transition: all 0.2s ease-out;
     }
   }
