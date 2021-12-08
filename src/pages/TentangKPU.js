@@ -37,7 +37,7 @@ export default function TentangKPU(){
                         <h2 class="p2 pink">FAKULTAS KEHUTANAN UGM <span className="font-number">2021</span></h2>
                     </div>
                     </Fade>
-                    <img class="line" src={LINE}></img>
+                    {/* <img class="line" src={LINE}></img> */}
                 </div>
                 {/*Deskripsi dari KPU*/}
                 <div class="container">
@@ -146,7 +146,11 @@ h1{
 }
 .Hero .line {
     width: 70vmin;
-    margin: 10vmin auto 20vmin;
+    // margin: 20vmin auto 10vmin;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 75vh;
 }
 
 .container {
@@ -155,7 +159,7 @@ h1{
 
 .container .deskripsi {
     height: auto;
-    margin-top: -90px;
+    // margin-top: -90px;
     padding: 10vmin 20vmin 20vmin 20vmin;
 }
 
