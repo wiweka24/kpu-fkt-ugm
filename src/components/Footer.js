@@ -26,9 +26,9 @@ function Footer() {
           <div className="social-media">
             <SocialMedia
               name="Instagram"
-              value = "@kpufktugm"
+              value = "@kpumfktugm"
               faIcon={["fab", "instagram"]}
-              link="http://instagram.com/kpufktugm"
+              link="http://instagram.com/kpumfktugm"
               secondaryColor="#302f2b"
             />
             <SocialMedia

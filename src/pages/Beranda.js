@@ -128,7 +128,7 @@ export default function Beranda(){
                                 <h2 className="font-title">CALON KETUA LEM</h2>
                                 <img src={no} alt="nomor urut"></img>
                                 <h3>DIMAS RAMADHAN</h3>
-                                <p>"Merajut Kolaboari Ciptakan Kreasi"</p>
+                                <p>"Merajut Kolaborasi Ciptakan Kreasi"</p>
                             </div>
                         </div> 
                         </Fade>:null
@@ -164,7 +164,7 @@ export default function Beranda(){
                                 <img src={no} alt="nomor urut"></img>
                                 <h3>DHAFIN ANDRIAN</h3>
                                 <p>
-                                    "Ekspresikian Diri, Satukan Aspirasi,
+                                    "Ekspresikan Diri, Satukan Aspirasi,
                                     <br/>Sempurnakan Demokrasi"
                                 </p>
                             </div>
