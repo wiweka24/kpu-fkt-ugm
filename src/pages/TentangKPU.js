@@ -37,7 +37,7 @@ export default function TentangKPU(){
                         <h2 class="p2 pink">FAKULTAS KEHUTANAN UGM <span className="font-number">2021</span></h2>
                     </div>
                     </Fade>
-                    <img class="line" src={LINE}></img>
+                    {/* <img class="line" src={LINE}></img> */}
                 </div>
                 {/*Deskripsi dari KPU*/}
                 <div class="container">
@@ -47,23 +47,17 @@ export default function TentangKPU(){
                         <div class="pemilu">
                             <h3 class="desk1  pink font-title ">PEMILWA FAKULTAS KEHUTANAN UGM</h3>
                             <p class="desk2">
-                                <b>Pemilihan Umum</b> Mahasiswa Fakultas Teknik Universitas Gadjah Mada (Pemilu) adalah sarana pelaksanaan kedaulatan mahasiswa berdasarkan Anggaran Dasar/Anggaran Rumah Tangga Keluarga Mahasiswa Fakultas Teknik Universitas Gadjah Mada.
-                                <br/><br/><b>Peserta Pemilu</b> adalah kandidat calon Ketua BEM KMFT UGM yang telah lolos verifikasi oleh KPU.
-                                <br/><br/><b>Pemilih</b> adalah seluruh mahasiswa Fakultas Teknik Universitas Gadjah Mada yang terdaftar
-                                secara akademik pada jenjang S1 reguler yang mempunyai hak untuk memilih dalam Pemilu.
+                                <b>Pemilihan Umum Mahasiswa</b> adalah sarana pelaksanaan kedaulatan mahasiswa yang diselenggarakan secara langsung, umum, bebas, rahasia, jujur, dan adil dalam Keluarga Mahasiswa Fakultas Kehutanan Universitas Gadjah Mada.
                             </p>
                         </div>
 
                         <div class="kpu" style={{marginTop: "10vmin"}}>
                             <h3 class="desk1 pink font-title ">KPUM FAKULTAS KEHUTANAN UGM</h3>
-                            <p class="desk2"><b>Komisi Pemilihan Umum</b> Fakultas Teknik Universitas Gadjah Mada yang selanjutnya disebut
-                            KPU adalah suatu komisi yang menyelenggarakan Pemilu berdasarkan Undang-Undang
-                            KMFT UGM tentang Pemilu dan terdiri dari SC KPU, OC KPU, Panitia Pengawas Pemilu
-                            dan Mahkamah Pemilu.
+                            <p class="desk2"><b>Komisi Pemilihan Umum Mahasiswa</b> Fakultas Kehutanan merupakan badan independen yang bertugas untuk menyelenggarakan serangkaian kegiatan Pemilihan Umum Mahasiswa KM FKT UGM. 
                             </p>
                         </div>
                     </Fade>
-                    <img src={JAM} class="jam"></img>
+                    {/* <img src={JAM} class="jam"></img> */}
                     </div>
                 </div>
                 {/*Judul Panitia*/}
@@ -151,9 +145,12 @@ h1{
     border-radius: 50%;
 }
 .Hero .line {
-    position:absolute;
-    left: -250px;
-    top: 325px;
+    width: 70vmin;
+    // margin: 20vmin auto 10vmin;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 75vh;
 }
 
 .container {
@@ -162,7 +159,7 @@ h1{
 
 .container .deskripsi {
     height: auto;
-    margin-top: 80px;
+    // margin-top: -90px;
     padding: 10vmin 20vmin 20vmin 20vmin;
 }
 
@@ -213,6 +210,7 @@ h1{
     left: 85%;
     width: 20%;
     opacity: 0.8;
+    overflow: hidden;
 }
 
 .squad{
@@ -227,10 +225,7 @@ h1{
     /* height: 126px;
     margin-top: 100px; */
     padding: 0 10vmin;
-    // background-image: url(${BACKGROUND2});
-    // border-bottom: 2px solid #3E6456;
-    // border-top: 2px solid #3E6456;
-    // background-color: #38445E;
+
 }
 .Panitia{
     // background-color: #38445E;
@@ -272,6 +267,9 @@ h1{
     .Panitia .panitia{
         width:100%;
         height:400px
+    }
+    .Hero .line {
+        width: 400px;
     }
 }
 
@@ -316,6 +314,11 @@ h1{
     .JudulPanitia{
         height: 68px;
     }
+    .Hero .line {
+        width: 100%;
+    }
+
+}
 
 @media (max-width:380px){
     .Hero .title{

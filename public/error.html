@@ -8,7 +8,6 @@
     <link rel="icon" href="logo-kpu-2021.ico">
     <style>
         body {
-            background-color: blue;
             overflow: hidden;
         }
 
@@ -34,7 +33,7 @@
         * {
             margin: 0;
             padding: 0;
-            color: white;
+            color: #d0c8b3;
             box-sizing: border-box;
         }
 
@@ -47,7 +46,7 @@
             width: 100vw;
             min-height: 100vh;
             position: relative;
-            background-color: #102037;
+            background: url(./assets/images/background2.png);
             padding: 10vmin 10vmin;
             text-align: center;
         }
@@ -58,10 +57,7 @@
         }
 
         .text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            margin-bottom: 20px;
 
         }
 
@@ -89,14 +85,11 @@
 
         .button {
             cursor: pointer;
-            background-color: #FB2481;
+            background-color: #3e6456;
+            color: #d0c8b3;
             padding: 1vmin 3vmin;
             border-radius: 5px;
             width: 180px;
-            position: absolute;
-            top: 80%;
-            left: 50%;
-            transform: translate(-40%, -50%);
         }
     </style>
 </head>
@@ -106,11 +99,19 @@
 
 <body>
     <div class="hero-container text-center">
-        <img src="assets/images/cards.webp" class="card" alt="card" />
         <div class="text">
-            <h1 class="font-title">ERROR 404</h1>
-            <h2 class="font-mont">Halaman yang Anda cari tidak ditemukan</h2>
+            <h1 class="font-title">Halaman tidak ditemukan</h1>
         </div>
+        <div style="padding: 10vmin; align-items: center; display:flex; flex-direction: column;">
+            <h3>
+                    <b>Mengapa halaman ini muncul? Kemungkinan:</b>
+                </h3>
+                <ul>
+                    <li>Anda telah memilih dan tidak diperkenankan memilih kembali</li>
+                    <li>Email Anda tidak terdaftar di Daftar Pemilih Tetap KPUM FKT UGM</li>
+                    <li>Anda tidak memiliki akses pada halaman ini</li>
+                </ul>                  
+            </div>
         <a href="/"><button class="button">Kembali</button></a>
     </div>
 

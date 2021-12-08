@@ -20,7 +20,8 @@ import {
   Frame_Empty,
   DPM_Tag,
   DPMUF_Tag,
-  LEM_Tag
+  LEM_Tag,
+  PilihKandidat
 } from "../assets/images/imgIndex"
 import { Helmet } from "react-helmet";
 import UnoCard from "../components/UnoCard";
@@ -45,7 +46,7 @@ export default function InfoCalon() {
   return (
     <>
       <Helmet>
-        <title>Calon Kandidat - FKT UGM</title>
+        <title>Kandidat - FKT UGM</title>
       </Helmet>
       <Container isClicked={isClicked} isClicked2={isClicked2} isClicked3={isClicked3}>
         <div class="background-fixed">
@@ -58,7 +59,7 @@ export default function InfoCalon() {
         <div class="title-container">
           <div class="page-title">
             <Fade top>
-              <h1 style={{ fontSize: "calc(0.5rem + 4vw)" }} >Calon Kandidat <br /><span style={{color:"var(--color-white)"}}>FKT UGM 2022</span></h1>
+              <h1 style={{ fontSize: "calc(0.5rem + 4vw)" }} >Kandidat <br /><span style={{color:"var(--color-white)"}}>Pemilihan Umum Mahasiswa</span></h1>
             </Fade>
           </div>
         </div>
@@ -66,10 +67,10 @@ export default function InfoCalon() {
         <div class="content-container" >
           <div class="button-container">
             <Fade left>
-              <Frame onClick={clickHandler} name="Aurora Tarisa M." no="CALON DPM" src={Frame_DPM} />
+              <Frame onClick={clickHandler} name="Aurora Tarisa M." no="Calon DPM" src={Frame_DPM} />
             </Fade>
             <Fade middle>
-              <Frame onClick={clickHandler2} name="Dhafin Andrian" no="CALON DPMUF" src={Frame_DPMUF} />
+              <Frame onClick={clickHandler2} name="Dhafin Andrian" no="Calon DPM UF" src={Frame_DPMUF} />
             </Fade>
             <Fade right>
               <Frame onClick={clickHandler3} name="Dhimas Ramadhan" no="Calon LEM" src={Frame_LEM} />
@@ -78,7 +79,7 @@ export default function InfoCalon() {
 
           <div class="image-background">
             <Fade bottom>
-              <img src={ChooseCandidate} alt="Choose A Candidate" style={{ maxWidth: "100%", height: "auto" }} />
+              <img src={PilihKandidat} alt="Choose A Candidate" style={{ maxWidth: "100%", height: "auto" }} />
             </Fade>
           </div>
         </div>
@@ -113,10 +114,10 @@ export default function InfoCalon() {
                   Menjalin hubungan yang bersinergi antar seluruh internal DPM FKT UGM maupun di luar internal DPM FKT UGM.
                   </li>
                   <li>
-                  Memberikan kualitas pelayanan terbaik dalam menjebatani aspirasi Keluarga Mahasiswa Fakultas Kehutanan UGM secara aktif dan berkelanjutan
+                  Memberikan kualitas pelayanan terbaik dalam menjebatani aspirasi Keluarga Mahasiswa Fakultas Kehutanan UGM secara aktif dan berkelanjutan.
                   </li>
                   <li>
-                  Memaksimalkan controlling, aspirasi dan media, budgeting, dan legislating di tingkat fakultas
+                  Memaksimalkan controlling, aspirasi dan media, budgeting, dan legislating di tingkat fakultas.
                   </li>
                   <li>
                   Menumbuhkan rasa kekeluargaan di dalam internal DPM FKT UGM.
@@ -136,7 +137,7 @@ export default function InfoCalon() {
               </p>
             </div>
             <div class="modal-footer">
-              <h3>KPUM FKT UGM <span className="font-number">2021</span></h3>
+              <h3>KPUM FKT UGM 2021</h3>
             </div>
           </div>
         </div>
@@ -153,7 +154,7 @@ export default function InfoCalon() {
             </div>
 
             <div class="modal-subheader">
-              <h4>Calon Ketua DPMUF</h4>
+              <h4>Calon Ketua DPM UF</h4>
             </div>
 
             <div class="modal-video">
@@ -162,26 +163,20 @@ export default function InfoCalon() {
 
             <div class="modal-body">
               <h3>Visi</h3>
-              <p>Terwujudnya DPM Fakultas Kehutanan UGM sebagai lembaga legislatif yang solid, profesional, peduli, dan dikenal luas dalam kebermanfaatan.
+              <p>Mengedepankan fungsi legislator dalam memberikan informasi serta penjaringan aspirasi.
               </p>
 
               <h3>Misi</h3>
               <p>
                 <ul>
                   <li>
-                    Mengoptimalkan kinerja pengurus DPM FKT UGM dengan mengedepankan kekompakan, kedisiplinan, penuh tanggung jawab, dan peduli terhadap sesama.
+                    Memanfaatkan sosial media sebagai wadah penyebaran informasi yang aktual.
                   </li>
                   <li>
-                  Menjalin hubungan yang bersinergi antar seluruh internal DPM FKT UGM maupun di luar internal DPM FKT UGM.
+                  Memberikan ruang KM FKT UGM dalam menghimpun aspirasi baik secara internal maupun eksternal.
                   </li>
                   <li>
-                  Memberikan kualitas pelayanan terbaik dalam menjebatani aspirasi Keluarga Mahasiswa Fakultas Kehutanan UGM secara aktif dan berkelanjutan
-                  </li>
-                  <li>
-                  Memaksimalkan controlling, aspirasi dan media, budgeting, dan legislating di tingkat fakultas
-                  </li>
-                  <li>
-                  Menumbuhkan rasa kekeluargaan di dalam internal DPM FKT UGM.
+                  Menjaga komunikasi kepada seluruh lembaga KM FKT UGM.
                   </li>
                 </ul>
               </p>
@@ -189,16 +184,13 @@ export default function InfoCalon() {
               <h3>Program Unggulan</h3>
               <p>
               <ul>
-                <li>Kotak Bicara</li>
-                <li>React (Response & Act)</li>
-                <li>Upgrading Motivasi Tim</li>
-                <li>Detro (Deep Intro)</li>
-                <li>Prinsip "KESANE MANSUR TUAN"</li>
+                <li>Aspirasi Rimbawan</li>
+                <li>Sowan Lembaga</li>
               </ul>
               </p>
             </div>
             <div class="modal-footer">
-              <h3>KPUM FKT UGM <span className="font-number">2021</span></h3>
+              <h3>KPUM FKT UGM 2021</h3>
             </div>
           </div>
         </div>
@@ -224,26 +216,26 @@ export default function InfoCalon() {
 
             <div class="modal-body">
               <h3>Visi</h3>
-              <p>Terwujudnya DPM Fakultas Kehutanan UGM sebagai lembaga legislatif yang solid, profesional, peduli, dan dikenal luas dalam kebermanfaatan.
+              <p>Terwujudnya kehidupan kampus yang religius dan dinamis dengan berwawasan kerakyatan, keilmuan, dan lingkungan.
               </p>
 
               <h3>Misi</h3>
               <p>
                 <ul>
                   <li>
-                    Mengoptimalkan kinerja pengurus DPM FKT UGM dengan mengedepankan kekompakan, kedisiplinan, penuh tanggung jawab, dan peduli terhadap sesama.
+                    Membangun internal yang berlandaskan kekeluargaan, profesionalitas, dan mempunyai etos perjuangan.
                   </li>
                   <li>
-                  Menjalin hubungan yang bersinergi antar seluruh internal DPM FKT UGM maupun di luar internal DPM FKT UGM.
+                  Menjadi fasilitator yang responsif dalam hal kebutuhan advokasi KM FKT.
                   </li>
                   <li>
-                  Memberikan kualitas pelayanan terbaik dalam menjebatani aspirasi Keluarga Mahasiswa Fakultas Kehutanan UGM secara aktif dan berkelanjutan
+                  Menciptakan hubungan yang baik serta membangun sinergitas berbagai lembaga di KM FKT UGM.
                   </li>
                   <li>
-                  Memaksimalkan controlling, aspirasi dan media, budgeting, dan legislating di tingkat fakultas
+                  Menjadikan LEM FKT UGM sebagai wadah minat dan bakat KM FKT, serta mendorong terwujudnya budaya kreatif, inovatif, dan kolaboratif sesuai dengan kemajuan zaman.
                   </li>
                   <li>
-                  Menumbuhkan rasa kekeluargaan di dalam internal DPM FKT UGM.
+                  Mengambil peran aktif di masyarakat dalam lingkup pergerakan.
                   </li>
                 </ul>
               </p>
@@ -251,16 +243,18 @@ export default function InfoCalon() {
               <h3>Program Unggulan</h3>
               <p>
               <ul>
-                <li>Kotak Bicara</li>
-                <li>React (Response & Act)</li>
-                <li>Upgrading Motivasi Tim</li>
-                <li>Detro (Deep Intro)</li>
-                <li>Prinsip "KESANE MANSUR TUAN"</li>
+                <li>Jaring Bakat</li>
+                <li>Optimalisasi Key Performa Indikator (KPI)</li>
+                <li>Forescare</li>
+                <li>Foreshealth</li>
+                <li>Advokasi</li>
+                <li>kajian Kolaboratif</li>
+                <li>Srawung Rimbawan</li>
               </ul>
               </p>
             </div>
             <div class="modal-footer">
-              <h3>KPUM FKT UGM <span className="font-number">2021</span></h3>
+              <h3>KPUM FKT UGM 2021</h3>
             </div>
           </div>
         </div>
@@ -339,7 +333,7 @@ justify-content: center;
 
 //Uno
 .image-background{
-  width: calc(100px + 50vmin);
+  width: calc(50px + 50vmin);
   position: relative;
   padding: 6% 0%;
   margin: auto;
@@ -349,6 +343,7 @@ justify-content: center;
 .image-background:hover{
   transform: scale(1.03);
   transition-duration: 0.4s;
+  /* box-shadow: 0 12px 100px 0 rgba(208, 200, 179, 0.9), 0 5px 70px 0 rgba(62, 100, 86, 1); */
 }
 
 //Dice
@@ -389,7 +384,7 @@ justify-content: center;
   overflow: auto;
   background-color: rgba(0,0,0,0.4);
   color: white;
-  font-family: Bright;
+  font-family: Montserrat;
 }
 
 //Bagian box Modal
@@ -415,8 +410,7 @@ justify-content: center;
   background-image: url(${BgGreen});
 
   h2{
-    font-size: calc(0.5rem + 5vmin);
-    color: var(--color-pink);
+    font-size: calc(0.5rem + 3vw);
   }
 }
 
@@ -425,9 +419,10 @@ justify-content: center;
   text-align: center;
   /* background-color: var(--color-yellow); */
   border-radius: 0px 0px 12px 12px;
-  padding: 0.5% 10%;
-  margin: auto;
+  padding: 0.5% 10% 1% 10%;
+  margin: -2.5% 0% auto;
   background-image: url(${BgGreen});
+  
 }
 
 .modal-image{
@@ -477,7 +472,7 @@ justify-content: center;
   width: 100%;
   padding-bottom: 56.25%; 
   height: 0;
-  margin: 5vmin 0;
+  margin: 2vmin 0;
 }
 
 .modal-video iframe{
@@ -498,7 +493,7 @@ justify-content: center;
   color: #FFFFFF;
   position: absolute;
   right: 7%;
-  top: 12px;
+  top: calc(10px + 2vw);
   font-size: calc(0.5rem + 4vmin);
   font-weight: bold;
   transition-duration: 0.4s;

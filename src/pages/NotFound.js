@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import Button from "../components/Button";
 
+import blackBG from "../assets/images/bg-black.webp"
 import LogoPNG from '../assets/images/logo.webp'
 import Cards from '../assets/images/cards.webp'
 
@@ -11,32 +12,34 @@ export default function NotFound() {
     return(
         <>
             <Helmet>
-                Error: Page Tidak Ditemukan
+                Halaman Tidak Ditemukan
             </Helmet>
             <Container>
                 <div className="hero-container text-center">
-                    <img src={Cards} className="card" alt="card"/>
                     <div class="text">
-                        <h1 className="font-title">ERROR 404</h1>
+                        <h1 className="font-title">Halaman Tidak Ditemukan</h1>
                     </div>
-                </div>
-                <div style={{padding: '10vmin', alignItems:'center', display:'flex', flexDirection: 'column'}}>
-                    <h3>
+                    <div style={{padding: '10vmin', alignItems:'center', display:'flex', flexDirection: 'column'}}>
+                <h3>
                         <b>Mengapa halaman ini muncul? Kemungkinan:</b>
                     </h3>
                     <ul>
                         <li>Anda telah memilih dan tidak diperkenankan memilih kembali</li>
                         <li>Email Anda tidak terdaftar di Daftar Pemilih Tetap KPUM FKT UGM</li>
                         <li>Anda tidak memiliki akses pada halaman ini</li>
-                    </ul>
+                    </ul>                  
                 </div>
+                <a href="/"><button class="button">Kembali</button></a>
+
+                </div>
+
             </Container>
         </>
     )
 }
 
 const Container = styled.div`
-background-color: var(--color-green);
+background: url(${blackBG});
 overflow: hidden;
 
 * {
@@ -54,7 +57,6 @@ overflow: hidden;
     width: 100vw;
     min-height: 100vh;
     position: relative;
-    background-color: var(--color-darkblue);
     padding: 10vmin 10vmin;
 }
 
@@ -63,10 +65,7 @@ overflow: hidden;
 }
 
 .text{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
     h1, h4{
         font-weight: lighter;
     }
@@ -79,4 +78,13 @@ overflow: hidden;
 .card {
     width: 100vmin;
 }
+
+.button {
+            cursor: pointer;
+            background-color: #3e6456;
+            color: #d0c8b3;
+            padding: 1vmin 3vmin;
+            border-radius: 5px;
+            width: 180px;
+        }
 `
