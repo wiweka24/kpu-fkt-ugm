@@ -1,5 +1,5 @@
 body {
-    background-color: #102037;
+    background: url(./assets/images/background2.png);
     width: 100%; 
     overflow-x: hidden;
     box-sizing: border-box;
@@ -7,19 +7,24 @@ body {
 
 @font-face {
     font-family: Bright;
-    src: url(./assets/fonts/Bright.otf);
+    font-style: normal;
+    font-weight: normal;
+    src: local("Bright"), url(./assets/fonts/Bright.otf) format('opentype');
 }
 
 @font-face {
     font-family: Montserrat;
-    src: url(./assets/fonts/Montserrat-Regular.ttf);
+    font-style: normal;
+    font-weight: normal;
+    src: local("Monserrat-Regular"), url(./assets/fonts/Montserrat-Regular.ttf) format('truetype');
 }
 
 * {
     margin: 0;
     padding: 0;
-    color: white;
+    color: #d0c8b3;
     box-sizing: border-box;
+    font-family: Monserrat;
 }
 
 .font-title {
@@ -32,10 +37,13 @@ body {
 
 h1 {
     font-size: calc(0.5rem + 4vmin);
+    font-family: Bright;
+    font-weight: 100;
 }
 
 h2 {
     font-size: calc(0.5rem + 2vmin);
+    font-family: Monserrat;
 }
 
 h3 {
@@ -43,7 +51,12 @@ h3 {
 }
 
 p {
-    font-size: calc(0.5rem + 1vmin);
+    font-size: calc(0.5rem + 1.5vmin);
+    font-family: Monserrat;
+}
+
+label{
+    margin: 0 3vmin;
 }
 
 .back {
@@ -54,7 +67,7 @@ p {
 }
 
 .back:hover {
-    color: #FB2481;
+    color: #3e6456;
 }
 
 .hero-container {
@@ -84,54 +97,34 @@ p {
 
 .button {
     border: none;
+    background: url(./assets/images/background1.png);
     background-size: cover;
-    /* min-width: 30%; */
-    /* height: auto; */
+    min-width: 30%;
+    padding: 2vmin;
     display: inline-block;
     border-radius: 12px;
-    /* padding: 20% 0%; */
     text-decoration: none;
-    margin: 10px 10% 10px 10%;
+    margin: 20px 10% 20px 10%;
     transition-duration: 0.2s;
     cursor: pointer;
+    border: 2px #d0c8b3;
   }
   
   
   .button:hover{
     transform: scale(1.02);
-    box-shadow: 0 12px 100px 0 rgba(251, 36, 129, 0.9), 0 5px 70px 0 rgba(181, 34, 63, 0.9);
+    transition-duration: 0.05s;
+    box-shadow: 0 12px 100px 0 #d0c8b3, 0 5px 70px 0 #302f2b;  
   }
   
   .button:active{
     transform: scale(0.97);
     transition-duration: 0.05s;
+    box-shadow: 0 12px 100px 0 #d0c8b3, 0 5px 70px 0 #302f2b;  
   }
 
-
-/* //Khusus Tombol Kandidat 1 */
-
-#button1 {
-    /* background-image: url(./assets/images/calon1.webp); */
-}
-
-
-/* //Khusus Tombol Kandidat 2 */
-
-#button2 {
-    /* background-image: url(./assets/images/calon2.webp); */
-}
-
-.path {
-    display: inline;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    width: 50vmin;
-}
-
 .cta {
-    color: #FB2481;
+    color: #3e6456;
 }
 
 
@@ -164,10 +157,10 @@ p {
 /* Modal Content */
 
 .modal-content {
-    background-color: #102037;
+    background: url(./assets/images/background2.png);
     margin: auto;
     padding: 5vmin 10vmin;
-    border: 1px solid #FB2481;
+    border: 5px solid #3e6456;
     width: 80vw;
     min-height: 70%;
     z-index: 6;
@@ -182,7 +175,7 @@ p {
 /* The Close Button */
 
 .close {
-    color: #304B72;
+    color: #d0c8b3;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -196,7 +189,7 @@ p {
 
 .close:hover,
 .close:focus {
-    color: #FB2481;
+    color: #3e6456;
     text-decoration: none;
     cursor: pointer;
 }
@@ -206,14 +199,17 @@ button {
 }
 
 #modalTitle {
-    color: #FB2481;
+    color: #d0c8b3;
 }
 
 .confirmBtn {
-    background-color: #304B72;
+    text-align: center;
+    cursor: pointer;
     padding: 1vmin 3vmin;
     border-radius: 5px;
     width: 180px;
+    font-size: calc(0.5rem + 1.2vmin);
+    margin: 5px;
 }
 
 @media(max-width: 1024px) {
@@ -221,7 +217,6 @@ button {
         justify-content: start;
     }
     .content-container {
-        flex-direction: column;
         align-items: center;
     }
     #button1 {
@@ -235,94 +230,47 @@ button {
     }
 }
 
-.card {
-    float:left;
-    /* background:#F9F7F8; */
-    border-radius:5px;
-    display:table;
-    /* padding:5px; */
-    margin:10px;
-    font-family: Montserrat;
-    text-shadow:
-       1px  1px 0 #211E21,
-      -1px -1px 0 #211E21,
-      -1px  1px 0 #211E21,
-       1px -1px 0 #211E21,
-       1px  0   0 #211E21,
-      -1px  0   0 #211E21,
-       0   -1px 0 #211E21,
-       0    1px 0 #211E21,
-       4px  4px 0 #211E21;
-    /* box-shadow:0 0 10px #aaaaaa; */
-    text-align:center;
-    position:relative;
-  }
-  .card .inner{
-    display:table-cell;
-    vertical-align:middle;
-    border-radius:5px;
-    overflow:hidden;
-  }
-  
-  .card .mark{
-    display:inline-block;
-    vertical-align:middle;
-    background:#F9F7F8;
-    margin:auto;
-    /* padding:0 26px; */
-    border-radius:200px 100px / 200px 100px;
-    line-height:1.4;
-    overflow: hidden;
+  /* HIDE RADIO */
+
+  .hiddenradio{
+      margin-top: 5vmin;
+      background: url(./assets/images/background1.png);
+      padding: 5vmin;
+     width: auto;
+     border-radius: 20px;
   }
 
-  img{
-      width: 30vmin;
+  .choice{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .hiddenradio h1{
+      margin-bottom: 4vmin;
+  }
+    .hiddenradio [type=radio] { 
+    position: absolute;
+    opacity: 0;
   }
   
-  .card:before,
-  .card:after{
-    display:inline-block;
-    position:absolute;
-    /* line-height:0; */
-    font-size:calc(0.5rem + 2vmin);
-    color:#F9F7F8;
-    text-shadow:
-       1px  1px 0 #211E21,
-      -1px -1px 0 #211E21,
-      -1px  1px 0 #211E21,
-       1px -1px 0 #211E21,
-       1px  0   0 #211E21,
-      -1px  0   0 #211E21,
-       0   -1px 0 #211E21,
-       0    1px 0 #211E21,
-       2px  2px 0 #211E21;
+  /* IMAGE STYLES */
+  .hiddenradio [type=radio] + img {
+    cursor: pointer;
+    width: 40vmin;
   }
   
-  #card1:before{
-    top:15px;
-    left:10px;
-    text-align: left;
-    content: "1";
-  }
-  #card1:after{
-    bottom:15px;
-    right:10px;
-    text-align: right;
-    content: "ADIAHMAD IRFAN ZIDNY";
-  }
-  #card2:before{
-    top:15px;
-    left:10px;
-    text-align: left;
-    content: "2";
-  }
-  #card2:after{
-    bottom:15px;
-    right:10px;
-    text-align: right;
-    content: "ANJU GERALD";
-  }
-  
-  .card.green .inner{
-    background:#126B59;
-  }
+  /* CHECKED STYLES */
+
+  .hiddenradio [type=radio]:checked + img {
+    transform: scale(1.02);
+    background: none;
+    outline: 3px solid #d0c8b3;
+    border-radius: 20px;
+}
+
+@media(max-width: 760px) {
+    .choice{
+        flex-direction: column;
+    }
+}
