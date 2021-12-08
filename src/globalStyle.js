@@ -118,10 +118,10 @@ const GlobalStyle = createGlobalStyle`
         font-size: calc(0.5rem + 8vmin);
     }
     h2{
-        font-size: calc(0.5rem + 3vmin);
+        font-size: calc(0.5rem + 5vmin);
     }
     h3{
-        font-size: calc(0.5rem + 2.5vmin);
+        font-size: calc(0.5rem + 3vmin);
     }
     h4{
         font-size: calc(0.5rem + 2vmin);
