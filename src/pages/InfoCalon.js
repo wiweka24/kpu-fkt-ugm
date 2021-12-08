@@ -17,7 +17,10 @@ import {
   Frame_DPM,
   Frame_DPMUF,
   Frame_LEM,
-  Frame_Empty
+  Frame_Empty,
+  DPM_Tag,
+  DPMUF_Tag,
+  LEM_Tag
 } from "../assets/images/imgIndex"
 import { Helmet } from "react-helmet";
 import UnoCard from "../components/UnoCard";
@@ -42,9 +45,9 @@ export default function InfoCalon() {
   return (
     <>
       <Helmet>
-        <title>Calon Ketua - BEM KMFT UGM</title>
+        <title>Calon Kandidat - FKT UGM</title>
       </Helmet>
-      <Container isClicked={isClicked} isClicked2={isClicked2}>
+      <Container isClicked={isClicked} isClicked2={isClicked2} isClicked3={isClicked3}>
         <div class="background-fixed">
           <div class="dice">
             {/* <img src={Dice} alt="Dice" style={{ width: "40vw" }} /> */}
@@ -55,7 +58,7 @@ export default function InfoCalon() {
         <div class="title-container">
           <div class="page-title">
             <Fade top>
-              <h1 style={{ fontSize: "calc(0.5rem + 4vmin)" }} >Calon Ketua <br /><span style={{color:"var(--color-pink)"}}>BEM KMFT UGM 2022</span></h1>
+              <h1 style={{ fontSize: "calc(0.5rem + 4vw)" }} >Calon Kandidat <br /><span style={{color:"var(--color-white)"}}>FKT UGM 2022</span></h1>
             </Fade>
           </div>
         </div>
@@ -69,7 +72,7 @@ export default function InfoCalon() {
               <Frame onClick={clickHandler2} name="Dhafin Andrian" no="CALON DPMUF" src={Frame_DPMUF} />
             </Fade>
             <Fade right>
-              <Frame onClick={clickHandler3} name="" no="" src={Frame_Empty} />
+              <Frame onClick={clickHandler3} name="Dhimas Ramadhan" no="Calon LEM" src={Frame_LEM} />
             </Fade >
           </div>
 
@@ -88,11 +91,11 @@ export default function InfoCalon() {
             </div>
 
             <div class="modal-subheader">
-              <h4>Calon Ketua</h4>
+              <h4>Calon Ketua DPM</h4>
             </div>
 
             <div class="modal-video">
-              <img src=""></img>            
+              <img src={DPM_Tag} style={{width:"100%"}}></img>            
             </div>
 
             <div class="modal-body">
@@ -131,74 +134,131 @@ export default function InfoCalon() {
                 <li>Prinsip "KESANE MANSUR TUAN"</li>
               </ul>
               </p>
-
-            
             </div>
-
-
-
             <div class="modal-footer">
               <h3>KPUM FKT UGM <span className="font-number">2021</span></h3>
             </div>
           </div>
         </div>
 
+
+
+
+
         <div id="Candidate2" class="modal-popup" onClick={clickHandler2}>
           <div class="modal-content" onClick={clickHandler2}>
             <div class="modal-header">
               <span class="close" onClick={clickHandler2}>&times;</span>
-              <h2>ANJU GERALD</h2>
+              <h2>Dhafin Andrian</h2>
             </div>
 
             <div class="modal-subheader">
-              <h4>Departemen Teknik Mesin dan Industri</h4>
+              <h4>Calon Ketua DPMUF</h4>
             </div>
 
             <div class="modal-video">
-              <iframe src="https://drive.google.com/file/d/1y3GZoSAdIPZ6RGIngSO7nLxBoFdU_FaL/preview" width="640" height="480" allow="autoplay"></iframe>
+            <img src={DPMUF_Tag} style={{width:"100%"}}></img>               
             </div>
 
             <div class="modal-body">
-              <h3>Profil</h3>
-              <p>Sebuah gagasan tidak akan hadir tanpa kemerdekaan, sebuah gerakan tidak akan hadir tanpa kesetaraan, sebuah entitas tidak akan hadir tanpa solidaritas. Dan tentu, semua ini tidak mungkin berjalan tanpa kemanusiaan. Dengan pertimbangan rekan dalam persaudaraan, itulah yang dirangkum Anju Gerald, calon ketua BEM KMFT UGM nomor urut dua. Karenapun jabatan hanya sementara, namun peninggalan adalah selama-lamanya, maka ini bukanlah akhir dari segala-galanya, namun permulaan dari apa yang ingin kita bangun kedepannya!
-                <br /><br />Kemahasiswaan, ketenagakerjaan, kebudayaan, dan teknologi adalah isu utamanya, berlandaskan Human-Centered Design mengaarah ke empowerment, emancipation, dan cooperation tujuannya. Karena tentang ini bukan aku, bukan kamu, tapi kita. Karena aku, kamu, kita, TEKNIK JAYA!</p>
-               
               <h3>Visi</h3>
-              <p>Menjadi Pelayan FT UGM</p>
-              
-              
+              <p>Terwujudnya DPM Fakultas Kehutanan UGM sebagai lembaga legislatif yang solid, profesional, peduli, dan dikenal luas dalam kebermanfaatan.
+              </p>
+
               <h3>Misi</h3>
               <p>
+                <ul>
+                  <li>
+                    Mengoptimalkan kinerja pengurus DPM FKT UGM dengan mengedepankan kekompakan, kedisiplinan, penuh tanggung jawab, dan peduli terhadap sesama.
+                  </li>
+                  <li>
+                  Menjalin hubungan yang bersinergi antar seluruh internal DPM FKT UGM maupun di luar internal DPM FKT UGM.
+                  </li>
+                  <li>
+                  Memberikan kualitas pelayanan terbaik dalam menjebatani aspirasi Keluarga Mahasiswa Fakultas Kehutanan UGM secara aktif dan berkelanjutan
+                  </li>
+                  <li>
+                  Memaksimalkan controlling, aspirasi dan media, budgeting, dan legislating di tingkat fakultas
+                  </li>
+                  <li>
+                  Menumbuhkan rasa kekeluargaan di dalam internal DPM FKT UGM.
+                  </li>
+                </ul>
+              </p>
+
+              <h3>Program Unggulan</h3>
+              <p>
               <ul>
-                <li>
-                Wadah kebebasan akademik dengan semangat tri dharma perguruan tinggi di KMFT UGM
-                </li>
-                <li>
-                Wadah  perjuangan akan hak-hak mahasiswa teknik yang belum, sudah, dan seharusnya didapatkan
-                </li>
-                <li>
-                Wadah untuk mewujudkan solidaritas dengan segala kerja-kerja kreatif di KMFT UGM
-                </li>
+                <li>Kotak Bicara</li>
+                <li>React (Response & Act)</li>
+                <li>Upgrading Motivasi Tim</li>
+                <li>Detro (Deep Intro)</li>
+                <li>Prinsip "KESANE MANSUR TUAN"</li>
               </ul>
               </p>
-              <h3>Daftar Riwayat Hidup</h3>
-              <div class="modal-cv">
-                {/* <iframe
-                  title="Daftar Riwayat Hidup Anju Gerald"
-                  src="https://drive.google.com/file/d/18CZcl2ZxHVuGl7VliovqSB_zxE3OYR2N/view?usp=sharing"
-                  width="100%"
-                  height="500px"
-                  allow="autoplay"
-                ></iframe> */}
-                <iframe 
-                title="Daftar Riwayat Hidup Anju Gerald"
-                width="100%"
-                height= "300"
-                onLoad="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';"
-                src="https://drive.google.com/file/d/18CZcl2ZxHVuGl7VliovqSB_zxE3OYR2N/preview"allow="autoplay"></iframe>
-                </div>
+            </div>
+            <div class="modal-footer">
+              <h3>KPUM FKT UGM <span className="font-number">2021</span></h3>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <div id="Candidate3" class="modal-popup" onClick={clickHandler3}>
+          <div class="modal-content" onClick={clickHandler3}>
+            <div class="modal-header">
+              <span class="close" onClick={clickHandler3}>&times;</span>
+              <h2>Dhimas Ramadhan</h2>
             </div>
 
+            <div class="modal-subheader">
+              <h4>Calon Ketua LEM</h4>
+            </div>
+
+            <div class="modal-video">
+            <img src={LEM_Tag} style={{width:"100%"}}></img>             
+            </div>
+
+            <div class="modal-body">
+              <h3>Visi</h3>
+              <p>Terwujudnya DPM Fakultas Kehutanan UGM sebagai lembaga legislatif yang solid, profesional, peduli, dan dikenal luas dalam kebermanfaatan.
+              </p>
+
+              <h3>Misi</h3>
+              <p>
+                <ul>
+                  <li>
+                    Mengoptimalkan kinerja pengurus DPM FKT UGM dengan mengedepankan kekompakan, kedisiplinan, penuh tanggung jawab, dan peduli terhadap sesama.
+                  </li>
+                  <li>
+                  Menjalin hubungan yang bersinergi antar seluruh internal DPM FKT UGM maupun di luar internal DPM FKT UGM.
+                  </li>
+                  <li>
+                  Memberikan kualitas pelayanan terbaik dalam menjebatani aspirasi Keluarga Mahasiswa Fakultas Kehutanan UGM secara aktif dan berkelanjutan
+                  </li>
+                  <li>
+                  Memaksimalkan controlling, aspirasi dan media, budgeting, dan legislating di tingkat fakultas
+                  </li>
+                  <li>
+                  Menumbuhkan rasa kekeluargaan di dalam internal DPM FKT UGM.
+                  </li>
+                </ul>
+              </p>
+
+              <h3>Program Unggulan</h3>
+              <p>
+              <ul>
+                <li>Kotak Bicara</li>
+                <li>React (Response & Act)</li>
+                <li>Upgrading Motivasi Tim</li>
+                <li>Detro (Deep Intro)</li>
+                <li>Prinsip "KESANE MANSUR TUAN"</li>
+              </ul>
+              </p>
+            </div>
             <div class="modal-footer">
               <h3>KPUM FKT UGM <span className="font-number">2021</span></h3>
             </div>
@@ -231,8 +291,8 @@ justify-content: center;
   width: 100%;
   height: auto;
   position: relative;
-  padding: 3% 0% 2% 0%;
-  border: 5px solid yellow;
+  padding: 0% 0% 0% 0%;
+  //border: 5px solid yellow;
 }
 
 //Teks Calon Ketua
@@ -313,6 +373,11 @@ justify-content: center;
   display: ${({ isClicked2 }) => isClicked2 ? "block" : "none"};
 }
 
+#Candidate3 {
+  display: ${({ isClicked3 }) => isClicked3 ? "block" : "none"};
+}
+}
+
 //Modal keseluruhan (overlay)
 .modal-popup {
   position: fixed;
@@ -329,7 +394,7 @@ justify-content: center;
 
 //Bagian box Modal
 .modal-content {
-  background-color: #102037;
+  background-image: url(${BgBlack});
   border-radius: 2%;
   margin: 7% auto;
   position: relative;
@@ -347,6 +412,7 @@ justify-content: center;
   margin: 2% 0px 0px 0px;
   padding: 0.5% 10%;
   border-radius: 12px 12px 0px 0px;
+  background-image: url(${BgGreen});
 
   h2{
     font-size: calc(0.5rem + 5vmin);
@@ -361,6 +427,7 @@ justify-content: center;
   border-radius: 0px 0px 12px 12px;
   padding: 0.5% 10%;
   margin: auto;
+  background-image: url(${BgGreen});
 }
 
 .modal-image{
@@ -464,7 +531,7 @@ justify-content: center;
     align-items: center;
     max-width: 100%;
     margin: auto;
-    border: 5px solid red;
+    //border: 5px solid red;
   }
 
   //Bagian box Modal

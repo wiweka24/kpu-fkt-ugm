@@ -19,6 +19,9 @@ import Frame_DPM from './CROP_DPM.png'
 import Frame_DPMUF from './CROP_DPMUF.png'
 import Frame_LEM from './CROP_LEM.png'
 import Frame_Empty from './Frame.png'
+import DPM_Tag from './CalonDPMTag.png'
+import DPMUF_Tag from './CalonDPMUFTag.png'
+import LEM_Tag from './CalonLEMTag.png'
 
 export{
   Dice,
@@ -41,5 +44,8 @@ export{
   Frame_DPM,
   Frame_LEM,
   Frame_DPMUF,
-  Frame_Empty
+  Frame_Empty,
+  DPM_Tag,
+  DPMUF_Tag,
+  LEM_Tag
 }
