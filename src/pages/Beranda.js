@@ -76,7 +76,7 @@ export default function Beranda(){
         // Kode HTML //
         <Container className="font-default">
             <Helmet>
-                <title>KPUM FT UGM</title>
+                <title>KPUM FKT UGM</title>
             </Helmet>
             {/* Awal Bagian Hero*/}
             <div className="hero-container text-center">
@@ -344,6 +344,7 @@ Button a{
 }
 .calon .foto-calon{
     width: 100%;
+    cursor: pointer;
 }
 .calon-info{
     padding: 2vmin 1vmin;
