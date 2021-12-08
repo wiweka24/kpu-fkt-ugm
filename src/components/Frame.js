@@ -130,7 +130,7 @@ const Container = styled.div`
 
 @media only screen and (max-width: 750px) {
   .card {
-    margin: 5vw 2vw;
+    margin: 7vw 2vw;
 }
 }
 `

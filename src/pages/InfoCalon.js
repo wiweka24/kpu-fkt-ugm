@@ -20,7 +20,8 @@ import {
   Frame_Empty,
   DPM_Tag,
   DPMUF_Tag,
-  LEM_Tag
+  LEM_Tag,
+  PilihKandidat
 } from "../assets/images/imgIndex"
 import { Helmet } from "react-helmet";
 import UnoCard from "../components/UnoCard";
@@ -66,10 +67,10 @@ export default function InfoCalon() {
         <div class="content-container" >
           <div class="button-container">
             <Fade left>
-              <Frame onClick={clickHandler} name="Aurora Tarisa M." no="CALON DPM" src={Frame_DPM} />
+              <Frame onClick={clickHandler} name="Aurora Tarisa M." no="Calon DPM" src={Frame_DPM} />
             </Fade>
             <Fade middle>
-              <Frame onClick={clickHandler2} name="Dhafin Andrian" no="CALON DPM UF" src={Frame_DPMUF} />
+              <Frame onClick={clickHandler2} name="Dhafin Andrian" no="Calon DPM UF" src={Frame_DPMUF} />
             </Fade>
             <Fade right>
               <Frame onClick={clickHandler3} name="Dhimas Ramadhan" no="Calon LEM" src={Frame_LEM} />
@@ -78,7 +79,7 @@ export default function InfoCalon() {
 
           <div class="image-background">
             <Fade bottom>
-              <img src={ChooseCandidate} alt="Choose A Candidate" style={{ maxWidth: "100%", height: "auto" }} />
+              <img src={PilihKandidat} alt="Choose A Candidate" style={{ maxWidth: "100%", height: "auto" }} />
             </Fade>
           </div>
         </div>
@@ -332,7 +333,7 @@ justify-content: center;
 
 //Uno
 .image-background{
-  width: calc(100px + 50vmin);
+  width: calc(50px + 50vmin);
   position: relative;
   padding: 6% 0%;
   margin: auto;
@@ -342,6 +343,7 @@ justify-content: center;
 .image-background:hover{
   transform: scale(1.03);
   transition-duration: 0.4s;
+  /* box-shadow: 0 12px 100px 0 rgba(208, 200, 179, 0.9), 0 5px 70px 0 rgba(62, 100, 86, 1); */
 }
 
 //Dice
@@ -409,7 +411,6 @@ justify-content: center;
 
   h2{
     font-size: calc(0.5rem + 3vw);
-    color: var(--color-pink);
   }
 }
 
@@ -421,10 +422,6 @@ justify-content: center;
   padding: 0.5% 10% 1% 10%;
   margin: -2.5% 0% auto;
   background-image: url(${BgGreen});
-
-  h4{
-    font-size: calc(0.5rem + 1.25vw);
-  }
   
 }
 
@@ -452,13 +449,11 @@ justify-content: center;
 
 .modal-body p{
   line-height: 150%;
-  font-size: calc(0.5rem + 0.6vw);
 }
 
 .modal-body h3{
   margin: 2% 0% auto;
   font-family: Bright;
-  font-size: calc(0.5rem + 1.8vw);
 }
 
 .modal-cv {
