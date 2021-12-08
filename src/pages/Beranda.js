@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import Button from "../components/Button";
-import BarChart from "../components/BarChart";
 import Fade from "react-reveal/Fade"
 import CarouselTataCara from "../components/Carousel_TataCara";
 import { Link } from "react-router-dom";
@@ -13,14 +12,13 @@ import {
     Calon_1_Polos,
     Calon_2_Polos,
     Calon_3_Polos,
-    Catur,
-    Path,
     WindL,
     WindR,
     BgGreen,
     BgBlack,
     no
 }from "../assets/images/imgIndex.js" 
+import Timerdown from "../components/Countdown";
 
 export default function Beranda(){
     // Kode Javascript //
@@ -89,28 +87,27 @@ export default function Beranda(){
                             <img className="wind" src={WindR} alt="wind"></img>
                             <br/>2021
                         </h1>
-                        <h2 className='text'>
-                            Pemilihan Umum Mahasiswa
-                            <h4 style={{color:"var(--color-yellow)"}}>8 Desember - ? Desember 2021</h4>
-                        </h2>
-                        <h2 className='text'>Ketua LEM &emsp;&emsp; Ketua DPM &emsp;&emsp; Ketua UF</h2>
+                        <h3 className='text'>
+                            <b>Pemilihan Umum Mahasiswa</b>
+                            <h4>8 Desember - ? Desember 2021</h4>
+                        </h3>
+                        <h3 className='text'>Ketua LEM<span class="tab"></span> Ketua DPM<span class="tab"></span> Ketua UF</h3>
                     </Fade>
                     <Fade>
                         <div className="wait">
-                        <Button>
-                            <a href={"https://kpuftugm.id/auth/google"}>Vote Sekarang</a>
-                        </Button>
+                        <Timerdown/>
                         </div>
                     </Fade>
-                    <Fade>
+                    {/* <Fade>
                         <img className="catur" src={Catur} alt="dice"></img>
                         <img className="path" src={Path} alt="dice"></img>
-                    </Fade>
+                    </Fade> */}
             </div>
             {/* Akhir Bagian Hero */}
 
             {/* Awal Calon calon */}
             <div className="calon-container">
+                <Fade>
                 <div className="calon">
                     <div className="calon1" onClick={reveal1}>
                         <img className="foto-calon" src={Calon_1} alt="dice"></img>
@@ -122,9 +119,11 @@ export default function Beranda(){
                         <img className="foto-calon" src={Calon_3} alt="dice"></img>
                     </div>
                 </div>
+                </Fade>
                 <div className="calon-info">
                     {
                         show1? 
+                        <Fade right>
                         <div className="desk-calon">
                             <div>
                                 <img className="foto-calon" src={Calon_1_Polos} alt="dice"></img>
@@ -135,10 +134,12 @@ export default function Beranda(){
                                 <h3>DIMAS RAMADHAN</h3>
                                 <p>"Merajut Kolaboari Ciptakan Kreasi"</p>
                             </div>
-                        </div> :null
+                        </div> 
+                        </Fade>:null
                     }
                     {
                         show2? 
+                        <Fade right>
                         <div className="desk-calon">
                             <div>
                                 <img className="foto-calon" src={Calon_2_Polos} alt="dice"></img>
@@ -152,10 +153,12 @@ export default function Beranda(){
                                     <br/>Hanya Menunggu, Tapi Ciptakan Aksimu Sendiri"
                                 </p>
                             </div>
-                        </div> :null
+                        </div> 
+                        </Fade>:null
                     }
                     {
                         show3? 
+                        <Fade right>
                         <div className="desk-calon">
                             <div>
                                 <img className="foto-calon" src={Calon_3_Polos} alt="dice"></img>
@@ -169,16 +172,15 @@ export default function Beranda(){
                                     <br/>Sempurnakan Demokrasi"
                                 </p>
                             </div>
-                        </div> :null
+                        </div> 
+                        </Fade> :null
                     }
                 </div>
+                <Button className="calon-button">
+                    <Link to="/infocalon">Tentang Calon</Link>
+                </Button>
             </div>
             {/* Akhir Calon calon */}
-
-            {/* Bar % Pemilih */}
-            <div className="bar-container text-center">
-                <BarChart/>
-            </div>
 
             {/* Awal About & Tata Cara */}
             <div className="about-container text-center">
@@ -196,9 +198,6 @@ export default function Beranda(){
                     <div className="tatacarabox"><CarouselTataCara/> </div>
                 </div>
                 </Fade>
-
-
-                <img className="path" src={Path} alt="path"></img>
             </div>
 
             {/* Akhir About & Tata Cara */}
@@ -234,6 +233,7 @@ overflow: hidden;
     color: #D0C8B3;
 }
 .wait {
+    padding-top: 3vmin;
     animation: show 2.5s forwards;
     opacity: 0;
     min-height: 15vmin;
@@ -255,13 +255,15 @@ Button{
 Button Link{
     color: var(--color-black);
     &:hover{
-        color: var(--color-gren);
+        text-decoration: none;
+        color: var(--color-green);
     }
 }
 Button a{
     color: var(--color-black);
     &:hover{
-        color: var(--color-gren);
+        text-decoration: none;
+        color: var(--color-green);
     }
 }
 .kritik Button{
@@ -323,28 +325,32 @@ Button a{
 .wind{
     height: 10vmin;
 }
+.text b{
+    color: var(--color-black);
+}
 // Calon // -------------------------------------------------------
 .calon-container{
     margin: 10vmin 0;
 }
 .calon{
-    padding: 5vmin 20%;
+    padding: 5vmin 1vmin;
     display: grid;
     grid-template-columns: 33.33% 33.33% 33.33%;
 }
 .calon1, .calon2, .calon3{
     padding: 0 3vmin;
     width: 100%;
+    border-radius: 1vmin;
 }
 .calon .foto-calon{
     width: 100%;
 }
 .calon-info{
-    padding: 2vmin 22.5%;
+    padding: 2vmin 1vmin;
 }
 .desk-calon{
     width: 100%;
-    border: 10px solid var(--color-green);
+    border: 1vmin solid var(--color-green);
     display: grid;
     grid-template-columns: 35% 65%;
     padding: 3vmin;
@@ -445,8 +451,31 @@ Button a{
     .cd p {
         font-size: calc(0.5rem + 1.5vmin);
     }
+    .tab{
+        margin: 0 5vmin;
+    }
     // Calon // -------------------------------------------------------
-    
+    .calon{
+        padding: 5vmin 20%;
+    }
+    .calon1, .calon2, .calon3{
+        padding: 0 3vmin;
+        width: 100%;
+
+        &:hover{
+            transform: scale(1.03);
+            box-shadow: inset 0px 0px 15vmin var(--color-white);
+            transition-duration: 0.4s;
+        }
+    }
+    /* .calon1{
+        &:hover{
+            box-shadow: inset 0px 0px 15vmin var(--color-white);
+        }
+    } */
+    .calon-info{
+        padding: 2vmin 22.5%;
+    }
     
     // about // -------------------------------------------------------
     .about{
