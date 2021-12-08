@@ -96,18 +96,17 @@ label{
 /* //Tombol Kandidat */
 
 .button {
-    border: none;
-    background: url(./assets/images/background1.png);
-    background-size: cover;
     min-width: 30%;
     padding: 2vmin;
     display: inline-block;
-    border-radius: 12px;
-    text-decoration: none;
     margin: 20px 10% 20px 10%;
     transition-duration: 0.2s;
     cursor: pointer;
-    border: 2px #d0c8b3;
+    border-radius: 12px;
+    border: 5px#d0c8b3;
+    background-color: #3e6456;
+    color: #d0c8b3;
+    border-style: solid;
   }
   
   
@@ -210,6 +209,7 @@ button {
     width: 180px;
     font-size: calc(0.5rem + 1.2vmin);
     margin: 5px;
+    background: #3e6456;
 }
 
 @media(max-width: 1024px) {
@@ -261,6 +261,12 @@ button {
   }
   
   /* CHECKED STYLES */
+  .hiddenradio [type=radio]:hover + img {
+    transform: scale(1.07);
+    background: none;
+    outline: 3px solid #d0c8b3;
+    border-radius: 20px;
+  } 
 
   .hiddenradio [type=radio]:checked + img {
     transform: scale(1.02);
