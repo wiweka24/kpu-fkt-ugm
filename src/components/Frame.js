@@ -31,7 +31,7 @@ const Container = styled.div`
   border-radius:5px;
   display:table;
   /* padding:5px; */
-  margin: 3vw 5vw;
+  margin: 5vw 5vw;
   font-family: Bright;
   /* text-shadow:
      1px  1px 0 #211E21,
@@ -47,6 +47,7 @@ const Container = styled.div`
   text-align:center;
   position:relative;
   transition-duration: 0.25s;
+  user-select: none;
 }
 .card .inner{
   display:table-cell;
@@ -77,9 +78,9 @@ const Container = styled.div`
   display:inline-block;
   position:absolute;
   text-align: center;
-  width: 15vw;
+  width: 17vw;
   /* line-height:0; */
-  font-size:calc(0.5rem + 1.5vw);
+  font-size:calc(0.5rem + 2vw);
   color: var(--color-white);
   //border: 5px solid green;
   /* text-shadow:
@@ -95,7 +96,7 @@ const Container = styled.div`
 }
 
 .card:before{
-  top:1%;
+  top:-10%;
   left:50%;
   transform: translate(-50%,0);
   text-align: center;
@@ -103,7 +104,7 @@ const Container = styled.div`
   content: "${props => props.no}";
 }
 .card:after{
-  bottom:1%;
+  bottom:-10%;
   left: 50%;
   transform: translate(-50%,0);
   text-align: center;
@@ -124,11 +125,12 @@ const Container = styled.div`
 .card:active{
   transform: scale(0.97);
   transition-duration: 0.05s;
+  box-shadow: 0 12px 100px 0 inset rgba(208, 200, 179, 0.9), 0 5px 70px 0 inset rgba(62, 100, 86, 1);
 }
 
 @media only screen and (max-width: 750px) {
   .card {
-    margin: 3vw 2vw;
+    margin: 7vw 2vw;
 }
 }
 `

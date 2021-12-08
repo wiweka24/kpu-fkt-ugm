@@ -89,7 +89,7 @@ export default function Beranda(){
                         </h1>
                         <h3 className='text'>
                             <b>Pemilihan Umum Mahasiswa</b>
-                            <h4>8 Desember - ? Desember 2021</h4>
+                            <h4>9 Desember - 11 Desember 2021</h4>
                         </h3>
                         <h3 className='text'>Ketua LEM<span class="tab"></span> Ketua DPM<span class="tab"></span> Ketua UF</h3>
                     </Fade>

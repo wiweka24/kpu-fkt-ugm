@@ -21,8 +21,8 @@ export default function Timerdown(){
     }, 1000) //every 1 sec
     return () => clearInterval(intervalId);
   }, [])
-  //9 Des 2021 = 1638982800
-  var seconds = 1638982800 - posts
+  //9 Des 2021 = 1638982800 //8 Des 2021 = 1638921600
+  var seconds = 1638921600 - posts
 
   //Get Time tanpa api
   // useEffect(() => {
@@ -40,8 +40,8 @@ export default function Timerdown(){
 
   //Display
   const Timeleft=()=>{
-    //9 Des 2021 = 1638118800
-    if (seconds == NaN || seconds == 1638982800){
+    //9 Des 2021 = 1638118800 //8 Des 2021=1638921600
+    if (seconds == NaN || seconds == 1638921600){
       return(
         <div><p>tunggu ...</p></div>
       )
