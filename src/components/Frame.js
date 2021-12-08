@@ -5,7 +5,7 @@ import Rotate from "react-reveal/Rotate"
 
 
 
-export default function UnoCard(props) {
+export default function Frame(props) {
 
         return (
             <Container onClick={props.onClick} color={props.color} name={props.name} no={props.no}>
@@ -24,7 +24,7 @@ const Container = styled.div`
 
 .card {
   cursor: pointer;
-  background-color: var(--color-white);
+  //background-color: var(--color-black);
   padding: calc(0px + 0.75vw);
   float:left;
   /* background:#F9F7F8; */
@@ -33,7 +33,7 @@ const Container = styled.div`
   /* padding:5px; */
   margin: 3vw 5vw;
   font-family: Bright;
-  text-shadow:
+  /* text-shadow:
      1px  1px 0 #211E21,
     -1px -1px 0 #211E21,
     -1px  1px 0 #211E21,
@@ -42,7 +42,7 @@ const Container = styled.div`
     -1px  0   0 #211E21,
      0   -1px 0 #211E21,
      0    1px 0 #211E21,
-     4px  4px 0 #211E21;
+     4px  4px 0 #211E21; */
   /* box-shadow:0 0 10px #aaaaaa; */
   text-align:center;
   position:relative;
@@ -58,10 +58,10 @@ const Container = styled.div`
 .card .mark{
   display:inline-block;
   vertical-align:middle;
-  background:#F9F7F8;
+  //background: var(--color-white);
   margin:auto;
   /* padding:0 26px; */
-  border-radius:200px 100px / 200px 100px;
+  //border-radius:200px 100px / 200px 100px;
   line-height:1.4;
   overflow: hidden;
 }
@@ -69,17 +69,20 @@ const Container = styled.div`
 .card .photo{
     width: calc(10px + 20vw);
     height: auto;
-    margin-top: -1vw;
+    margin-top: 0vw;
 }
 
 .card:before,
 .card:after{
   display:inline-block;
   position:absolute;
+  text-align: center;
+  width: 15vw;
   /* line-height:0; */
-  font-size:calc(0.5rem + 2.5vw);
-  color:#F9F7F8;
-  text-shadow:
+  font-size:calc(0.5rem + 1.5vw);
+  color: var(--color-white);
+  //border: 5px solid green;
+  /* text-shadow:
      1px  1px 0 #211E21,
     -1px -1px 0 #211E21,
     -1px  1px 0 #211E21,
@@ -88,29 +91,33 @@ const Container = styled.div`
     -1px  0   0 #211E21,
      0   -1px 0 #211E21,
      0    1px 0 #211E21,
-     2px  2px 0 #211E21;
+     2px  2px 0 #211E21; */
 }
 
 .card:before{
-  top:15px;
-  left:10px;
-  text-align: left;
+  top:1%;
+  left:50%;
+  transform: translate(-50%,0);
+  text-align: center;
+  //border: 5px solid red;
   content: "${props => props.no}";
 }
 .card:after{
-  bottom:15px;
-  right:10px;
-  text-align: right;
+  bottom:1%;
+  left: 50%;
+  transform: translate(-50%,0);
+  text-align: center;
   content: "${props => props.name}";
 }
 
 .card.green .inner{
-  background:#126B59;
+  //background:#126B59;
 }
 
 .card:hover{
   transform: scale(1.02);
-  box-shadow: 0 12px 100px 0 rgba(208, 200, 179, 0.9), 0 5px 70px 0 rgba(62, 100, 86, 1);
+  box-shadow: 0 12px 100px 0 inset rgba(208, 200, 179, 0.9), 0 5px 70px 0 inset rgba(62, 100, 86, 1);
+  //box-shadow: 0 12px 100px 0 rgba(208, 200, 179, 0.9), 0 5px 70px 0 rgba(62, 100, 86, 1);
   transition-duration: 0.25s;
 }
 
