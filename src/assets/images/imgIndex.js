@@ -15,6 +15,10 @@ import WindL from './windL.png'
 import BgGreen from './bg-green.webp'
 import BgBlack from './bg-black.webp'
 import no from './no.png'
+import Frame_DPM from './CROP_DPM.png'
+import Frame_DPMUF from './CROP_DPMUF.png'
+import Frame_LEM from './CROP_LEM.png'
+import Frame_Empty from './Frame.png'
 
 export{
   Dice,
@@ -33,5 +37,9 @@ export{
   WindR,
   BgGreen,
   BgBlack,
-  no
+  no,
+  Frame_DPM,
+  Frame_LEM,
+  Frame_DPMUF,
+  Frame_Empty
 }

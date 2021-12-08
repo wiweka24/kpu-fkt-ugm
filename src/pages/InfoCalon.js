@@ -14,10 +14,15 @@ import {
   BgGreen,
   BgBlack,
   ChooseCandidate,
+  Frame_DPM,
+  Frame_DPMUF,
+  Frame_LEM,
+  Frame_Empty
 } from "../assets/images/imgIndex"
 import { Helmet } from "react-helmet";
 import UnoCard from "../components/UnoCard";
 import Fade from "react-reveal/Fade"
+import Frame from "../components/Frame";
 
 
 export default function InfoCalon() {
@@ -58,13 +63,13 @@ export default function InfoCalon() {
         <div class="content-container" >
           <div class="button-container">
             <Fade left>
-              <UnoCard onClick={clickHandler} name="NO 1" no="1" src={Calon_1_Polos} />
+              <Frame onClick={clickHandler} name="Aurora Tarisa M." no="CALON DPM" src={Frame_DPM} />
             </Fade>
             <Fade middle>
-              <UnoCard onClick={clickHandler2} name="NO 2" no="2" src={Calon_2_Polos} />
+              <Frame onClick={clickHandler2} name="Dhafin Andrian" no="CALON DPMUF" src={Frame_DPMUF} />
             </Fade>
             <Fade right>
-              <UnoCard onClick={clickHandler3} name="NO 3" no="3" src={Calon_3_Polos} />
+              <Frame onClick={clickHandler3} name="" no="" src={Frame_Empty} />
             </Fade >
           </div>
 
@@ -79,52 +84,52 @@ export default function InfoCalon() {
           <div class="modal-content" onClick={clickHandler}>
             <div class="modal-header">
               <span class="close" onClick={clickHandler}>&times;</span>
-              <h2>ADIAHMAD IRFAN ZIDNY</h2>
+              <h2>Aurora Tarisa Muzdalifah</h2>
             </div>
 
             <div class="modal-subheader">
-              <h4>Departemen Teknik Arsitektur dan Perencanaan</h4>
+              <h4>Calon Ketua</h4>
             </div>
 
             <div class="modal-video">
-              <iframe src="https://drive.google.com/file/d/1UMuHAJo4FczD-Nh7SyfZpA6N4jWqjH6o/preview" width="640" height="480" allow="autoplay"></iframe>            
+              <img src=""></img>            
             </div>
 
             <div class="modal-body">
-              <h3>Profil</h3>
-              <p>Teknik lahir dari berbagai kekuatan. Dibesarkan tulus oleh keberagaman. Memimpikan keterbukaan, kesetaraan, ketangguhan, hingga kesejahteraan. Perjalanannya pelik, tidak mudah seperti yang dibayangkan. Namun, semua ini dapat dirajut bersama melalui orientasi dampak berkelanjutan.
-                <br /><br />Ini bukan imajinasi tanpa pasti, bukan juga sekadar cerita ilusi, apalagi soal egoisme pribadi.
-                <br /><br />Adiahmad Irfan Zidny, Calon Ketua BEM KMFT UGM no. 1 percaya, dampak luas dapat dirasa ketika kita semua membersamainya, kan?
-                <br /><br />Yang pasti, Teknik butuh kita. #KarenaKitaTeknik. TEKNIK JAYA!</p>
-                <h3>Visi</h3>
-              <p>BEM KMFT UGM sebagai organisasi mahasiswa memaknai kebermanfaatan dan mensinergikan keberagaman yang berkelanjutan bagi Teknik, UGM, dan Indonesia
+              <h3>Visi</h3>
+              <p>Terwujudnya DPM Fakultas Kehutanan UGM sebagai lembaga legislatif yang solid, profesional, peduli, dan dikenal luas dalam kebermanfaatan.
               </p>
 
               <h3>Misi</h3>
               <p>
                 <ul>
                   <li>
-                    Membangun tata kelola organisasi dan sumber daya yang menyenangkan dan terpadu
+                    Mengoptimalkan kinerja pengurus DPM FKT UGM dengan mengedepankan kekompakan, kedisiplinan, penuh tanggung jawab, dan peduli terhadap sesama.
                   </li>
                   <li>
-                  Menjalin hubungan kelembagaan sinergis berkala dengan berbagai elemen kelembagaan.
+                  Menjalin hubungan yang bersinergi antar seluruh internal DPM FKT UGM maupun di luar internal DPM FKT UGM.
                   </li>
                   <li>
-                  Melaksanakan integrasi program dan kegiatan yang tepat guna berdasarkan keinginan dan kebutuhan mahasiswa FT UGM.
+                  Memberikan kualitas pelayanan terbaik dalam menjebatani aspirasi Keluarga Mahasiswa Fakultas Kehutanan UGM secara aktif dan berkelanjutan
                   </li>
                   <li>
-                  Menyediakan ruang interaktif dan informatif melalui pengembangan dan pengelolaan media.
+                  Memaksimalkan controlling, aspirasi dan media, budgeting, dan legislating di tingkat fakultas
                   </li>
                   <li>
-                  Menghadirkan gerakan mahasiswa konstruktif dan substantif berdasarkan pemikiran kritis dan kompetensi keilmuan.
-                  </li>
-                  <li>
-                  Mengakomodasi kegiatan kemahasiswaan bermakna berdasarkan kebutuhan, minat, dan bakat mahasiswa FT UGM.
-                  </li>
-                  <li>
-                  Mewujudkan kepekaan sosial nyata terhadap sesama manusia dan lingkungan melalui berbagai bentuk pemberdayaan.
+                  Menumbuhkan rasa kekeluargaan di dalam internal DPM FKT UGM.
                   </li>
                 </ul>
+              </p>
+
+              <h3>Program Unggulan</h3>
+              <p>
+              <ul>
+                <li>Kotak Bicara</li>
+                <li>React (Response & Act)</li>
+                <li>Upgrading Motivasi Tim</li>
+                <li>Detro (Deep Intro)</li>
+                <li>Prinsip "KESANE MANSUR TUAN"</li>
+              </ul>
               </p>
 
             
@@ -319,7 +324,7 @@ justify-content: center;
   overflow: auto;
   background-color: rgba(0,0,0,0.4);
   color: white;
-  font-family: Montserrat;
+  font-family: Bright;
 }
 
 //Bagian box Modal
