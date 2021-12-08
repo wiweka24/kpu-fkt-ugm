@@ -10,7 +10,7 @@ export default function Timerdown(){
   useEffect(() => {
     const intervalId = setInterval(() => {
       axios
-      .get('https://kpufKtugm.id/timeinfo.php')
+      .get('https://kpumfktugm.id/timeinfo.php')
       .then(res => {
         //console.log(res)
         setPosts(res.data)
@@ -22,7 +22,7 @@ export default function Timerdown(){
     return () => clearInterval(intervalId);
   }, [])
   //9 Des 2021 = 1638982800 //8 Des 2021 = 1638921600
-  var seconds = 1638921600 - posts
+  var seconds = 1638982800 - posts
 
   //Get Time tanpa api
   // useEffect(() => {
@@ -41,7 +41,7 @@ export default function Timerdown(){
   //Display
   const Timeleft=()=>{
     //9 Des 2021 = 1638118800 //8 Des 2021=1638921600
-    if (seconds == NaN || seconds == 1638921600){
+    if (seconds == NaN || seconds == 1638982800){
       return(
         <div><p>tunggu ...</p></div>
       )
@@ -61,7 +61,7 @@ export default function Timerdown(){
           return (
             <div>
               <Button>
-                <a href={"https://kpufktugm.id/auth/google"}>Vote Sekarang</a>
+                <a href={"https://kpumfktugm.id.id/auth/google"}>Vote Sekarang</a>
               </Button>
             </div>
           )
