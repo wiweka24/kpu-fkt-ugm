@@ -1,5 +1,5 @@
 body {
-    background: url(./assets/images/background2.png);
+    background: url(./assets/images/bg-black.webp);
     width: 100%; 
     overflow-x: hidden;
     box-sizing: border-box;
@@ -156,7 +156,7 @@ label{
 /* Modal Content */
 
 .modal-content {
-    background: url(./assets/images/background2.png);
+    background: url(./assets/images/bg-black.webp);
     margin: auto;
     padding: 5vmin 10vmin;
     border: 5px solid #3e6456;
@@ -234,7 +234,7 @@ button {
 
   .hiddenradio{
       margin-top: 5vmin;
-      background: url(./assets/images/background1.png);
+      background: url(./assets/images/bg-green.webp);
       padding: 5vmin;
      width: auto;
      border-radius: 20px;

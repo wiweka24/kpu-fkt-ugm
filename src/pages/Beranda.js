@@ -98,10 +98,6 @@ export default function Beranda(){
                         <Timerdown/>
                         </div>
                     </Fade>
-                    {/* <Fade>
-                        <img className="catur" src={Catur} alt="dice"></img>
-                        <img className="path" src={Path} alt="dice"></img>
-                    </Fade> */}
             </div>
             {/* Akhir Bagian Hero */}
 

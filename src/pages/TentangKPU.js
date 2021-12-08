@@ -1,21 +1,17 @@
 import React from "react";
 import styled from "styled-components";
 import {
-    Path,
-    Dice,
-    Squad,
-    Logo,
     BACKGROUND2,
     LINE,
     JAM
 }from "../assets/images/imgKPU.js"
 import CarouselPanitia from "../components/Carousel";
 import 'antd/dist/antd.css';
-import CarouselPanitia2 from "../components/Carousel2";
 import { Helmet } from "react-helmet";
 import Fade from "react-reveal/Fade";
 import blackBG from "../assets/images/bg-black.webp";
 import greenBG from "../assets/images/bg-green.webp";
+import LogoPNG from "../assets/images/logo-kpu.webp"
 
 export default function TentangKPU(){
     // Kode Javascript //
@@ -32,7 +28,7 @@ export default function TentangKPU(){
                     <Fade>
                     <div class="title">
                         <h1 class="white">TENTANG KAMI</h1>
-                        <img class="logo" src={Logo} alt="Logo KPU FT"/>
+                        <img class="logo" src={LogoPNG} alt="Logo KPU FT"/>
                         <h1 class="p1 white">KOMISI PEMILIHAN UMUM MAHASISWA</h1>
                         <h2 class="p2 pink">FAKULTAS KEHUTANAN UGM <span className="font-number">2021</span></h2>
                     </div>
