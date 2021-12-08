@@ -33,7 +33,7 @@ export default function TentangKPU(){
                         <h2 class="p2 pink">FAKULTAS KEHUTANAN UGM <span className="font-number">2021</span></h2>
                     </div>
                     </Fade>
-                    <img class="line" src={LINE}></img>
+                    {/* <img class="line" src={LINE}></img> */}
                 </div>
                 {/*Deskripsi dari KPU*/}
                 <div class="container">
@@ -53,7 +53,7 @@ export default function TentangKPU(){
                             </p>
                         </div>
                     </Fade>
-                    <img src={JAM} class="jam"></img>
+                    {/* <img src={JAM} class="jam"></img> */}
                     </div>
                 </div>
                 {/*Judul Panitia*/}
@@ -141,9 +141,12 @@ h1{
     border-radius: 50%;
 }
 .Hero .line {
-    position:absolute;
-    left: -250px;
-    top: 325px;
+    width: 70vmin;
+    // margin: 20vmin auto 10vmin;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: 75vh;
 }
 
 .container {
@@ -152,7 +155,7 @@ h1{
 
 .container .deskripsi {
     height: auto;
-    margin-top: 80px;
+    // margin-top: -90px;
     padding: 10vmin 20vmin 20vmin 20vmin;
 }
 
@@ -203,6 +206,7 @@ h1{
     left: 85%;
     width: 20%;
     opacity: 0.8;
+    overflow: hidden;
 }
 
 .squad{
@@ -260,6 +264,9 @@ h1{
         width:100%;
         height:400px
     }
+    .Hero .line {
+        width: 400px;
+    }
 }
 
 @media (max-width:670px){
@@ -303,6 +310,11 @@ h1{
     .JudulPanitia{
         height: 68px;
     }
+    .Hero .line {
+        width: 100%;
+    }
+
+}
 
 @media (max-width:380px){
     .Hero .title{
