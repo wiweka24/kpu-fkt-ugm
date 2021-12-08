@@ -193,10 +193,10 @@ export default function Beranda(){
                     </Button>
                 </div>
                 
-                <div className="tatacara text-center">
+                {/* <div className="tatacara text-center">
                     <h2 className="font-title">Tata Cara Pemilihan </h2>
                     <div className="tatacarabox"><CarouselTataCara/> </div>
-                </div>
+                </div> */}
                 </Fade>
             </div>
 
