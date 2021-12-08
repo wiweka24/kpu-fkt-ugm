@@ -10,7 +10,7 @@ export default function Timerdown(){
   useEffect(() => {
     const intervalId = setInterval(() => {
       axios
-      .get('https://kpuftugm.id/timeinfo.php')
+      .get('https://kpufKtugm.id/timeinfo.php')
       .then(res => {
         //console.log(res)
         setPosts(res.data)
@@ -61,7 +61,7 @@ export default function Timerdown(){
           return (
             <div>
               <Button>
-                <a href={"https://kpuftugm.id/auth/google"}>Vote Sekarang</a>
+                <a href={"https://kpufktugm.id/auth/google"}>Vote Sekarang</a>
               </Button>
             </div>
           )
