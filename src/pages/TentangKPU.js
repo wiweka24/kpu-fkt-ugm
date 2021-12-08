@@ -47,19 +47,13 @@ export default function TentangKPU(){
                         <div class="pemilu">
                             <h3 class="desk1  pink font-title ">PEMILWA FAKULTAS KEHUTANAN UGM</h3>
                             <p class="desk2">
-                                <b>Pemilihan Umum</b> Mahasiswa Fakultas Teknik Universitas Gadjah Mada (Pemilu) adalah sarana pelaksanaan kedaulatan mahasiswa berdasarkan Anggaran Dasar/Anggaran Rumah Tangga Keluarga Mahasiswa Fakultas Teknik Universitas Gadjah Mada.
-                                <br/><br/><b>Peserta Pemilu</b> adalah kandidat calon Ketua BEM KMFT UGM yang telah lolos verifikasi oleh KPU.
-                                <br/><br/><b>Pemilih</b> adalah seluruh mahasiswa Fakultas Teknik Universitas Gadjah Mada yang terdaftar
-                                secara akademik pada jenjang S1 reguler yang mempunyai hak untuk memilih dalam Pemilu.
+                                <b>Pemilihan Umum Mahasiswa</b> adalah sarana pelaksanaan kedaulatan mahasiswa yang diselenggarakan secara langsung, umum, bebas, rahasia, jujur, dan adil dalam Keluarga Mahasiswa Fakultas Kehutanan Universitas Gadjah Mada.
                             </p>
                         </div>
 
                         <div class="kpu" style={{marginTop: "10vmin"}}>
                             <h3 class="desk1 pink font-title ">KPUM FAKULTAS KEHUTANAN UGM</h3>
-                            <p class="desk2"><b>Komisi Pemilihan Umum</b> Fakultas Teknik Universitas Gadjah Mada yang selanjutnya disebut
-                            KPU adalah suatu komisi yang menyelenggarakan Pemilu berdasarkan Undang-Undang
-                            KMFT UGM tentang Pemilu dan terdiri dari SC KPU, OC KPU, Panitia Pengawas Pemilu
-                            dan Mahkamah Pemilu.
+                            <p class="desk2"><b>Komisi Pemilihan Umum Mahasiswa</b> Fakultas Kehutanan merupakan badan independen yang bertugas untuk menyelenggarakan serangkaian kegiatan Pemilihan Umum Mahasiswa KM FKT UGM. 
                             </p>
                         </div>
                     </Fade>
@@ -227,10 +221,7 @@ h1{
     /* height: 126px;
     margin-top: 100px; */
     padding: 0 10vmin;
-    // background-image: url(${BACKGROUND2});
-    // border-bottom: 2px solid #3E6456;
-    // border-top: 2px solid #3E6456;
-    // background-color: #38445E;
+
 }
 .Panitia{
     // background-color: #38445E;

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import UlarPNG from '../assets/images/path.webp'
-import LogoPNG from '../assets/images/logo.webp'
+import LogoPNG from '../assets/images/logo-kpu.png'
 import { Helmet } from "react-helmet";
 import Button from "../components/Button";
+import {BgBlack, BgGreen} from "../assets/images/imgIndex"
 
 export default function TerimaKasih() {
     // Kode Javascript //
@@ -40,15 +41,11 @@ export default function TerimaKasih() {
             </Helmet>
             <   Container>
                 <div class="hero">
-                    <img src={UlarPNG} class="ular" />
                     <div class="title font-title">
                         <h2 class="font-mont white text-center">Terima Kasih Atas</h2>
                         <h2 class="font-mont white text-center">Partisipasi Anda Dalam</h2>
                         <img class="logo" src={LogoPNG} alt="Logo KPU FT" />
-                        <h1 class="pink font-mont font-bold">PEMILWA FKT UGM <span className="font-number">2021</span></h1>
-                    </div>
-                    <div class="buttons">
-                        <Button target="_blank" link="http://bit.ly/EvalKPU21" fontSize="calc(0.5rem + 1.2vmin)"><b>Evaluasi</b></Button>
+                        <h1 class="white font-mont font-bold">PEMILWA FKT UGM <span className="font-number">2021</span></h1>
                     </div>
                 </div>
 
@@ -63,7 +60,7 @@ export default function TerimaKasih() {
                             value={message}
                             onChange={handleChange}>
                         </textarea>
-                        <Button>Kirim</Button>
+                        <Button bgColor="var(--color-white)" textColor="var(--color-green)"><b>Kirim</b></Button>
                     </form>
                 </div>
             </Container>
@@ -73,7 +70,8 @@ export default function TerimaKasih() {
 
 const Container = styled.div`
     // Kode CSS //
-    background-color: var(--color-green);
+    background: url(${BgBlack});
+
 
 *{
     box-sizing:border-box;
@@ -81,8 +79,8 @@ const Container = styled.div`
     
 }
 .hero{
+    background: url(${BgGreen});
     min-height: 98vh;
-    background-color: #102037;
     padding: 10vmin;
     text-align: center;
     display: flex;
@@ -91,17 +89,13 @@ const Container = styled.div`
 
 }
 
-.ular {
-    position: absolute;
-    width: 60vmin; 
-    height: auto;
-    left: 0;
-    top: 0;
-}
 
 .logo {
-    width: 30vmin;
-    height: 30vmin;
+    width: 35vmin;
+    height: 35vmin;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    padding: 2vmin;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -114,7 +108,6 @@ h1{
 }
 
 // kritik dan saran // -------------------------------------------------------
-
 .kritik{
     display: grid;
     padding: 10vmin 0;
@@ -122,35 +115,29 @@ h1{
     margin: auto;
     width: 75%;
 }
-
 .kritik .box{
     display: flex;
 }
-
 .kritik .box h4{
     border-style: solid;
-    border-color: var(--color-pink);
-    border-radius: 2vmin 2vmin 0 0;
-    background-color: var(--color-pink);
-
-    color: var(--color-black);
+    border-color: var(--color-white);
+    border-radius: 1vmin 1vmin 0 0;
+    background-color: var(--color-white);
+    color: var(--color-green);
     font-weight: bolder;
     padding: 1vmin;
     text-align: left;
 }
-
 .kritik textarea{
     border-style: solid;
-    border-color: var(--color-pink);
+    border-color: var(--color-white);
     border-width: thick;
-    border-radius: 0 2vmin 2vmin 2vmin;
-    margin-bottom: 3vmin;
+    border-radius: 0 1vmin 1vmin 1vmin;
     padding: 1vmin;
     width: 100%;
-
     color: var(--color-black);
     font-size: calc(0.5rem + 2vmin);
-    font-family: "Monserrat";
+    font-family: Montserrat;
 }
 
 .buttons{
