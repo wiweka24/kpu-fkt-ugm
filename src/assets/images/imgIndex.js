@@ -22,6 +22,7 @@ import Frame_Empty from './Frame.png'
 import DPM_Tag from './CalonDPMTag.png'
 import DPMUF_Tag from './CalonDPMUFTag.png'
 import LEM_Tag from './CalonLEMTag.png'
+import PilihKandidat from './PilihKandidat.png'
 
 export{
   Dice,
@@ -47,5 +48,6 @@ export{
   Frame_Empty,
   DPM_Tag,
   DPMUF_Tag,
-  LEM_Tag
+  LEM_Tag,
+  PilihKandidat
 }
