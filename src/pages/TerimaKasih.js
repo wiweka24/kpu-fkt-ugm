@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import UlarPNG from '../assets/images/path.webp'
-import LogoPNG from '../assets/images/logo-kpu.png'
+import LogoPNG from '../assets/images/logo-kpu.webp'
 import { Helmet } from "react-helmet";
 import Button from "../components/Button";
 import {BgBlack, BgGreen} from "../assets/images/imgIndex"

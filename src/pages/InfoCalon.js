@@ -7,8 +7,6 @@ import {
   Calon_1_Polos,
   Calon_2_Polos,
   Calon_3_Polos,
-  Catur,
-  Path,
   WindL,
   WindR,
   BgGreen,
@@ -539,6 +537,5 @@ justify-content: center;
     position: absolute;
     top: 5px;
   }
-}
 `
 

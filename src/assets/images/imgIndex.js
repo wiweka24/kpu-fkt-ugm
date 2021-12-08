@@ -1,42 +1,30 @@
-import Dice from './dice.webp';
-import Rectangle_1 from './rectangle1.webp';
-import Rectangle_2 from './rectangle2.webp';
-import Calon_1 from './calon1.png';
-import Calon_2 from './calon2.png';
-import Calon_3 from './calon3.png';
-import Calon_1_Polos from './calon11.png';
-import Calon_2_Polos from './calon22.png';
-import Calon_3_Polos from './calon33.png';
-import Catur from './catur.webp';
-import Path from './path.webp'
-import ChooseCandidate from './choosecandidate.webp'
-import WindR from './windR.PNG'
-import WindL from './windL.png'
+import Calon_1 from './calon1.webp';
+import Calon_2 from './calon2.webp';
+import Calon_3 from './calon3.webp';
+import Calon_1_Polos from './calon11.webp';
+import Calon_2_Polos from './calon22.webp';
+import Calon_3_Polos from './calon33.webp';
+import WindR from './windR.webp'
+import WindL from './windL.webp'
 import BgGreen from './bg-green.webp'
 import BgBlack from './bg-black.webp'
-import no from './no.png'
-import Frame_DPM from './CROP_DPM.png'
-import Frame_DPMUF from './CROP_DPMUF.png'
-import Frame_LEM from './CROP_LEM.png'
-import Frame_Empty from './Frame.png'
-import DPM_Tag from './CalonDPMTag.png'
-import DPMUF_Tag from './CalonDPMUFTag.png'
-import LEM_Tag from './CalonLEMTag.png'
-import PilihKandidat from './PilihKandidat.png'
+import no from './no.webp'
+import Frame_DPM from './CROP_DPM.webp'
+import Frame_DPMUF from './CROP_DPMUF.webp'
+import Frame_LEM from './CROP_LEM.webp'
+import Frame_Empty from './Frame.webp'
+import DPM_Tag from './CalonDPMTag.webp'
+import DPMUF_Tag from './CalonDPMUFTag.webp'
+import LEM_Tag from './CalonLEMTag.webp'
+import PilihKandidat from './PilihKandidat.webp'
 
 export{
-  Dice,
-  Rectangle_1,
-  Rectangle_2,
   Calon_1,
   Calon_2,
   Calon_3,
   Calon_1_Polos,
   Calon_2_Polos,
   Calon_3_Polos,
-  Catur,
-  Path,
-  ChooseCandidate,
   WindL,
   WindR,
   BgGreen,
