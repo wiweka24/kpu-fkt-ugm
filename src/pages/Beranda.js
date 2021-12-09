@@ -160,7 +160,7 @@ export default function Beranda(){
                                 <img className="foto-calon" src={Calon_3_Polos} alt="dice"></img>
                             </div>
                             <div className="desk-tiap-calon text-center">
-                                <h2 className="font-title">CALON KETUA DPM UF</h2>
+                                <h2 className="font-title">CALON DPM UF</h2>
                                 <img src={no} alt="nomor urut"></img>
                                 <h3>DHAFIN ANDRIAN</h3>
                                 <p>

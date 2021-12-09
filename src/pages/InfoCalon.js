@@ -152,7 +152,7 @@ export default function InfoCalon() {
             </div>
 
             <div class="modal-subheader">
-              <h4>Calon Ketua DPM UF</h4>
+              <h4>Calon DPM UF</h4>
             </div>
 
             <div class="modal-video">
