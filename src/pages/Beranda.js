@@ -85,7 +85,8 @@ export default function Beranda(){
                             <img className="wind" src={WindL} alt="wind"></img>
                             KPUM FKT
                             <img className="wind" src={WindR} alt="wind"></img>
-                            <br/>2021
+                            <br/>
+                            <h1 className="font-number">2021</h1>
                         </h1>
                         <h3 className='text'>
                             <b>Pemilihan Umum Mahasiswa</b>
