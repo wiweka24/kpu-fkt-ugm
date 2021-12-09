@@ -1,23 +1,15 @@
-import Dice from './dice.webp';
-import Squad from './squad.webp';
-import Logo from './imgPanitia/LOGO.jpg';
-import Path from './path.webp';
-import ACARA from './imgPanitia/ACARA.png'
-import HUMAS from './imgPanitia/HUMAS.png'
-import BENDAHARA from './imgPanitia/BENDAHARA.png'
-import RAFRES from './imgPanitia/RAFRES.png'
-import PDD from './imgPanitia/PDD.png'
-import PERKAP from './imgPanitia/PERKAP.png'
-import BACKGROUND2 from './imgPanitia/Background2.png'
-import SUDUT from './imgPanitia/sudut.png'
-import LINE from './imgPanitia/line.png'
-import JAM from './imgPanitia/jam.png'
+import ACARA from './imgPanitia/ACARA.webp'
+import HUMAS from './imgPanitia/HUMAS.webp'
+import BENDAHARA from './imgPanitia/BENDAHARA.webp'
+import RAFRES from './imgPanitia/RAFRES.webp'
+import PDD from './imgPanitia/PDD.webp'
+import PERKAP from './imgPanitia/PERKAP.webp'
+import BACKGROUND2 from './imgPanitia/Background2.webp'
+import SUDUT from './imgPanitia/sudut.webp'
+import LINE from './imgPanitia/line.webp'
+import JAM from './imgPanitia/jam.webp'
 
 export{
-  Path,
-  Dice,
-  Squad,
-  Logo,
   ACARA,
   HUMAS,
   BENDAHARA,

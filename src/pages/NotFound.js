@@ -5,8 +5,6 @@ import { Helmet } from "react-helmet";
 import Button from "../components/Button";
 
 import blackBG from "../assets/images/bg-black.webp"
-import LogoPNG from '../assets/images/logo.webp'
-import Cards from '../assets/images/cards.webp'
 
 export default function NotFound() {
     return(

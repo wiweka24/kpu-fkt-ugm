@@ -92,17 +92,13 @@ export default function Beranda(){
                             <b>Pemilihan Umum Mahasiswa</b>
                             <h4>9 Desember - 11 Desember 2021</h4>
                         </h3>
-                        <h3 className='text'>Ketua LEM<span class="tab"></span> Ketua DPM<span class="tab"></span>DMP UF</h3>
+                        <h3 className='text'>Ketua LEM<span class="tab"></span> Ketua DPM<span class="tab"></span> DPM UF</h3>
                     </Fade>
                     <Fade>
                         <div className="wait">
                         <Timerdown/>
                         </div>
                     </Fade>
-                    {/* <Fade>
-                        <img className="catur" src={Catur} alt="dice"></img>
-                        <img className="path" src={Path} alt="dice"></img>
-                    </Fade> */}
             </div>
             {/* Akhir Bagian Hero */}
 
@@ -132,8 +128,8 @@ export default function Beranda(){
                             <div className="desk-tiap-calon text-center">
                                 <h2 className="font-title">CALON KETUA LEM</h2>
                                 <img src={no} alt="nomor urut"></img>
-                                <h3>DIMAS RAMADHAN</h3>
-                                <p>"Merajut Kolaboari Ciptakan Kreasi"</p>
+                                <h3>DHIMAS RAMADHAN</h3>
+                                <p>"Merajut Kolaborasi Ciptakan Kreasi"</p>
                             </div>
                         </div> 
                         </Fade>:null
@@ -165,11 +161,11 @@ export default function Beranda(){
                                 <img className="foto-calon" src={Calon_3_Polos} alt="dice"></img>
                             </div>
                             <div className="desk-tiap-calon text-center">
-                                <h2 className="font-title">CALON KETUA DPM UF</h2>
+                                <h2 className="font-title">CALON DPM UF</h2>
                                 <img src={no} alt="nomor urut"></img>
                                 <h3>DHAFIN ANDRIAN</h3>
                                 <p>
-                                    "Ekspresikian Diri, Satukan Aspirasi,
+                                    "Ekspresikan Diri, Satukan Aspirasi,
                                     <br/>Sempurnakan Demokrasi"
                                 </p>
                             </div>
@@ -188,16 +184,17 @@ export default function Beranda(){
                 <Fade>
                 <div className="about">
                     <h2 className="font-title">Tentang Pemilwa FKT UGM <span className="font-number">2021</span> </h2>
-                    <p> Pemilihan Umum Mahasiswa Fakultas Teknik Universitas Gadjah Mada (Pemilwa) adalah sarana pelaksanaan kedaulatan mahasiswa berdasarkan Anggaran Dasar/Anggaran Rumah Tangga Keluarga Mahasiswa Fakultas Teknik Universitas Gadjah Mada. </p>                     
+                    <p> Pemilihan Umum Mahasiswa Fakultas Kehutanan Universitas Gadjah Mada adalah sarana pelaksanaan kedaulatan mahasiswa yang diselenggarakan secara langsung, umum, bebas, rahasia, jujur, dan adil dalam Keluarga Mahasiswa Fakultas Kehutanan Universitas Gadjah Mada. 
+                    </p>
                     <Button>
                         <Link to="/tentang">Selengkapnya</Link>
                     </Button>
                 </div>
                 
-                {/* <div className="tatacara text-center">
+                <div className="tatacara text-center">
                     <h2 className="font-title">Tata Cara Pemilihan </h2>
                     <div className="tatacarabox"><CarouselTataCara/> </div>
-                </div> */}
+                </div>
                 </Fade>
             </div>
 

@@ -7,8 +7,6 @@ import {
   Calon_1_Polos,
   Calon_2_Polos,
   Calon_3_Polos,
-  Catur,
-  Path,
   WindL,
   WindR,
   BgGreen,
@@ -114,7 +112,7 @@ export default function InfoCalon() {
                   Menjalin hubungan yang bersinergi antar seluruh internal DPM FKT UGM maupun di luar internal DPM FKT UGM.
                   </li>
                   <li>
-                  Memberikan kualitas pelayanan terbaik dalam menjebatani aspirasi Keluarga Mahasiswa Fakultas Kehutanan UGM secara aktif dan berkelanjutan.
+                  Memberikan kualitas pelayanan terbaik dalam menjembatani aspirasi Keluarga Mahasiswa Fakultas Kehutanan UGM secara aktif dan berkelanjutan.
                   </li>
                   <li>
                   Memaksimalkan controlling, aspirasi dan media, budgeting, dan legislating di tingkat fakultas.
@@ -154,7 +152,7 @@ export default function InfoCalon() {
             </div>
 
             <div class="modal-subheader">
-              <h4>Calon Ketua DPM UF</h4>
+              <h4>Calon DPM UF</h4>
             </div>
 
             <div class="modal-video">
@@ -248,7 +246,7 @@ export default function InfoCalon() {
                 <li>Forescare</li>
                 <li>Foreshealth</li>
                 <li>Advokasi</li>
-                <li>kajian Kolaboratif</li>
+                <li>Kajian Kolaboratif</li>
                 <li>Srawung Rimbawan</li>
               </ul>
               </p>
@@ -539,6 +537,5 @@ justify-content: center;
     position: absolute;
     top: 5px;
   }
-}
 `
 
