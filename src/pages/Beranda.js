@@ -127,7 +127,7 @@ export default function Beranda(){
                             <div className="desk-tiap-calon text-center">
                                 <h2 className="font-title">CALON KETUA LEM</h2>
                                 <img src={no} alt="nomor urut"></img>
-                                <h3>DIMAS RAMADHAN</h3>
+                                <h3>DHIMAS RAMADHAN</h3>
                                 <p>"Merajut Kolaborasi Ciptakan Kreasi"</p>
                             </div>
                         </div> 
@@ -183,7 +183,8 @@ export default function Beranda(){
                 <Fade>
                 <div className="about">
                     <h2 className="font-title">Tentang Pemilwa FKT UGM <span className="font-number">2021</span> </h2>
-                    <p> Pemilihan Umum Mahasiswa Fakultas Teknik Universitas Gadjah Mada (Pemilwa) adalah sarana pelaksanaan kedaulatan mahasiswa berdasarkan Anggaran Dasar/Anggaran Rumah Tangga Keluarga Mahasiswa Fakultas Teknik Universitas Gadjah Mada. </p>                     
+                    <p> Pemilihan Umum Mahasiswa Fakultas Kehutanan Universitas Gadjah Mada adalah sarana pelaksanaan kedaulatan mahasiswa yang diselenggarakan secara langsung, umum, bebas, rahasia, jujur, dan adil dalam Keluarga Mahasiswa Fakultas Kehutanan Universitas Gadjah Mada. 
+                    </p>
                     <Button>
                         <Link to="/tentang">Selengkapnya</Link>
                     </Button>
