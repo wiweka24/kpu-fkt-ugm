@@ -35,7 +35,7 @@ export default function Beranda(){
     const handleSubmit = async e => {
         e.preventDefault()
         try {
-            await fetch("https://v1.nocodeapi.com/wiweka24/google_sheets/OABEIiLFFqUeOzJG?tabId=Sheet1", {
+            await fetch("https://v1.nocodeapi.com/weka/google_sheets/izICsFuEWwIynksQ?tabId=KesanPesan", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
