@@ -96,7 +96,7 @@ export default function Beranda(){
                     </Fade>
                     <Fade>
                         <div className="wait">
-                        <Timerdown/>
+                            <h3 className="endvote">Vote Ditutup</h3>
                         </div>
                     </Fade>
             </div>
@@ -453,6 +453,9 @@ Button a{
     .tab{
         margin: 0 5vmin;
     }
+    .endvote {
+        width: 25%;
+    }
     // Calon // -------------------------------------------------------
     .calon{
         padding: 5vmin 20%;
@@ -467,11 +470,6 @@ Button a{
             transition-duration: 0.4s;
         }
     }
-    /* .calon1{
-        &:hover{
-            box-shadow: inset 0px 0px 15vmin var(--color-white);
-        }
-    } */
     .calon-info{
         padding: 2vmin 22.5%;
     }
